@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Todo Plásticos</title>
-  <link rel="stylesheet" href="css/styles.css">
-  <link rel="icon" href="favicon.ico">
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" href="favicon.ico" />
 </head>
 <body>
 
+  <!-- HEADER -->
   <header>
     <div class="logo">
-      <img src="img/logo todo plasticos.png" alt="Todo Plásticos">
+      <img src="img/logo todo plasticos.png" alt="Todo Plásticos" />
     </div>
     <nav class="navbar">
       <ul>
@@ -23,28 +24,35 @@
       </ul>
     </nav>
     <div class="search-container">
-      <input type="text" placeholder="¿Qué producto estás buscando hoy?">
-      <img src="img/bandera colombia.png" alt="Col" class="flag">
+      <input type="text" placeholder="¿Qué producto estás buscando hoy?" />
+      <img src="img/bandera colombia.png" alt="Col" class="flag" />
     </div>
   </header>
 
-  <!-- SLIDER HERO -->
+  <!-- SLIDER HERO MEJORADO -->
   <section class="slider-hero">
     <div class="slider-images">
-      <img src="img/fondo productos1.png" class="slide active" alt="Imagen 1">
-      <img src="img/fondo productos2.png" class="slide" alt="Imagen 2">
-      <img src="img/fondo productos3.png" class="slide" alt="Imagen 3">
-      <img src="img/fondo productos4.png" class="slide" alt="Imagen 4">
+      <img src="img/fondo productos1.png" class="slide active" alt="Imagen 1" />
+      <img src="img/fondo productos2.png" class="slide" alt="Imagen 2" />
+      <img src="img/fondo productos3.png" class="slide" alt="Imagen 3" />
+      <img src="img/fondo productos4.png" class="slide" alt="Imagen 4" />
     </div>
 
     <div class="slider-overlay">
       <div class="slider-text">
-        <h2>¿Estás buscando empaques sostenibles para tu negocio?</h2>
-        <p>Ofrecemos productos reciclables, biodegradables y pensados para cuidar el planeta.</p>
+        <h2><strong>Empaques sostenibles</strong> para tu negocio</h2>
+        <p class="tagline">Reciclables, biodegradables y responsables con el planeta 🌱</p>
         <a href="#" class="btn-primary">Ver más productos</a>
       </div>
       <button class="slider-btn prev">&#10094;</button>
       <button class="slider-btn next">&#10095;</button>
+    </div>
+
+    <div class="slider-dots">
+      <span class="dot active-dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
     </div>
   </section>
 
@@ -96,17 +104,22 @@
     <p>© 2025 Todo Plásticos · Garzón, Huila · Tel: 310 3377752</p>
   </footer>
 
-  <!-- JS SLIDER -->
+  <!-- SLIDER SCRIPT -->
   <script>
     const slides = document.querySelectorAll('.slide');
     const nextBtn = document.querySelector('.next');
     const prevBtn = document.querySelector('.prev');
+    const dots = document.querySelectorAll('.dot');
     let current = 0;
 
     function updateSlides(index) {
       slides.forEach((slide, i) => {
         slide.classList.remove('active');
         if (i === index) slide.classList.add('active');
+      });
+      dots.forEach((dot, i) => {
+        dot.classList.remove('active-dot');
+        if (i === index) dot.classList.add('active-dot');
       });
     }
 
@@ -120,12 +133,19 @@
       updateSlides(current);
     });
 
-    updateSlides(current);
+    dots.forEach((dot, i) => {
+      dot.addEventListener('click', () => {
+        current = i;
+        updateSlides(current);
+      });
+    });
 
     setInterval(() => {
       current = (current + 1) % slides.length;
       updateSlides(current);
     }, 5000);
+
+    updateSlides(current);
   </script>
 
 </body>
