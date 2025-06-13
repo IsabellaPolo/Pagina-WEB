@@ -28,55 +28,27 @@
     </div>
   </header>
 
-<section class="slider-final">
-  <button class="slider-btn prev">&#10094;</button>
-
-  <div class="slider-text">
-    <h2>¿Estás buscando empaques sostenibles para tu negocio?</h2>
-    <p>Ofrecemos productos reciclables, biodegradables y pensados para cuidar el planeta.</p>
-    <a href="#" class="btn-primary">Ver más productos</a>
-  </div>
-
-  <div class="hero-slider">
+  <!-- SLIDER HERO -->
+  <section class="slider-hero">
     <div class="slider-images">
       <img src="img/fondo productos1.png" class="slide active" alt="Imagen 1">
       <img src="img/fondo productos2.png" class="slide" alt="Imagen 2">
       <img src="img/fondo productos3.png" class="slide" alt="Imagen 3">
       <img src="img/fondo productos4.png" class="slide" alt="Imagen 4">
     </div>
-  </div>
 
-  <button class="slider-btn next">&#10095;</button>
-</section>
+    <div class="slider-overlay">
+      <div class="slider-text">
+        <h2>¿Estás buscando empaques sostenibles para tu negocio?</h2>
+        <p>Ofrecemos productos reciclables, biodegradables y pensados para cuidar el planeta.</p>
+        <a href="#" class="btn-primary">Ver más productos</a>
+      </div>
+      <button class="slider-btn prev">&#10094;</button>
+      <button class="slider-btn next">&#10095;</button>
+    </div>
+  </section>
 
-
-<script>
-  const slides = document.querySelectorAll('.slide');
-  const nextBtn = document.querySelector('.next');
-  const prevBtn = document.querySelector('.prev');
-  let current = 0;
-
-  function updateSlides(index) {
-    slides.forEach((slide, i) => {
-      slide.classList.remove('active');
-      if (i === index) slide.classList.add('active');
-    });
-  }
-
-  nextBtn.addEventListener('click', () => {
-    current = (current + 1) % slides.length;
-    updateSlides(current);
-  });
-
-  prevBtn.addEventListener('click', () => {
-    current = (current - 1 + slides.length) % slides.length;
-    updateSlides(current);
-  });
-
-  // Mostrar primera al inicio
-  updateSlides(current);
-</script>
-
+  <!-- FEATURES -->
   <section class="features">
     <div class="feature">
       <h3>🌿 Biodegradables</h3>
@@ -92,10 +64,42 @@
     </div>
   </section>
 
-
+  <!-- FOOTER -->
   <footer>
     <p>© 2025 Todo Plásticos · Garzón, Huila · Tel: 310 3377752</p>
   </footer>
+
+  <!-- JS SLIDER -->
+  <script>
+    const slides = document.querySelectorAll('.slide');
+    const nextBtn = document.querySelector('.next');
+    const prevBtn = document.querySelector('.prev');
+    let current = 0;
+
+    function updateSlides(index) {
+      slides.forEach((slide, i) => {
+        slide.classList.remove('active');
+        if (i === index) slide.classList.add('active');
+      });
+    }
+
+    nextBtn.addEventListener('click', () => {
+      current = (current + 1) % slides.length;
+      updateSlides(current);
+    });
+
+    prevBtn.addEventListener('click', () => {
+      current = (current - 1 + slides.length) % slides.length;
+      updateSlides(current);
+    });
+
+    updateSlides(current);
+
+    setInterval(() => {
+      current = (current + 1) % slides.length;
+      updateSlides(current);
+    }, 5000);
+  </script>
 
 </body>
 </html>
