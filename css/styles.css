@@ -63,22 +63,27 @@ header {
 .search-container {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
 }
+
 
 .search-container input {
-  padding: 8px 12px;
-  border-radius: 20px;
+  padding: 12px 18px;
+  font-size: 1rem;
+  border-radius: 25px;
   border: 1px solid #ccc;
+  width: 270px;
 }
 
+
 .flag {
-  width: 24px;
-  height: 24px;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
   object-fit: cover;
   border: 1px solid #ccc;
 }
+
 
 /* === BOTÓN === */
 .btn-primary {
