@@ -5,27 +5,24 @@ body {
   font-size: 18px;
   line-height: 1.6;
   color: #333;
+  background-color: #f2f4f8;
+}
+
+h1, h2, h3 {
+  color: #003366;
+  font-weight: bold;
 }
 
 h1 {
   font-size: 2.5rem;
-  font-weight: bold;
-  margin-bottom: 20px;
-  color: #003366;
 }
 
 h2 {
   font-size: 2rem;
-  font-weight: bold;
-  margin-bottom: 20px;
-  color: #003366;
 }
 
 h3 {
   font-size: 1.4rem;
-  font-weight: bold;
-  margin-bottom: 10px;
-  color: #003366;
 }
 
 a {
@@ -66,7 +63,6 @@ header {
   gap: 12px;
 }
 
-
 .search-container input {
   padding: 12px 18px;
   font-size: 1rem;
@@ -75,7 +71,6 @@ header {
   width: 270px;
 }
 
-
 .flag {
   width: 30px;
   height: 30px;
@@ -83,7 +78,6 @@ header {
   object-fit: cover;
   border: 1px solid #ccc;
 }
-
 
 /* === BOTÓN === */
 .btn-primary {
@@ -94,6 +88,11 @@ header {
   font-weight: bold;
   display: inline-block;
   margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #003366;
 }
 
 /* === SLIDER HERO === */
@@ -141,7 +140,6 @@ header {
   align-items: center;
   justify-content: space-between;
   box-sizing: border-box;
-  overflow: hidden;
 }
 
 .slider-overlay::before {
@@ -167,7 +165,6 @@ header {
 
 .slider-text h2 {
   font-size: 2.5rem;
-  color: #003366;
   margin-bottom: 10px;
 }
 
@@ -182,7 +179,7 @@ p {
   font-size: 1.05rem;
 }
 
-/* === FLECHAS === */
+/* === FLECHAS SLIDER === */
 .slider-btn {
   position: absolute;
   top: 50%;
@@ -234,28 +231,38 @@ p {
 /* === FEATURES === */
 .features {
   display: flex;
-  justify-content: space-around;
-  padding: 40px 20px;
-  background-color: #ffffff;
-  text-align: center;
+  justify-content: center;
   flex-wrap: wrap;
+  gap: 0;
+  padding: 60px 20px;
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
 }
 
 .feature {
-  max-width: 300px;
-  margin: 10px;
+  flex: 1 1 200px;
+  padding: 20px;
+  text-align: center;
+  color: #333;
+  border-left: 1px solid #ccc;
+}
+
+.feature:first-child {
+  border-left: none;
 }
 
 .feature h3 {
-  font-size: 1.2rem;
-  margin-bottom: 10px;
+  font-size: 1.3rem;
+  margin-bottom: 8px;
   color: #003366;
 }
 
 .feature p {
+  color: #555;
   font-size: 1rem;
-  color: #444;
 }
+
 
 /* === PRODUCTOS MÁS VENDIDOS === */
 .mas-vendidos {
@@ -266,7 +273,6 @@ p {
 
 .mas-vendidos h2 {
   font-size: 2rem;
-  color: #003366;
   margin-bottom: 40px;
 }
 
@@ -278,33 +284,33 @@ p {
 }
 
 .producto {
-  background: #fff;
-  border: 1px solid #ddd;
-  border-radius: 10px;
+  background: #ffffff;
+  border-radius: 15px;
   padding: 20px;
   max-width: 220px;
   text-align: center;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-  transition: transform 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #e0e0e0;
 }
 
 .producto:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transform: translateY(-8px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.12);
 }
 
 .producto img {
   width: 100%;
   height: 160px;
   object-fit: cover;
-  border-radius: 8px;
+  border-radius: 10px;
   margin-bottom: 15px;
 }
 
 .producto h4 {
-  margin: 10px 0 5px;
   color: #003366;
   font-size: 1.1rem;
+  margin-bottom: 8px;
 }
 
 .producto p {
@@ -335,10 +341,6 @@ footer {
   }
 
   .tagline {
-    font-size: 1rem;
-  }
-
-  p, .feature p, .producto p {
     font-size: 1rem;
   }
 
