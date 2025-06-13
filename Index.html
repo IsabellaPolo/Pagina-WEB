@@ -28,16 +28,54 @@
     </div>
   </header>
 
-  <section class="hero">
-    <div class="hero-text">
-      <h1>Productos biodegradables<br>y reutilizables</h1>
-      <p>Plásticos amigables con el planeta</p>
-      <a href="#" class="btn-primary">Explorar productos</a>
+<section class="slider-final">
+  <button class="slider-btn prev">&#10094;</button>
+
+  <div class="slider-text">
+    <h2>¿Estás buscando empaques sostenibles para tu negocio?</h2>
+    <p>Ofrecemos productos reciclables, biodegradables y pensados para cuidar el planeta.</p>
+    <a href="#" class="btn-primary">Ver más productos</a>
+  </div>
+
+  <div class="hero-slider">
+    <div class="slider-images">
+      <img src="img/fondo productos1.png" class="slide active" alt="Imagen 1">
+      <img src="img/fondo productos2.png" class="slide" alt="Imagen 2">
+      <img src="img/fondo productos3.png" class="slide" alt="Imagen 3">
+      <img src="img/fondo productos4.png" class="slide" alt="Imagen 4">
     </div>
-    <div class="hero-image">
-      <img src="img/fondo productos.png" alt="Productos ecológicos">
-    </div>
-  </section>
+  </div>
+
+  <button class="slider-btn next">&#10095;</button>
+</section>
+
+
+<script>
+  const slides = document.querySelectorAll('.slide');
+  const nextBtn = document.querySelector('.next');
+  const prevBtn = document.querySelector('.prev');
+  let current = 0;
+
+  function updateSlides(index) {
+    slides.forEach((slide, i) => {
+      slide.classList.remove('active');
+      if (i === index) slide.classList.add('active');
+    });
+  }
+
+  nextBtn.addEventListener('click', () => {
+    current = (current + 1) % slides.length;
+    updateSlides(current);
+  });
+
+  prevBtn.addEventListener('click', () => {
+    current = (current - 1 + slides.length) % slides.length;
+    updateSlides(current);
+  });
+
+  // Mostrar primera al inicio
+  updateSlides(current);
+</script>
 
   <section class="features">
     <div class="feature">
@@ -53,6 +91,7 @@
       <p>Te ayudamos a encontrar la solución ideal para tu negocio.</p>
     </div>
   </section>
+
 
   <footer>
     <p>© 2025 Todo Plásticos · Garzón, Huila · Tel: 310 3377752</p>
