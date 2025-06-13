@@ -226,3 +226,59 @@ footer {
   text-align: center;
   padding: 20px;
 }
+
+/* PRODUCTOS MÁS VENDIDOS */
+.mas-vendidos {
+  padding: 60px 5%;
+  background-color: #f7f9fc;
+  text-align: center;
+}
+
+.mas-vendidos h2 {
+  font-size: 2rem;
+  color: #003366;
+  margin-bottom: 40px;
+}
+
+.productos-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+.producto {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 220px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+
+.producto:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.producto img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.producto h4 {
+  margin: 10px 0 5px;
+  color: #003366;
+  font-size: 1.1rem;
+}
+
+.producto p {
+  color: #0056b3;
+  font-weight: bold;
+  font-size: 1rem;
+}
