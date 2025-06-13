@@ -1,4 +1,4 @@
-/* General */
+/* === GENERAL === */
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
@@ -10,7 +10,7 @@ a {
   color: #003366;
 }
 
-/* Header */
+/* === HEADER === */
 header {
   display: flex;
   align-items: center;
@@ -57,7 +57,7 @@ header {
   border: 1px solid #ccc;
 }
 
-/* Botón */
+/* === BOTÓN === */
 .btn-primary {
   background-color: #0056b3;
   color: white;
@@ -68,11 +68,11 @@ header {
   margin-top: 10px;
 }
 
-/* SLIDER HERO */
+/* === SLIDER HERO === */
 .slider-hero {
   position: relative;
   width: 100%;
-  height: 400px;
+  height: 550px; /* AJUSTE DE ALTURA */
   overflow: hidden;
   background-color: #eee;
 }
@@ -93,10 +93,12 @@ header {
   position: absolute;
   top: 0;
   left: 0;
+  transition: transform 1s ease;
 }
 
 .slider-images img.active {
   display: block;
+  transform: scale(1.02);
 }
 
 .slider-overlay {
@@ -108,26 +110,41 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: linear-gradient(to right, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.6) 40%, rgba(255,255,255,0.1) 100%);
   box-sizing: border-box;
+  overflow: hidden;
+}
+
+.slider-overlay::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(255,255,255,0.95), rgba(255,255,255,0.3));
+  z-index: 1;
 }
 
 .slider-text {
   max-width: 600px;
+  position: relative;
+  z-index: 2;
 }
 
 .slider-text h2 {
-  font-size: 2.2rem;
+  font-size: 2.5rem;
   color: #003366;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
-.slider-text p {
+.tagline {
   font-size: 1.1rem;
-  color: #444;
+  font-weight: 600;
+  color: #0056b3;
   margin-bottom: 20px;
 }
 
+/* === FLECHAS === */
 .slider-btn {
   position: absolute;
   top: 50%;
@@ -153,7 +170,30 @@ header {
   color: #0056b3;
 }
 
-/* FEATURES */
+/* === INDICADORES === */
+.slider-dots {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 4;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  background: #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.active-dot {
+  background: #0056b3;
+}
+
+/* === FEATURES === */
 .features {
   display: flex;
   justify-content: space-around;
@@ -179,10 +219,42 @@ header {
   color: #444;
 }
 
-/* FOOTER */
+/* === FOOTER === */
 footer {
   background-color: #003366;
   color: white;
   text-align: center;
   padding: 20px;
+}
+
+/* === RESPONSIVE === */
+@media screen and (max-width: 768px) {
+  .slider-hero {
+    height: auto;
+  }
+
+  .slider-overlay {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px 20px;
+    background: rgba(255,255,255,0.9);
+  }
+
+  .slider-text {
+    max-width: 90%;
+  }
+
+  .slider-btn.prev,
+  .slider-btn.next {
+    top: auto;
+    bottom: 10px;
+    transform: none;
+    font-size: 1.5rem;
+  }
+
+  .slider-dots {
+    bottom: 10px;
+  }
 }
