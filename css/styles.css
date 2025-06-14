@@ -55,8 +55,50 @@ header {
 
 .navbar a {
   font-weight: bold;
+  position: relative;
+  z-index: 2;
 }
 
+/* === MENÚ DESPLEGABLE === */
+.navbar li.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  display: none;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 10px 0;
+  min-width: 220px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  z-index: 1000;
+  transition: opacity 0.2s ease;
+}
+
+.dropdown-menu li {
+  padding: 8px 20px;
+  white-space: nowrap;
+}
+
+.dropdown-menu li a {
+  color: #003366;
+  font-weight: normal;
+  font-size: 15px;
+}
+
+.navbar li.dropdown:hover .dropdown-menu {
+  display: block;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* === BUSCADOR === */
 .search-container {
   display: flex;
   align-items: center;
@@ -130,6 +172,7 @@ header {
   transform: scale(1.02);
 }
 
+/* === SLIDER TEXTO === */
 .slider-overlay {
   position: relative;
   z-index: 2;
@@ -263,7 +306,6 @@ p {
   font-size: 1rem;
 }
 
-
 /* === PRODUCTOS MÁS VENDIDOS === */
 .mas-vendidos {
   padding: 60px 5%;
@@ -318,6 +360,8 @@ p {
   font-weight: bold;
   font-size: 1rem;
 }
+
+/* === SITE LINKS === */
 .site-links {
   padding: 40px 20px;
   border-top: 1px solid #ccc;
@@ -329,10 +373,9 @@ p {
   max-width: 1400px;
   margin: 0 auto;
   display: flex;
-  justify-content: center; /* Centra horizontalmente */
-  gap: 300px; /* más separación entre columnas */
+  justify-content: center;
+  gap: 300px;
 }
-
 
 .site-links h4 {
   color: #0056b3;
@@ -350,18 +393,6 @@ p {
   margin-bottom: 15px;
   color: #333;
   font-size: 14px;
-}
-
-@media (max-width: 768px) {
-  .site-links-container {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 480px) {
-  .site-links-container {
-    grid-template-columns: 1fr;
-  }
 }
 
 /* === FOOTER === */
@@ -404,5 +435,20 @@ footer {
   .slider-hero {
     aspect-ratio: auto;
     height: auto;
+  }
+
+  .site-links-container {
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+  }
+
+  .dropdown-menu {
+    position: static;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+    display: block !important;
+    box-shadow: none;
+    border: none;
   }
 }
