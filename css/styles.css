@@ -13,17 +13,9 @@ h1, h2, h3 {
   font-weight: bold;
 }
 
-h1 {
-  font-size: 2.5rem;
-}
-
-h2 {
-  font-size: 2rem;
-}
-
-h3 {
-  font-size: 1.4rem;
-}
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.4rem; }
 
 a {
   text-decoration: none;
@@ -41,9 +33,7 @@ header {
   flex-wrap: wrap;
 }
 
-.logo img {
-  height: 80px;
-}
+.logo img { height: 80px; }
 
 .navbar ul {
   display: flex;
@@ -60,9 +50,7 @@ header {
 }
 
 /* === MENÚ DESPLEGABLE === */
-.navbar li.dropdown {
-  position: relative;
-}
+.navbar li.dropdown { position: relative; }
 
 .dropdown-menu {
   display: none;
@@ -74,28 +62,52 @@ header {
   background: #fff;
   border: 1px solid #ddd;
   border-radius: 6px;
-  padding: 10px 0;
-  min-width: 220px;
+  padding: 20px;
+  min-width: 250px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   z-index: 1000;
   transition: opacity 0.2s ease;
-}
-
-.dropdown-menu li {
-  padding: 8px 20px;
-  white-space: nowrap;
-}
-
-.dropdown-menu li a {
-  color: #003366;
-  font-weight: normal;
-  font-size: 15px;
 }
 
 .navbar li.dropdown:hover .dropdown-menu {
   display: block;
   opacity: 1;
   pointer-events: auto;
+}
+
+/* === MENÚ CATEGORÍAS VERTICAL === */
+.mega-menu {
+  display: block;
+}
+
+.lista-categorias {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.lista-categorias li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 20px;
+  font-size: 0.95rem;
+  color: #003366;
+  transition: background-color 0.2s ease;
+}
+
+.lista-categorias li:hover {
+  background-color: #f0f4fa;
+}
+
+.lista-categorias img {
+  width: 22px;
+  height: 22px;
+}
+
+.ver-todo {
+  text-align: center;
+  margin-top: 15px;
 }
 
 /* === BUSCADOR === */
