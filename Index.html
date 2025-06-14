@@ -4,34 +4,25 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Todo Plásticos</title>
-
-  <!-- Vincula la hoja de estilos externa -->
   <link rel="stylesheet" href="css/styles.css" />
-
-  <!-- Favicon del sitio (icono que aparece en la pestaña del navegador) -->
   <link rel="icon" href="favicon.ico" />
 </head>
 <body>
 
   <!-- ========== ENCABEZADO (HEADER) ========== -->
   <header>
-    <!-- Logo de la empresa -->
     <div class="logo">
       <img src="img/logo todo plasticos.png" alt="Todo Plásticos" />
     </div>
-
-    <!-- Barra de navegación -->
     <nav class="navbar">
       <ul>
-        <li><a href="#">Inicio</a></li>
-        <li><a href="#">Productos</a></li>
-        <li><a href="#">Catálogo</a></li>
-        <li><a href="#">Nosotros</a></li>
-        <li><a href="#">Contacto</a></li>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="productos.html">Productos</a></li>
+        <li><a href="catalogo.html">Catálogo</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
       </ul>
     </nav>
-
-    <!-- Barra de búsqueda con ícono de bandera -->
     <div class="search-container">
       <input type="text" placeholder="¿Qué producto estás buscando hoy?" />
       <img src="img/bandera colombia.png" alt="Col" class="flag" />
@@ -40,8 +31,6 @@
 
   <!-- ========== SLIDER PRINCIPAL (HERO) ========== -->
   <section class="slider-hero">
-
-    <!-- Contenedor de imágenes del slider -->
     <div class="slider-images">
       <img src="img/fondo productos1.png" class="slide active" alt="Imagen 1" />
       <img src="img/fondo productos2.png" class="slide" alt="Imagen 2" />
@@ -49,20 +38,17 @@
       <img src="img/fondo productos4.png" class="slide" alt="Imagen 4" />
     </div>
 
-    <!-- Superposición del slider con texto y botones -->
     <div class="slider-overlay">
       <div class="slider-text">
         <h2><strong>Empaques sostenibles</strong> para tu negocio</h2>
         <p class="tagline">Reciclables, biodegradables y responsables con el planeta 🌱</p>
-        <a href="#" class="btn-primary">Ver más productos</a>
+        <a href="productos.html" class="btn-primary">Ver más productos</a>
       </div>
 
-      <!-- Botones de navegación del slider -->
       <button class="slider-btn prev">&#10094;</button>
       <button class="slider-btn next">&#10095;</button>
     </div>
 
-    <!-- Indicadores (dots) del slider -->
     <div class="slider-dots">
       <span class="dot active-dot"></span>
       <span class="dot"></span>
@@ -71,7 +57,7 @@
     </div>
   </section>
 
-  <!-- ========== SECCIÓN DE CARACTERÍSTICAS (FEATURES) ========== -->
+  <!-- ========== SECCIÓN DE CARACTERÍSTICAS ========== -->
   <section class="features">
     <div class="feature">
       <h3>🌿 Biodegradables</h3>
@@ -91,7 +77,6 @@
   <section class="mas-vendidos">
     <h2>🛒 Productos más vendidos</h2>
     <div class="productos-grid">
-      <!-- Cada producto destacado -->
       <div class="producto">
         <img src="img/Bolsa biodegradable.png" alt="Bolsa biodegradable">
         <h4>Bolsa Biodegradable</h4>
@@ -111,11 +96,9 @@
     </div>
   </section>
 
-  <!-- ========== ENLACES ADICIONALES DE CATEGORÍAS ========== -->
+  <!-- ========== ENLACES ADICIONALES ========== -->
   <section class="site-links">
     <div class="site-links-container">
-
-      <!-- Columna 1 -->
       <div class="column">
         <h4>Productos</h4>
         <ul>
@@ -126,10 +109,8 @@
           <li>Papel Aluminio</li>
         </ul>
       </div>
-
-      <!-- Columna 2 -->
       <div class="column">
-        <h4>&nbsp;</h4> <!-- Espacio en blanco para alinear -->
+        <h4>&nbsp;</h4>
         <ul>
           <li>Domos y Bases</li>
           <li>Películas Termoencogibles</li>
@@ -138,8 +119,6 @@
           <li>Máquinas Empacadoras</li>
         </ul>
       </div>
-
-      <!-- Columna 3 -->
       <div class="column">
         <h4>&nbsp;</h4>
         <ul>
@@ -152,23 +131,20 @@
     </div>
   </section>
 
-  <!-- ========== PIE DE PÁGINA (FOOTER) ========== -->
+  <!-- ========== PIE DE PÁGINA ========== -->
   <footer>
     <p>© 2025 Todo Plásticos · Garzón, Huila · Tel: 310 3377752</p>
   </footer>
 
   <!-- ========== SCRIPT DEL SLIDER ========== -->
   <script>
-    // Selecciona todos los elementos del slider
     const slides = document.querySelectorAll('.slide');
     const nextBtn = document.querySelector('.next');
     const prevBtn = document.querySelector('.prev');
     const dots = document.querySelectorAll('.dot');
+    let current = 0;
+    let autoSlide;
 
-    let current = 0;     // Índice de la imagen actual
-    let autoSlide;       // Referencia al intervalo de auto deslizamiento
-
-    // Actualiza la imagen activa y los dots
     function updateSlides(index) {
       slides.forEach((slide, i) => {
         slide.classList.remove('active');
@@ -181,19 +157,16 @@
       });
     }
 
-    // Botón "Siguiente"
     nextBtn.addEventListener('click', () => {
       current = (current + 1) % slides.length;
       updateSlides(current);
     });
 
-    // Botón "Anterior"
     prevBtn.addEventListener('click', () => {
       current = (current - 1 + slides.length) % slides.length;
       updateSlides(current);
     });
 
-    // Hacer clic en los puntos (dots)
     dots.forEach((dot, i) => {
       dot.addEventListener('click', () => {
         current = i;
@@ -201,24 +174,20 @@
       });
     });
 
-    // Inicia el deslizamiento automático
     function startAutoSlide() {
       autoSlide = setInterval(() => {
         current = (current + 1) % slides.length;
         updateSlides(current);
-      }, 5000); // cada 5 segundos
+      }, 5000);
     }
 
-    // Detiene el deslizamiento automático
     function stopAutoSlide() {
       clearInterval(autoSlide);
     }
 
-    // Pausa el slide cuando el mouse está encima
     document.querySelector('.slider-hero').addEventListener('mouseenter', stopAutoSlide);
     document.querySelector('.slider-hero').addEventListener('mouseleave', startAutoSlide);
 
-    // Inicialización al cargar la página
     updateSlides(current);
     startAutoSlide();
   </script>
