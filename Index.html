@@ -4,16 +4,23 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Todo Plásticos</title>
+
+  <!-- Vincula la hoja de estilos externa -->
   <link rel="stylesheet" href="css/styles.css" />
+
+  <!-- Favicon del sitio (icono que aparece en la pestaña del navegador) -->
   <link rel="icon" href="favicon.ico" />
 </head>
 <body>
 
-  <!-- HEADER -->
+  <!-- ========== ENCABEZADO (HEADER) ========== -->
   <header>
+    <!-- Logo de la empresa -->
     <div class="logo">
       <img src="img/logo todo plasticos.png" alt="Todo Plásticos" />
     </div>
+
+    <!-- Barra de navegación -->
     <nav class="navbar">
       <ul>
         <li><a href="#">Inicio</a></li>
@@ -23,14 +30,18 @@
         <li><a href="#">Contacto</a></li>
       </ul>
     </nav>
+
+    <!-- Barra de búsqueda con ícono de bandera -->
     <div class="search-container">
       <input type="text" placeholder="¿Qué producto estás buscando hoy?" />
       <img src="img/bandera colombia.png" alt="Col" class="flag" />
     </div>
   </header>
 
-  <!-- SLIDER HERO -->
+  <!-- ========== SLIDER PRINCIPAL (HERO) ========== -->
   <section class="slider-hero">
+
+    <!-- Contenedor de imágenes del slider -->
     <div class="slider-images">
       <img src="img/fondo productos1.png" class="slide active" alt="Imagen 1" />
       <img src="img/fondo productos2.png" class="slide" alt="Imagen 2" />
@@ -38,16 +49,20 @@
       <img src="img/fondo productos4.png" class="slide" alt="Imagen 4" />
     </div>
 
+    <!-- Superposición del slider con texto y botones -->
     <div class="slider-overlay">
       <div class="slider-text">
         <h2><strong>Empaques sostenibles</strong> para tu negocio</h2>
         <p class="tagline">Reciclables, biodegradables y responsables con el planeta 🌱</p>
         <a href="#" class="btn-primary">Ver más productos</a>
       </div>
+
+      <!-- Botones de navegación del slider -->
       <button class="slider-btn prev">&#10094;</button>
       <button class="slider-btn next">&#10095;</button>
     </div>
 
+    <!-- Indicadores (dots) del slider -->
     <div class="slider-dots">
       <span class="dot active-dot"></span>
       <span class="dot"></span>
@@ -56,7 +71,7 @@
     </div>
   </section>
 
-  <!-- FEATURES -->
+  <!-- ========== SECCIÓN DE CARACTERÍSTICAS (FEATURES) ========== -->
   <section class="features">
     <div class="feature">
       <h3>🌿 Biodegradables</h3>
@@ -71,105 +86,114 @@
       <p>Te ayudamos a encontrar la solución ideal para tu negocio.</p>
     </div>
   </section>
-  
 
-  <!-- PRODUCTOS MÁS VENDIDOS -->
+  <!-- ========== PRODUCTOS MÁS VENDIDOS ========== -->
   <section class="mas-vendidos">
     <h2>🛒 Productos más vendidos</h2>
     <div class="productos-grid">
+      <!-- Cada producto destacado -->
       <div class="producto">
         <img src="img/Bolsa biodegradable.png" alt="Bolsa biodegradable">
         <h4>Bolsa Biodegradable</h4>
-        
       </div>
       <div class="producto">
         <img src="img/Vasos Tami.png" alt="Vaso Tami">
         <h4>Vaso Tami</h4>
-        
       </div>
       <div class="producto">
         <img src="img/Contenedor SelloPlus.png" alt="Contenedor SelloPlus">
         <h4>Contenedor SelloPlus</h4>
-
       </div>
       <div class="producto">
         <img src="img/cubiertos desechables.jpg" alt="Cubiertos desechables">
         <h4>Cubiertos Desechables</h4>
-
       </div>
     </div>
   </section>
 
+  <!-- ========== ENLACES ADICIONALES DE CATEGORÍAS ========== -->
   <section class="site-links">
-  <div class="site-links-container">
-    <div class="column">
-      <h4>Productos</h4>
-      <ul>
-        <li>Bandejas</li>
-        <li>Contenedores</li>
-        <li>Cubiertos</li>
-        <li>Catering y eventos</li>
-        <li>Papel Aluminio</li>
-      </ul>
-    </div>
-    <div class="column">
-      <h4>&nbsp;</h4>
-      <ul>
-        <li>Domos y Bases</li>
-        <li>Películas Termoencogibles</li>
-        <li>Películas Extensibles</li>
-        <li>Frascos para almacenar</li>
-        <li>Máquinas Empacadoras</li>
-      </ul>
-    </div>
-    <div class="column">
-      <h4>&nbsp;</h4>
-      <ul>
-        <li>Platos</li>
-        <li>Portacomidas</li>
-        <li>Pitillos Mezcladores Palillos</li>
-        <li>Vasos, Copas y Tazas</li>
-      </ul>
-    </div>
-  </div>
-</section>
+    <div class="site-links-container">
 
+      <!-- Columna 1 -->
+      <div class="column">
+        <h4>Productos</h4>
+        <ul>
+          <li>Bandejas</li>
+          <li>Contenedores</li>
+          <li>Cubiertos</li>
+          <li>Catering y eventos</li>
+          <li>Papel Aluminio</li>
+        </ul>
+      </div>
 
-  <!-- FOOTER -->
+      <!-- Columna 2 -->
+      <div class="column">
+        <h4>&nbsp;</h4> <!-- Espacio en blanco para alinear -->
+        <ul>
+          <li>Domos y Bases</li>
+          <li>Películas Termoencogibles</li>
+          <li>Películas Extensibles</li>
+          <li>Frascos para almacenar</li>
+          <li>Máquinas Empacadoras</li>
+        </ul>
+      </div>
+
+      <!-- Columna 3 -->
+      <div class="column">
+        <h4>&nbsp;</h4>
+        <ul>
+          <li>Platos</li>
+          <li>Portacomidas</li>
+          <li>Pitillos Mezcladores Palillos</li>
+          <li>Vasos, Copas y Tazas</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PIE DE PÁGINA (FOOTER) ========== -->
   <footer>
     <p>© 2025 Todo Plásticos · Garzón, Huila · Tel: 310 3377752</p>
   </footer>
 
-  <!-- SLIDER SCRIPT -->
+  <!-- ========== SCRIPT DEL SLIDER ========== -->
   <script>
+    // Selecciona todos los elementos del slider
     const slides = document.querySelectorAll('.slide');
     const nextBtn = document.querySelector('.next');
     const prevBtn = document.querySelector('.prev');
     const dots = document.querySelectorAll('.dot');
-    let current = 0;
-    let autoSlide;
 
+    let current = 0;     // Índice de la imagen actual
+    let autoSlide;       // Referencia al intervalo de auto deslizamiento
+
+    // Actualiza la imagen activa y los dots
     function updateSlides(index) {
       slides.forEach((slide, i) => {
         slide.classList.remove('active');
         if (i === index) slide.classList.add('active');
       });
+
       dots.forEach((dot, i) => {
         dot.classList.remove('active-dot');
         if (i === index) dot.classList.add('active-dot');
       });
     }
 
+    // Botón "Siguiente"
     nextBtn.addEventListener('click', () => {
       current = (current + 1) % slides.length;
       updateSlides(current);
     });
 
+    // Botón "Anterior"
     prevBtn.addEventListener('click', () => {
       current = (current - 1 + slides.length) % slides.length;
       updateSlides(current);
     });
 
+    // Hacer clic en los puntos (dots)
     dots.forEach((dot, i) => {
       dot.addEventListener('click', () => {
         current = i;
@@ -177,20 +201,24 @@
       });
     });
 
+    // Inicia el deslizamiento automático
     function startAutoSlide() {
       autoSlide = setInterval(() => {
         current = (current + 1) % slides.length;
         updateSlides(current);
-      }, 5000);
+      }, 5000); // cada 5 segundos
     }
 
+    // Detiene el deslizamiento automático
     function stopAutoSlide() {
       clearInterval(autoSlide);
     }
 
+    // Pausa el slide cuando el mouse está encima
     document.querySelector('.slider-hero').addEventListener('mouseenter', stopAutoSlide);
     document.querySelector('.slider-hero').addEventListener('mouseleave', startAutoSlide);
 
+    // Inicialización al cargar la página
     updateSlides(current);
     startAutoSlide();
   </script>
