@@ -6,9 +6,10 @@ body {
   line-height: 1.6;
   color: #333;
   background-color: #f2f4f8;
+  overflow-x: hidden;
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4 {
   color: #003366;
   font-weight: bold;
 }
@@ -16,6 +17,7 @@ h1, h2, h3 {
 h1 { font-size: 2.5rem; }
 h2 { font-size: 2rem; }
 h3 { font-size: 1.4rem; }
+h4 { font-size: 1rem; margin: 10px 0 5px 0; }
 
 a {
   text-decoration: none;
@@ -63,51 +65,99 @@ header {
   border: 1px solid #ddd;
   border-radius: 6px;
   padding: 20px;
-  min-width: 250px;
+  min-width: 600px;
+  max-height: 400px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   z-index: 1000;
   transition: opacity 0.2s ease;
+  display: flex;
+  gap: 40px;
+  overflow-y: auto;
 }
 
 .navbar li.dropdown:hover .dropdown-menu {
-  display: block;
+  display: flex;
   opacity: 1;
   pointer-events: auto;
 }
 
 /* === MENÚ CATEGORÍAS VERTICAL === */
-.mega-menu {
-  display: block;
-}
-
 .lista-categorias {
   list-style: none;
   padding: 0;
   margin: 0;
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+}
+
+.lista-categorias h4 {
+  margin: 20px 10px 5px 30px; /* top, right, bottom, left */
+  font-size: 1rem;
+  color: #0056b3;
 }
 
 .lista-categorias li {
   display: flex;
   align-items: center;
   gap: 10px;
-  padding: 10px 20px;
-  font-size: 0.95rem;
+  padding: 6px 20px;
+  font-size: 0.9rem;
   color: #003366;
   transition: background-color 0.2s ease;
+  width: 100%;
 }
 
 .lista-categorias li:hover {
   background-color: #f0f4fa;
 }
 
-.lista-categorias img {
+.lista-categorias img,
+.lista-categorias i {
   width: 22px;
   height: 22px;
+  font-size: 1rem;
+  color: #0056b3;
 }
 
 .ver-todo {
   text-align: center;
-  margin-top: 15px;
+  margin-top: 10px;
+  width: 100%;
+}
+
+/* === MARCAS DESTACADAS === */
+.marcas-destacadas {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 10px;
+  padding-top: 10px;
+}
+
+.marcas-destacadas h4 {
+  font-size: 1rem;
+  color: #0056b3;
+  margin: 15px 5px 5px 50px; /* top, right, bottom, left */
+}
+
+.marca-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.9rem;
+  color: #003366;
+}
+
+.marca-item img {
+  width: 150px;
+  height: auto;
+  display: flex;
+  margin-left: 35px;
+  border-radius: 45px;
+  padding: 20px;
+  object-fit: contain;
 }
 
 /* === BUSCADOR === */
@@ -144,6 +194,11 @@ header {
   margin-top: 10px;
   transition: background-color 0.3s ease;
 }
+
+.btn-primary:hover {
+  background-color: #003366;
+}
+
 
 .btn-primary:hover {
   background-color: #003366;
