@@ -91,11 +91,17 @@ header {
   flex-direction: column;
 }
 
+.lista-categorias ul {
+  display: flex;
+  flex-direction: column;
+}
+
 .lista-categorias h4 {
-  margin: 20px 10px 5px 30px; /* top, right, bottom, left */
+  margin: 20px 30px 20px 30px; /* top, right, bottom, left */
   font-size: 1rem;
   color: #0056b3;
 }
+
 
 .lista-categorias li {
   display: flex;
@@ -148,6 +154,10 @@ header {
   gap: 10px;
   font-size: 0.9rem;
   color: #003366;
+}
+
+.marca-item img.sin-redondear {
+  border-radius: 0 !important;
 }
 
 .marca-item img {
