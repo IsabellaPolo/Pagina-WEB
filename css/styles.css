@@ -80,6 +80,39 @@ header {
   opacity: 1;
   pointer-events: auto;
 }
+/* === MENÚ CATÁLOGO === */
+.navbar li.dropdown .menu-catalogo {
+  min-width: 280px;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.navbar li.dropdown .menu-catalogo a {
+  padding: 12px 20px;
+  border-radius: 8px;
+  background: #f0f4fa;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transition: background 0.3s ease;
+}
+
+.navbar li.dropdown .menu-catalogo a:hover {
+  color: #002244;
+}
+
+.navbar li.dropdown .menu-catalogo i {
+  font-size: 1.3rem;
+  color: #002244;
+}
 
 /* === MENÚ CATEGORÍAS VERTICAL === */
 .lista-categorias {
@@ -99,7 +132,7 @@ header {
 .lista-categorias h4 {
   margin: 20px 30px 20px 30px; /* top, right, bottom, left */
   font-size: 1rem;
-  color: #0056b3;
+  color: #002244;
 }
 
 
@@ -109,7 +142,7 @@ header {
   gap: 10px;
   padding: 6px 20px;
   font-size: 0.9rem;
-  color: #003366;
+  color: #333;
   transition: background-color 0.2s ease;
   width: 100%;
 }
@@ -123,7 +156,7 @@ header {
   width: 22px;
   height: 22px;
   font-size: 1rem;
-  color: #0056b3;
+  color: #002244;
 }
 
 .ver-todo {
@@ -144,7 +177,7 @@ header {
 
 .marcas-destacadas h4 {
   font-size: 1rem;
-  color: #0056b3;
+  color: #002244;
   margin: 15px 5px 5px 50px; /* top, right, bottom, left */
 }
 
@@ -153,7 +186,7 @@ header {
   align-items: center;
   gap: 10px;
   font-size: 0.9rem;
-  color: #003366;
+  color: #002244;
 }
 
 .marca-item img.sin-redondear {
