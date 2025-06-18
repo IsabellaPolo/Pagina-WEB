@@ -4,7 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Todo Plásticos</title>
+
+  <!-- Íconos de Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- Hoja de estilos principal -->
   <link rel="stylesheet" href="css/styles.css" />
   <link rel="icon" href="favicon.ico" />
 </head>
@@ -12,16 +16,21 @@
 
   <!-- ========== ENCABEZADO (HEADER) ========== -->
   <header>
+    <!-- Logo -->
     <div class="logo">
       <img src="img/logo todo plasticos.png" alt="Todo Plásticos" />
     </div>
+
+    <!-- Navegación principal -->
     <nav class="navbar">
       <ul>
         <li><a href="index.html">Inicio</a></li>
-  <!-- ========== PRODUCTOS ========== -->
+
+        <!-- Menú desplegable de productos -->
         <li class="dropdown">
-        <a href="productos.html">Productos</a>
-        <ul class="dropdown-menu mega-menu">
+          <a href="productos.html">Productos</a>
+          <ul class="dropdown-menu mega-menu">
+            <!-- Categorías de productos -->
             <div class="lista-categorias">
               <h4>Categorías</h4>
               <ul>
@@ -39,46 +48,49 @@
                 <li><i class="fas fa-receipt"></i> Papel</li>
                 <li><i class="fas fa-utensils"></i> Cubiertos</li>
                 <li><i class="fas fa-ellipsis-h"></i> Otros</li>
+                <!-- Botón para ver todos los productos -->
                 <li class="ver-todo">
                   <a href="productos.html" class="btn-primary">Todos los productos</a>
                 </li>
               </ul>
             </div>
+
+            <!-- Sección de marcas destacadas -->
             <div class="marcas-destacadas">
               <h4>Marcas destacadas</h4>
               <div class="marca-item"><img src="img/Logo darnel.png" alt="Darnel"></div>
-              <div class="marca-item">
-                <img src="img/logo lider.png" alt="Lider" class="sin-redondear">
-              </div>
+              <div class="marca-item"><img src="img/logo lider.png" alt="Lider" class="sin-redondear"></div>
               <div class="marca-item"><img src="img/Logo wau.jpg" alt="Wau"></div>
               <div class="marca-item"><img src="img/logo familia.png" alt="Familia"></div>
               <div class="marca-item"><img src="img/logo arbora.jpg" alt="Arbora"></div>
             </div>
           </ul>
         </li>
-  <!-- ========== CATÁLOGO ========== -->
+
+        <!-- Menú desplegable de catálogo -->
         <li class="dropdown">
-        <a href="#">Catálogo</a>
-        <ul class="dropdown-menu menu-catalogo">
-          <li>
-            <a href="img/Catálogo Todo Plasticos.pdf" download>
-              <i class="fas fa-file-pdf"></i> Descargar catálogo
-            </a>
-          </li>
-          <li>
-            <a href="catalogo.html">
-              <i class="fas fa-eye"></i> Ver en línea
-            </a>
-          </li>
-        </ul>
-      </li>
-<!-- ========== NOSOTROS ========== -->
+          <a href="#">Catálogo</a>
+          <ul class="dropdown-menu menu-catalogo">
+            <li>
+              <a href="img/Catálogo Todo Plasticos.pdf" download>
+                <i class="fas fa-file-pdf"></i> Descargar catálogo
+              </a>
+            </li>
+            <li>
+              <a href="catalogo.html">
+                <i class="fas fa-eye"></i> Ver en línea
+              </a>
+            </li>
+          </ul>
+        </li>
+
+        <!-- Otros enlaces -->
         <li><a href="nosotros.html">Nosotros</a></li>
-<!-- ========== CONTACTO ========== -->
         <li><a href="contacto.html">Contacto</a></li>
       </ul>
     </nav>
-<!-- ========== BUSCADOR ========== -->
+
+    <!-- Barra de búsqueda -->
     <div class="search-container">
       <input type="text" placeholder="¿Qué producto estás buscando hoy?" />
       <img src="img/bandera colombia.png" alt="Col" class="flag" />
@@ -88,6 +100,7 @@
   <!-- ========== SLIDER PRINCIPAL (HERO) ========== -->
   <section class="slider-hero">
     <div class="slider-images">
+      <!-- Imágenes del slider -->
       <img src="img/fondo productos1.png" class="slide active" alt="Imagen 1" />
       <img src="img/fondo productos2.png" class="slide" alt="Imagen 2" />
       <img src="img/fondo productos3.png" class="slide" alt="Imagen 3" />
@@ -100,10 +113,12 @@
         <p class="tagline">Reciclables, biodegradables y responsables con el planeta 🌱</p>
         <a href="productos.html" class="btn-primary">Ver más productos</a>
       </div>
+      <!-- Botones de navegación del slider -->
       <button class="slider-btn prev">&#10094;</button>
       <button class="slider-btn next">&#10095;</button>
     </div>
 
+    <!-- Puntos indicadores del slider -->
     <div class="slider-dots">
       <span class="dot active-dot"></span>
       <span class="dot"></span>
@@ -191,8 +206,9 @@
     <p>© 2025 Todo Plásticos · Garzón, Huila · Tel: 310 3377752</p>
   </footer>
 
-  <!-- ========== SCRIPT DEL SLIDER ========== -->
+  <!-- ========== SCRIPT DEL SLIDER HERO ========== -->
   <script>
+    // Funcionalidad del slider principal
     const slides = document.querySelectorAll('.slide');
     const nextBtn = document.querySelector('.next');
     const prevBtn = document.querySelector('.prev');
@@ -200,6 +216,7 @@
     let current = 0;
     let autoSlide;
 
+    // Actualiza la visibilidad de las imágenes y puntos activos
     function updateSlides(index) {
       slides.forEach((slide, i) => {
         slide.classList.remove('active');
@@ -212,6 +229,7 @@
       });
     }
 
+    // Botones siguiente y anterior
     nextBtn.addEventListener('click', () => {
       current = (current + 1) % slides.length;
       updateSlides(current);
@@ -222,6 +240,7 @@
       updateSlides(current);
     });
 
+    // Dots indicadores de navegación
     dots.forEach((dot, i) => {
       dot.addEventListener('click', () => {
         current = i;
@@ -229,6 +248,7 @@
       });
     });
 
+    // Inicio automático del slider
     function startAutoSlide() {
       autoSlide = setInterval(() => {
         current = (current + 1) % slides.length;
@@ -236,6 +256,7 @@
       }, 5000);
     }
 
+    // Pausa del slider al hacer hover
     function stopAutoSlide() {
       clearInterval(autoSlide);
     }
@@ -243,6 +264,7 @@
     document.querySelector('.slider-hero').addEventListener('mouseenter', stopAutoSlide);
     document.querySelector('.slider-hero').addEventListener('mouseleave', startAutoSlide);
 
+    // Inicializar slider
     updateSlides(current);
     startAutoSlide();
   </script>
