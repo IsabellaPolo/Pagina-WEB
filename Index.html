@@ -67,12 +67,12 @@
           </ul>
         </li>
 
-        <!-- Menú desplegable de catálogo -->
+        <!-- Menú desplegable de catálogo (CORREGIDO) -->
         <li class="dropdown">
           <a href="#">Catálogo</a>
           <ul class="dropdown-menu menu-catalogo">
             <li>
-              <a href="img/Catálogo Todo Plasticos.pdf" download>
+              <a href="catalogo-todo-plasticos.pdf" download>
                 <i class="fas fa-file-pdf"></i> Descargar catálogo
               </a>
             </li>
@@ -208,7 +208,6 @@
 
   <!-- ========== SCRIPT DEL SLIDER HERO ========== -->
   <script>
-    // Funcionalidad del slider principal
     const slides = document.querySelectorAll('.slide');
     const nextBtn = document.querySelector('.next');
     const prevBtn = document.querySelector('.prev');
@@ -216,7 +215,6 @@
     let current = 0;
     let autoSlide;
 
-    // Actualiza la visibilidad de las imágenes y puntos activos
     function updateSlides(index) {
       slides.forEach((slide, i) => {
         slide.classList.remove('active');
@@ -229,7 +227,6 @@
       });
     }
 
-    // Botones siguiente y anterior
     nextBtn.addEventListener('click', () => {
       current = (current + 1) % slides.length;
       updateSlides(current);
@@ -240,7 +237,6 @@
       updateSlides(current);
     });
 
-    // Dots indicadores de navegación
     dots.forEach((dot, i) => {
       dot.addEventListener('click', () => {
         current = i;
@@ -248,7 +244,6 @@
       });
     });
 
-    // Inicio automático del slider
     function startAutoSlide() {
       autoSlide = setInterval(() => {
         current = (current + 1) % slides.length;
@@ -256,7 +251,6 @@
       }, 5000);
     }
 
-    // Pausa del slider al hacer hover
     function stopAutoSlide() {
       clearInterval(autoSlide);
     }
@@ -264,10 +258,10 @@
     document.querySelector('.slider-hero').addEventListener('mouseenter', stopAutoSlide);
     document.querySelector('.slider-hero').addEventListener('mouseleave', startAutoSlide);
 
-    // Inicializar slider
     updateSlides(current);
     startAutoSlide();
   </script>
 
 </body>
 </html>
+
