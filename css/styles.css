@@ -1,30 +1,49 @@
-/* === GENERAL === */
+/* ============================================= */
+/* === ESTILOS GENERALES PARA TODA LA PÁGINA === */
+/* ============================================= */
+
+/* Configuración de scroll suave para toda la página */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Estilos base del cuerpo del documento */
 body {
-  margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  font-size: 18px;
-  line-height: 1.6;
-  color: #333;
-  background-color: #f2f4f8;
-  overflow-x: hidden;
+  margin: 0; /* Elimina márgenes por defecto */
+  font-family: 'Segoe UI', sans-serif; /* Fuente principal */
+  font-size: 18px; /* Tamaño base de fuente */
+  line-height: 1.6; /* Espaciado entre líneas */
+  color: #333; /* Color de texto principal */
+  background-color: #f2f4f8; /* Color de fondo */
+  overflow-x: hidden; /* Evita scroll horizontal */
 }
 
+/* Estilos para encabezados */
 h1, h2, h3, h4 {
-  color: #003366;
-  font-weight: bold;
+  color: #003366; /* Color corporativo azul oscuro */
+  font-weight: bold; /* Negrita para todos los títulos */
 }
 
-h1 { font-size: 2.5rem; }
-h2 { font-size: 2rem; }
-h3 { font-size: 1.4rem; }
-h4 { font-size: 1rem; margin: 10px 0 5px 0; }
+/* Tamaños específicos para cada nivel de encabezado */
+h1 { font-size: 2.5rem; } /* Título principal */
+h2 { font-size: 2rem; }   /* Subtítulos */
+h3 { font-size: 1.4rem; } /* Encabezados secciones */
+h4 {                     /* Encabezados menores */
+  font-size: 1rem; 
+  margin: 10px 0 5px 0; /* Margen superior e inferior */
+}
 
+/* Estilos para enlaces */
 a {
-  text-decoration: none;
-  color: #003366;
+  text-decoration: none; /* Sin subrayado */
+  color: #003366; /* Mismo color corporativo */
 }
 
-/* === HEADER === */
+/* ================================= */
+/* === CABECERA Y MENÚ PRINCIPAL === */
+/* ================================= */
+
+/* Contenedor principal del header */
 header {
   display: flex;
   align-items: center;
@@ -32,28 +51,40 @@ header {
   padding: 15px 30px;
   background: #fff;
   border-bottom: 1px solid #ddd;
-  flex-wrap: wrap;
+  flex-wrap: wrap; /* Permite que los elementos se ajusten en móviles */
 }
 
-.logo img { height: 80px; }
+/* Logo de la empresa */
+.logo img { 
+  height: 80px; /* Altura fija para el logo */
+}
 
+/* Menú de navegación principal */
 .navbar ul {
   display: flex;
   list-style: none;
-  gap: 20px;
+  gap: 20px; /* Espacio entre elementos del menú */
   padding: 0;
   margin: 0;
 }
 
+/* Elementos del menú */
 .navbar a {
   font-weight: bold;
   position: relative;
   z-index: 2;
 }
 
-/* === MENÚ DESPLEGABLE === */
-.navbar li.dropdown { position: relative; }
+/* ================================== */
+/* === MENÚS DESPLEGABLES (DROPDOWN) === */
+/* ================================== */
 
+/* Contenedor de elementos con menú desplegable */
+.navbar li.dropdown { 
+  position: relative; /* Para posicionar el dropdown */
+}
+
+/* Estilo general de los menús desplegables */
 .dropdown-menu {
   display: none;
   opacity: 0;
@@ -75,12 +106,14 @@ header {
   overflow-y: auto;
 }
 
+/* Mostrar dropdown al hacer hover */
 .navbar li.dropdown:hover .dropdown-menu {
   display: flex;
   opacity: 1;
   pointer-events: auto;
 }
-/* === MENÚ CATÁLOGO === */
+
+/* Estilo específico para el menú del catálogo */
 .navbar li.dropdown .menu-catalogo {
   min-width: 280px;
   padding: 20px;
@@ -92,6 +125,7 @@ header {
   gap: 10px;
 }
 
+/* Elementos del menú del catálogo */
 .navbar li.dropdown .menu-catalogo a {
   padding: 12px 20px;
   border-radius: 8px;
@@ -105,16 +139,22 @@ header {
   transition: background 0.3s ease;
 }
 
+/* Efecto hover para elementos del menú catálogo */
 .navbar li.dropdown .menu-catalogo a:hover {
   color: #002244;
 }
 
+/* Iconos del menú catálogo */
 .navbar li.dropdown .menu-catalogo i {
   font-size: 1.3rem;
   color: #002244;
 }
 
-/* === MENÚ CATEGORÍAS VERTICAL === */
+/* ================================== */
+/* === LISTA DE CATEGORÍAS (MEGAMENÚ) === */
+/* ================================== */
+
+/* Contenedor de la lista de categorías */
 .lista-categorias {
   list-style: none;
   padding: 0;
@@ -124,18 +164,20 @@ header {
   flex-direction: column;
 }
 
+/* Lista interna de categorías */
 .lista-categorias ul {
   display: flex;
   flex-direction: column;
 }
 
+/* Título de la sección de categorías */
 .lista-categorias h4 {
-  margin: 20px 30px 20px 30px; /* top, right, bottom, left */
+  margin: 20px 30px 20px 30px;
   font-size: 1rem;
   color: #002244;
 }
 
-
+/* Elementos individuales de categorías */
 .lista-categorias li {
   display: flex;
   align-items: center;
@@ -147,10 +189,12 @@ header {
   width: 100%;
 }
 
+/* Efecto hover para categorías */
 .lista-categorias li:hover {
   background-color: #f0f4fa;
 }
 
+/* Iconos e imágenes en categorías */
 .lista-categorias img,
 .lista-categorias i {
   width: 22px;
@@ -159,13 +203,18 @@ header {
   color: #002244;
 }
 
+/* Botón "Ver todos" */
 .ver-todo {
   text-align: center;
   margin-top: 10px;
   width: 100%;
 }
 
-/* === MARCAS DESTACADAS === */
+/* =============================== */
+/* === MARCAS DESTACADAS (MEGAMENÚ) === */
+/* =============================== */
+
+/* Contenedor de marcas destacadas */
 .marcas-destacadas {
   flex: 1;
   display: flex;
@@ -175,12 +224,14 @@ header {
   padding-top: 10px;
 }
 
+/* Título de marcas destacadas */
 .marcas-destacadas h4 {
   font-size: 1rem;
   color: #002244;
-  margin: 15px 5px 5px 50px; /* top, right, bottom, left */
+  margin: 15px 5px 5px 50px;
 }
 
+/* Items individuales de marca */
 .marca-item {
   display: flex;
   align-items: center;
@@ -189,10 +240,12 @@ header {
   color: #002244;
 }
 
+/* Imágenes de marcas sin bordes redondeados */
 .marca-item img.sin-redondear {
   border-radius: 0 !important;
 }
 
+/* Estilo general de imágenes de marca */
 .marca-item img {
   width: 150px;
   height: auto;
@@ -203,13 +256,18 @@ header {
   object-fit: contain;
 }
 
-/* === BUSCADOR === */
+/* ======================= */
+/* === BARRA DE BÚSQUEDA === */
+/* ======================= */
+
+/* Contenedor del buscador */
 .search-container {
   display: flex;
   align-items: center;
   gap: 12px;
 }
 
+/* Campo de entrada del buscador */
 .search-container input {
   padding: 12px 18px;
   font-size: 1rem;
@@ -218,6 +276,7 @@ header {
   width: 270px;
 }
 
+/* Bandera (selector de idioma) */
 .flag {
   width: 30px;
   height: 30px;
@@ -226,7 +285,11 @@ header {
   border: 1px solid #ccc;
 }
 
-/* === BOTÓN === */
+/* ==================== */
+/* === BOTONES PRINCIPALES === */
+/* ==================== */
+
+/* Estilo base para botones primarios */
 .btn-primary {
   background-color: #0056b3;
   color: white;
@@ -238,16 +301,65 @@ header {
   transition: background-color 0.3s ease;
 }
 
+/* Efecto hover para botones */
 .btn-primary:hover {
   background-color: #003366;
 }
 
+/* ========================= */
+/* === SECCIÓN DE PRODUCTOS === */
+/* ========================= */
 
-.btn-primary:hover {
-  background-color: #003366;
+/* Contenedor principal de la página de productos */
+.main-productos {
+  padding: 30px 5%; 
+  background-color: #f7f9fc;
 }
 
-/* === SLIDER HERO === */
+/* Grid de productos */
+.productos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
+  padding: 30px 0;
+}
+
+/* Tarjeta de producto individual */
+.producto {
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Imagen del producto */
+.producto img {
+  width: 100%;
+  height: auto;
+}
+
+/* Título del producto */
+.producto h4 {
+  margin: 10px 12px 4px;
+  color: #003366;
+  font-size: 1rem;
+}
+
+/* Descripción del producto */
+.producto p {
+  margin: 0 12px 12px;
+  font-size: 0.85rem;
+  color: #555;
+}
+
+/* ================================== */
+/* === COMPONENTE SLIDER (CARRUSEL) === */
+/* ================================== */
+
+/* Contenedor principal del slider */
 .slider-hero {
   position: relative;
   width: 100%;
@@ -257,6 +369,7 @@ header {
   background-color: #eee;
 }
 
+/* Contenedor de imágenes del slider */
 .slider-images {
   height: 100%;
   width: 100%;
@@ -265,6 +378,7 @@ header {
   left: 0;
 }
 
+/* Imágenes del slider */
 .slider-images img {
   width: 100%;
   height: 100%;
@@ -276,13 +390,14 @@ header {
   transition: opacity 0.5s ease-in-out;
 }
 
+/* Clase para imagen activa en el slider */
 .slider-images img.active {
   display: block;
   opacity: 1;
   transform: scale(1.02);
 }
 
-/* === SLIDER TEXTO === */
+/* Overlay con texto sobre el slider */
 .slider-overlay {
   position: relative;
   z-index: 2;
@@ -295,6 +410,7 @@ header {
   box-sizing: border-box;
 }
 
+/* Efecto de degradado sobre el slider */
 .slider-overlay::before {
   content: "";
   position: absolute;
@@ -310,17 +426,20 @@ header {
   z-index: 1;
 }
 
+/* Contenedor de texto en el slider */
 .slider-text {
   max-width: 600px;
   position: relative;
   z-index: 2;
 }
 
+/* Título en el slider */
 .slider-text h2 {
   font-size: 2.5rem;
   margin-bottom: 10px;
 }
 
+/* Subtítulo en el slider */
 .tagline {
   font-size: 1.2rem;
   font-weight: 600;
@@ -328,11 +447,12 @@ header {
   margin-bottom: 24px;
 }
 
+/* Párrafos generales */
 p {
   font-size: 1.05rem;
 }
 
-/* === FLECHAS SLIDER === */
+/* Flechas de navegación del slider */
 .slider-btn {
   position: absolute;
   top: 50%;
@@ -346,19 +466,22 @@ p {
   padding: 10px;
 }
 
+/* Posición flecha anterior */
 .slider-btn.prev {
   left: 10px;
 }
 
+/* Posición flecha siguiente */
 .slider-btn.next {
   right: 10px;
 }
 
+/* Efecto hover para flechas */
 .slider-btn:hover {
   color: #0056b3;
 }
 
-/* === INDICADORES === */
+/* Indicadores/puntos del slider */
 .slider-dots {
   position: absolute;
   bottom: 20px;
@@ -369,6 +492,7 @@ p {
   z-index: 4;
 }
 
+/* Puntos inactivos */
 .dot {
   width: 10px;
   height: 10px;
@@ -377,11 +501,16 @@ p {
   cursor: pointer;
 }
 
+/* Punto activo */
 .active-dot {
   background: #0056b3;
 }
 
-/* === FEATURES === */
+/* ============================ */
+/* === SECCIÓN DE CARACTERÍSTICAS === */
+/* ============================ */
+
+/* Contenedor de características */
 .features {
   display: flex;
   justify-content: center;
@@ -393,6 +522,7 @@ p {
   border-bottom: 1px solid #ccc;
 }
 
+/* Items individuales de características */
 .feature {
   flex: 1 1 200px;
   padding: 20px;
@@ -401,77 +531,106 @@ p {
   border-left: 1px solid #ccc;
 }
 
+/* Eliminar borde izquierdo del primer elemento */
 .feature:first-child {
   border-left: none;
 }
 
+/* Título de cada característica */
 .feature h3 {
   font-size: 1.3rem;
   margin-bottom: 8px;
   color: #003366;
 }
 
+/* Texto de cada característica */
 .feature p {
   color: #555;
   font-size: 1rem;
 }
 
-/* === PRODUCTOS MÁS VENDIDOS === */
+/* ================================= */
+/* === SECCIÓN PRODUCTOS DESTACADOS === */
+/* ================================= */
+
+/* Contenedor de productos destacados */
 .mas-vendidos {
   padding: 60px 5%;
   background-color: #f7f9fc;
   text-align: center;
 }
 
+/* Título de la sección */
 .mas-vendidos h2 {
   font-size: 2rem;
   margin-bottom: 40px;
 }
 
+/* Grid de productos destacados */
 .productos-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* 5 columnas fijas */
+  gap: 15px;
+  padding: 30px 0;
+  width: 100%;
+  max-width: 1400px; /* Ancho máximo para contener 5 columnas */
+  margin: 0 auto; /* Centrado */
 }
 
+/* Tarjeta de producto destacado */
 .producto {
-  background: #ffffff;
-  border-radius: 15px;
-  padding: 20px;
-  max-width: 220px;
-  text-align: center;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.08);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border: 1px solid #e0e0e0;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  min-width: 0; /* Evita problemas de desbordamiento */
 }
 
+/* Efecto hover para productos destacados */
 .producto:hover {
   transform: translateY(-8px);
   box-shadow: 0 8px 16px rgba(0,0,0,0.12);
 }
 
+/* Imagen de producto destacado */
 .producto img {
   width: 100%;
-  height: 160px;
-  object-fit: cover;
+  height: 180px; /* Altura fija para imágenes */
+  object-fit: cover;/* Mantiene relación de aspecto */
   border-radius: 10px;
   margin-bottom: 15px;
+  width: 100%;
 }
 
+/* Título de producto destacado */
 .producto h4 {
+  margin: 10px 12px 4px;
   color: #003366;
-  font-size: 1.1rem;
-  margin-bottom: 8px;
-}
-
-.producto p {
-  color: #0056b3;
-  font-weight: bold;
   font-size: 1rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-/* === SITE LINKS === */
+/* Texto de cada característica */
+.producto p {
+  margin: 0 12px 12px;
+  font-size: 0.85rem;
+  color: #555;
+  line-height: 1.4em;
+  max-height: 2.8em;
+  overflow: hidden;
+  position: relative;
+}
+
+/* ============================== */
+/* === ENLACES RÁPIDOS DEL SITIO === */
+/* ============================== */
+
+/* Contenedor de enlaces rápidos */
 .site-links {
   padding: 40px 20px;
   border-top: 1px solid #ccc;
@@ -479,6 +638,7 @@ p {
   background-color: #fff;
 }
 
+/* Contenedor interno para alineación */
 .site-links-container {
   max-width: 1400px;
   margin: 0 auto;
@@ -487,25 +647,32 @@ p {
   gap: 300px;
 }
 
+/* Títulos de secciones de enlaces */
 .site-links h4 {
   color: #0056b3;
   font-size: 16px;
   margin-bottom: 10px;
 }
 
+/* Listas de enlaces */
 .site-links ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
+/* Items individuales de enlaces */
 .site-links li {
   margin-bottom: 15px;
   color: #333;
   font-size: 14px;
 }
 
-/* === FOOTER === */
+/* =================== */
+/* === PIE DE PÁGINA === */
+/* =================== */
+
+/* Estilos del footer */
 footer {
   background-color: #003366;
   color: white;
@@ -513,8 +680,37 @@ footer {
   padding: 20px;
 }
 
-/* === RESPONSIVE === */
-@media (max-width: 768px) {
+/* Estilos para páginas de categoría */
+.titulo-categoria {
+  text-align: center;
+  color: #003366;
+  margin: 30px 0;
+  font-size: 2.5rem;
+}
+
+.categoria-productos {
+  margin-bottom: 50px;
+  padding: 20px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.btn-ver-todos {
+  display: block;
+  text-align: center;
+  margin: 20px auto;
+  padding: 10px 20px;
+  background: #0056b3;
+  color: white;
+  border-radius: 5px;
+  width: fit-content;
+}
+
+/* ============================== */
+/* === MEDIA QUERIES (RESPONSIVE) === */
+/* ============================== */
+
+@media (max-width: 1200px) {
+  /* Ajustes para slider en móviles */
   .slider-overlay {
     flex-direction: column;
     justify-content: center;
@@ -522,6 +718,7 @@ footer {
     padding: 20px;
   }
 
+  /* Tamaño de texto en móviles */
   .slider-text h2 {
     font-size: 2rem;
   }
@@ -530,29 +727,37 @@ footer {
     font-size: 1rem;
   }
 
+  /* Ajustes para productos en móviles */
   .producto {
     max-width: 90%;
+    min-width: 220px; /* Ancho mínimo para cada producto */
   }
 
   .productos-grid {
     gap: 20px;
+    grid-template-columns: repeat(5, 1fr); /* Mantener 5 columnas */
+    overflow-x: auto; /* Permite scroll horizontal si es necesario */
   }
 
+  /* Tamaño de flechas en móviles */
   .slider-btn {
     font-size: 1.5rem;
   }
 
+  /* Ajuste de aspecto del slider */
   .slider-hero {
     aspect-ratio: auto;
     height: auto;
   }
 
+  /* Ajustes para enlaces del sitio */
   .site-links-container {
     flex-direction: column;
     gap: 40px;
     align-items: center;
   }
 
+  /* Menú desplegable en móviles */
   .dropdown-menu {
     position: static;
     opacity: 1 !important;

@@ -7,40 +7,6 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link rel="stylesheet" href="css/styles.css" />
   <link rel="icon" href="favicon.ico" />
-  <style>
-    html {
-      scroll-behavior: smooth;
-    }
-    .productos-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 15px;
-      padding: 30px 0;
-    }
-    .producto {
-      background: #fff;
-      border-radius: 10px;
-      overflow: hidden;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.08);
-      text-align: left;
-      display: flex;
-      flex-direction: column;
-    }
-    .producto img {
-      width: 100%;
-      height: auto;
-    }
-    .producto h4 {
-      margin: 10px 12px 4px;
-      color: #003366;
-      font-size: 1rem;
-    }
-    .producto p {
-      margin: 0 12px 12px;
-      font-size: 0.85rem;
-      color: #555;
-    }
-  </style>
 </head>
 <body>
   <header>
@@ -53,7 +19,7 @@
       <ul>
         <li><a href="index.html">Inicio</a></li>
         <li class="dropdown">
-          <a href="productos.html">Productos</a>
+          <a href="productos.html" aria-haspopup="true" aria-expanded="false">Productos</a>
           <ul class="dropdown-menu mega-menu">
             <div class="lista-categorias">
               <h4>Categorías</h4>
@@ -62,8 +28,7 @@
                 <li><a href="productos.html#bandejas"><i class="fas fa-layer-group"></i> Bandejas</a></li>
                 <li><a href="productos.html#copas"><i class="fas fa-wine-glass-alt"></i> Copas</a></li>
                 <li><a href="productos.html#vasos"><i class="fas fa-glass-water"></i> Vasos</a></li>
-                <li><a href="productos.html#portacomidas"><i class="fas fa-box"></i> Portacomidas</a></li>
-                <li><a href="productos.html#pitillos"><i class="fas fa-grip-lines-vertical"></i> Pitillos y Palillos</a></li>
+                <li><a href="productos.html#pitillos-palillos"><i class="fas fa-grip-lines-vertical"></i> Pitillos y Palillos</a></li>
                 <li><a href="productos.html#platos"><i class="fas fa-utensil-spoon"></i> Platos</a></li>
                 <li><a href="productos.html#frascos"><i class="fas fa-flask"></i> Frascos</a></li>
                 <li><a href="productos.html#bolsas"><i class="fas fa-shopping-bag"></i> Bolsas</a></li>
@@ -104,92 +69,97 @@
     </div>
   </header>
 
-  <main style="padding: 30px 5%; background-color: #f7f9fc;">
-    <div class="productos-grid">
-      <!-- Productos anteriores aquí... -->
-
+  <main class="main-productos">
+    <section class="productos-grid">
+      <!-- Todos los productos agrupados -->
+      <!-- Contenedores y empaques -->
       <div class="producto"><img src="img/Contenedor SelloPlus.png" alt="Contenedor SelloPlus"><h4>Contenedor SelloPlus</h4><p>Sellado seguro para alimentos preparados.</p></div>
       <div class="producto"><img src="img/Contenedor triangular.png" alt="Contenedor Triangular"><h4>Contenedor Triangular</h4><p>Diseño práctico para porciones individuales.</p></div>
       <div class="producto"><img src="img/contenedores deli.png" alt="Contenedores Deli"><h4>Contenedores Deli</h4><p>Transparencia ideal para deli y frutas.</p></div>
       <div class="producto"><img src="img/Contenedores espumados.png" alt="Contenedores Espumados"><h4>Contenedores Espumados</h4><p>Livianos y aislantes para comidas rápidas.</p></div>
-      <div class="producto"><img src="img/Copa tipo flauta.png" alt="Copa tipo Flauta"><h4>Copa tipo Flauta</h4><p>Elegancia para brindis y celebraciones.</p></div>
-      <div class="producto"><img src="img/Copa vino.png" alt="Copa de Vino"><h4>Copa de Vino</h4><p>Perfecta para eventos formales.</p></div>
-      <div class="producto"><img src="img/Copas venecianas.png" alt="Copas Venecianas"><h4>Copas Venecianas</h4><p>Diseño clásico para bebidas frías.</p></div>
-      <div class="producto"><img src="img/cubiertos desechables.jpg" alt="Cubiertos Desechables"><h4>Cubiertos Desechables</h4><p>Prácticos para eventos o domicilios.</p></div>
-      <div class="producto"><img src="img/Cucharas desechables.png" alt="Cucharas Desechables"><h4>Cucharas Desechables</h4><p>Ideales para sopas o postres.</p></div>
-      <div class="producto"><img src="img/Cuchillos desechables.png" alt="Cuchillos Desechables"><h4>Cuchillos Desechables</h4><p>Resistentes y ligeros para corte.</p></div>
-      <div class="producto"><img src="img/Domo perforado.png" alt="Domo Perforado"><h4>Domo Perforado</h4><p>Ventilación ideal para postres.</p></div>
-      <div class="producto"><img src="img/Domo sin perforacion.png" alt="Domo Sin Perforación"><h4>Domo Sin Perforación</h4><p>Protección hermética para bebidas.</p></div>
-      <div class="producto"><img src="img/Frasco plastico redondo.png" alt="Frasco Plástico Redondo"><h4>Frasco Plástico Redondo</h4><p>Versátil para líquidos o sólidos.</p></div>
-      <div class="producto"><img src="img/Moldes de aluminio.png" alt="Moldes de Aluminio"><h4>Moldes de Aluminio</h4><p>Perfectos para hornear y almacenar.</p></div>
       <div class="producto"><img src="img/Plato espumado hondo.png" alt="Plato Espumado Hondo"><h4>Plato Espumado Hondo</h4><p>Ideal para sopas y platos calientes.</p></div>
       <div class="producto"><img src="img/Plato espumado.png" alt="Plato Espumado"><h4>Plato Espumado</h4><p>Ligero y económico para eventos.</p></div>
       <div class="producto"><img src="img/Porta hamburguesas.png" alt="Porta Hamburguesas"><h4>Porta Hamburguesas</h4><p>Empaque práctico para domicilios.</p></div>
       <div class="producto"><img src="img/Porta perros.png" alt="Porta Perros"><h4>Porta Perros</h4><p>Diseño seguro para hot dogs.</p></div>
       <div class="producto"><img src="img/Portacomidas espumado.png" alt="Portacomidas Espumado"><h4>Portacomidas Espumado</h4><p>Contenedor térmico para comidas completas.</p></div>
-      <div class="producto"><img src="img/papel aluminio.png" alt="Papel Aluminio"><h4>Papel Aluminio</h4><p>Ideal para envolver o cocinar.</p></div>
-      <div class="producto"><img src="img/Vinipel para alimentos.png" alt="Vinipel para Alimentos"><h4>Vinipel para Alimentos</h4><p>Conservación de frescura garantizada.</p></div>
-      <div class="producto"><img src="img/Escoba w color.png" alt="Escoba w color"><h4>Escoba W Color</h4><p>Resistente y colorida para barrido general.</p></div>
-      <div class="producto"><img src="img/Escoba w suprema.png" alt="Escoba w suprema"><h4>Escoba W Suprema</h4><p>Cerdas duraderas, ideal para exteriores.</p></div>
-      <div class="producto"><img src="img/Cepillo anatomico.png" alt="Cepillo anatómico"><h4>Cepillo Anatómico</h4><p>Diseño ergonómico para mejor agarre.</p></div>
-      <div class="producto"><img src="img/Cepillo multi hogar.png" alt="Cepillo multi hogar"><h4>Cepillo Multi Hogar</h4><p>Versátil para limpieza en toda la casa.</p></div>
-      <div class="producto"><img src="img/Cinta transparente.png" alt="Cinta Transparente"><h4>Cinta Transparente</h4><p>Adhesión fuerte y presentación limpia.</p></div>
-      <div class="producto"><img src="img/Lamina parafinada.png" alt="Lámina Parafinada"><h4>Lámina Parafinada</h4><p>Protección para alimentos o empaques.</p></div>
-      <div class="producto"><img src="img/Mecheras.png" alt="Mecheras"><h4>Mecheras</h4><p>Prácticas para prender estufas y fogones.</p></div>
-      <div class="producto"><img src="img/Mezclador madera.png" alt="Mezclador de madera"><h4>Mezclador de Madera</h4><p>Ideal para bebidas calientes.</p></div>
-      <div class="producto"><img src="img/Mezclador plastico.png" alt="Mezclador plástico"><h4>Mezclador Plástico</h4><p>Ligero, funcional y desechable.</p></div>
+      <div class="producto"><img src="img/Portacomidas espumado1.png" alt="Portacomidas Espumado 1"><h4>Portacomidas Espumado L-2, 2 Div</h4><p>Versión alternativa para porciones individuales.</p></div>
       <div class="producto"><img src="img/MiniPack.png" alt="MiniPack"><h4>MiniPack</h4><p>Empaque compacto para alimentos.</p></div>
-      <div class="producto"><img src="img/Nevera termica.png" alt="Nevera Térmica"><h4>Nevera Térmica</h4><p>Mantiene tus alimentos frescos por más tiempo.</p></div>
-      <div class="producto"><img src="img/Palillo de madera.png" alt="Palillo de madera"><h4>Palillo de Madera</h4><p>Natural y funcional para múltiples usos.</p></div>
+      <div class="producto"><img src="img/Bandejas espumadas.png" alt="Bandejas Espumadas"><h4>Bandejas Espumadas</h4><p>Ideales para exhibición de carnes y frutas.</p></div>
+      <!-- Vasos y copas -->
+      <div class="producto"><img src="img/Copa tipo flauta.png" alt="Copa tipo Flauta"><h4>Copa tipo Flauta</h4><p>Elegancia para brindis y celebraciones.</p></div>
+      <div class="producto"><img src="img/Copa vino.png" alt="Copa de Vino"><h4>Copa de Vino</h4><p>Perfecta para eventos formales.</p></div>
+      <div class="producto"><img src="img/Copas venecianas.png" alt="Copas Venecianas"><h4>Copas Venecianas</h4><p>Diseño clásico para bebidas frías.</p></div>
+      <div class="producto"><img src="img/Vasos Tami.png" alt="Vasos Tami"><h4>Vasos Tami</h4><p>Prácticos y resistentes para uso diario.</p></div>
+      <div class="producto"><img src="img/Vasos resq.png" alt="Vasos Resq"><h4>Vasos Resq</h4><p>Alta transparencia y resistencia.</p></div>
+      <div class="producto"><img src="img/Vasos espumados.png" alt="Vasos Espumados"><h4>Vasos Espumados</h4><p>Aislantes térmicos y livianos.</p></div>
+      <div class="producto"><img src="img/Vaso 3 onz.png" alt="Vaso 3 onz"><h4>Vaso 3 onz</h4><p>Tamaño pequeño ideal para degustaciones.</p></div>
+      <div class="producto"><img src="img/Vaso 5 onz.png" alt="Vaso 5 onz"><h4>Vaso 5 onz</h4><p>Compacto y práctico para líquidos fríos.</p></div>
+      <div class="producto"><img src="img/Vaso 7 onz.png" alt="Vaso 7 onz"><h4>Vaso 7 onz</h4><p>Uso general en bebidas rápidas.</p></div>
+      <div class="producto"><img src="img/Vaso 9 onz.png" alt="Vaso 9 onz"><h4>Vaso 9 onz</h4><p>Capacidad media para múltiples bebidas.</p></div>
+      <div class="producto"><img src="img/Vaso tinto.png" alt="Vaso Tinto"><h4>Vaso Tinto</h4><p>Diseño estilizado para bebidas calientes.</p></div>
+      <div class="producto"><img src="img/Vasos plasticos en color.png" alt="Vasos Plásticos Color"><h4>Vasos Plásticos Color</h4><p>Presentación llamativa y resistente.</p></div>
+      <div class="producto"><img src="img/Vasos plasticos en opal.png" alt="Vasos Plásticos Opal"><h4>Vasos Plásticos Opal</h4><p>Elegancia con resistencia reforzada.</p></div>
+      <!-- Cubiertos y tapas -->
+      <div class="producto"><img src="img/Cubiertos desechables.jpg" alt="Cubiertos Desechables"><h4>Cubiertos Desechables</h4><p>Prácticos para eventos o domicilios.</p></div>
+      <div class="producto"><img src="img/Cucharas desechables.png" alt="Cucharas Desechables"><h4>Cucharas Desechables</h4><p>Ideales para sopas o postres.</p></div>
+      <div class="producto"><img src="img/Cuchillos desechables.png" alt="Cuchillos Desechables"><h4>Cuchillos Desechables</h4><p>Resistentes y ligeros para corte.</p></div>
+      <div class="producto"><img src="img/Tenedores desechables.png" alt="Tenedores Desechables"><h4>Tenedores Desechables</h4><p>Útiles en picnics y celebraciones.</p></div>
+      <div class="producto"><img src="img/Palillo de madera.png" alt="Palillo de Madera"><h4>Palillo de Madera</h4><p>Natural y funcional para múltiples usos.</p></div>
       <div class="producto"><img src="img/Palo de paleta.png" alt="Palo de Paleta"><h4>Palo de Paleta</h4><p>Perfecto para paletas y helados artesanales.</p></div>
       <div class="producto"><img src="img/Pincho.png" alt="Pincho"><h4>Pincho</h4><p>Ideal para asados y comidas rápidas.</p></div>
       <div class="producto"><img src="img/Pitillo eco plastico.png" alt="Pitillo Eco Plástico"><h4>Pitillo Eco Plástico</h4><p>Alternativa ecológica y práctica.</p></div>
       <div class="producto"><img src="img/Pitillos biodegradables.png" alt="Pitillos Biodegradables"><h4>Pitillos Biodegradables</h4><p>Cuida el ambiente sin perder comodidad.</p></div>
-      <div class="producto"><img src="img/Pegante instantaneo.png" alt="Pegante Instantáneo"><h4>Pegante Instantáneo</h4><p>Fijación rápida y efectiva en segundos.</p></div>
-      <div class="producto"><img src="img/Recogedor con banda.png" alt="Recogedor con banda"><h4>Recogedor con Banda</h4><p>Reforzado para mejor recolección.</p></div>
-      <div class="producto"><img src="img/Recogedor con plus.png" alt="Recogedor con plus"><h4>Recogedor Plus</h4><p>Diseño optimizado y liviano.</p></div>
-      <div class="producto"><img src="img/Recogedor sin banda.png" alt="Recogedor sin banda"><h4>Recogedor sin Banda</h4><p>Básico y funcional para limpieza rápida.</p></div>
+      <div class="producto"><img src="img/Mezclador madera.png" alt="Mezclador de Madera"><h4>Mezclador de Madera</h4><p>Ideal para bebidas calientes.</p></div>
+      <div class="producto"><img src="img/Mezclador plastico.png" alt="Mezclador Plástico"><h4>Mezclador Plástico</h4><p>Ligero, funcional y desechable.</p></div>
+      <div class="producto"><img src="img/Domo perforado.png" alt="Domo Perforado"><h4>Domo Perforado</h4><p>Ventilación ideal para postres.</p></div>
+      <div class="producto"><img src="img/Domo sin perforacion.png" alt="Domo Sin Perforación"><h4>Domo Sin Perforación</h4><p>Protección hermética para bebidas.</p></div>
+      <div class="producto"><img src="img/Tapa para frasco cuadrado.png" alt="Tapa Frasco Cuadrado"><h4>Tapa Frasco Cuadrado</h4><p>Cierre seguro y duradero.</p></div>
+      <div class="producto"><img src="img/Tapa sin perforacion.png" alt="Tapa sin Perforación"><h4>Tapa sin Perforación</h4><p>Perfecta para vasos o frascos herméticos.</p></div>
+      <div class="producto"><img src="img/Tapa perforada.png" alt="Tapa Perforada"><h4>Tapa Perforada</h4><p>Previene derrames y mantiene el contenido fresco.</p></div>
+      <div class="producto"><img src="img/Frasco plastico redondo.png" alt="Frasco Plástico Redondo"><h4>Frasco Plástico Redondo</h4><p>Versátil para líquidos o sólidos.</p></div>
+      <div class="producto"><img src="img/Moldes de aluminio.png" alt="Moldes de Aluminio"><h4>Moldes de Aluminio</h4><p>Perfectos para hornear y almacenar.</p></div>
+      <div class="producto"><img src="img/papel aluminio.png" alt="Papel Aluminio"><h4>Papel Aluminio</h4><p>Ideal para envolver o cocinar.</p></div>
+      <div class="producto"><img src="img/Vinipel para alimentos.png" alt="Vinipel para Alimentos"><h4>Vinipel para Alimentos</h4><p>Conservación de frescura garantizada.</p></div>
+      <div class="producto"><img src="img/Vinipel strech.png" alt="Vinipel Stretch"><h4>Vinipel Stretch</h4><p>Adherente y versátil para envolver.</p></div>
+      <div class="producto"><img src="img/Lamina parafinada.png" alt="Lámina Parafinada"><h4>Lámina Parafinada</h4><p>Protección para alimentos o empaques.</p></div>
+      
+      <!-- Bolsas y servilletas -->
       <div class="producto"><img src="img/Bolsa aluminio.png" alt="Bolsa de Aluminio"><h4>Bolsa de Aluminio</h4><p>Durabilidad y resistencia para alimentos calientes o fríos.</p></div>
       <div class="producto"><img src="img/Bolsa basura.png" alt="Bolsa de Basura"><h4>Bolsa de Basura</h4><p>Gran capacidad y resistencia para desechos domésticos.</p></div>
       <div class="producto"><img src="img/Bolsa biodegradable.png" alt="Bolsa Biodegradable"><h4>Bolsa Biodegradable</h4><p>Ecológica y fuerte, ideal para comercios conscientes.</p></div>
       <div class="producto"><img src="img/Bolsa papel.png" alt="Bolsa de Papel"><h4>Bolsa de Papel</h4><p>Prácticas y reutilizables para panaderías o tiendas.</p></div>
-      <div class="producto"><img src="img/Servilleta arbora.png" alt="Servilleta Arbora"><h4>Servilleta Arbora</h4><p>Calidad y suavidad garantizadas.</p></div>
-      <div class="producto"><img src="img/Servilleta familia.png" alt="Servilleta Familia"><h4>Servilleta Familia</h4><p>Absorbentes para uso diario.</p></div>
-      <div class="producto"><img src="img/Servilleta favorita.png" alt="Servilleta Favorita"><h4>Servilleta Favorita</h4><p>Diseño económico y versátil.</p></div>
-      <div class="producto"><img src="img/Tapa para frasco cuadrado.png" alt="Tapa Frasco Cuadrado"><h4>Tapa Frasco Cuadrado</h4><p>Cierre seguro y duradero.</p></div>
-      <div class="producto"><img src="img/Tapa sin perforacion.png" alt="Tapa sin Perforación"><h4>Tapa sin Perforación</h4><p>Perfecta para vasos o frascos herméticos.</p></div>
-      <div class="producto"><img src="img/Tapa sin preforacion.png" alt="Tapa sin Preforación"><h4>Tapa sin Preforación</h4><p>Previene derrames y mantiene el contenido fresco.</p></div>
-      <div class="producto"><img src="img/Tenedores desechables.png" alt="Tenedores Desechables"><h4>Tenedores Desechables</h4><p>Útiles en picnics y celebraciones.</p></div>
-      <div class="producto"><img src="img/Trapeador algodon.png" alt="Trapeador de Algodón"><h4>Trapeador de Algodón</h4><p>Alta absorción para limpieza profunda.</p></div>
-      <div class="producto"><img src="img/Vaso 3 onz.png" alt="Vaso 3 onz"><h4>Vaso 3 onz</h4><p>Tamaño pequeño ideal para degustaciones.</p></div>
-      <div class="producto"><img src="img/Vaso 5 onz.png" alt="Vaso 5 onz"><h4>Vaso 5 onz</h4><p>Compacto y práctico para líquidos fríos.</p></div>
-      <div class="producto"><img src="img/Vaso 7 onz.png" alt="Vaso 7 onz"><h4>Vaso 7 onz</h4><p>Uso general en bebidas rápidas.</p></div>
-      <div class="producto"><img src="img/Vaso tinto.png" alt="Vaso Tinto"><h4>Vaso Tinto</h4><p>Diseño estilizado para bebidas calientes.</p></div>
-      <div class="producto"><img src="img/Vasos plasticos en color.png" alt="Vasos Plásticos Color"><h4>Vasos Plásticos Color</h4><p>Presentación llamativa y resistente.</p></div>
-      <div class="producto"><img src="img/Vasos plasticos en opal.png" alt="Vasos Plásticos Opal"><h4>Vasos Plásticos Opal</h4><p>Elegancia con resistencia reforzada.</p></div>
-      <div class="producto"><img src="img/Vinipel strech.png" alt="Vinipel Stretch"><h4>Vinipel Stretch</h4><p>Adherente y versátil para envolver.</p></div>
-      <div class="producto"><img src="img/Bandejas espumadas.png" alt="Bandejas Espumadas"><h4>Bandejas Espumadas</h4><p>Ideales para exhibición de carnes y frutas.</p></div>
       <div class="producto"><img src="img/Bolsa hermetica.png" alt="Bolsa Hermética"><h4>Bolsa Hermética</h4><p>Con cierre seguro para conservar alimentos.</p></div>
       <div class="producto"><img src="img/Bolsa para hielo.png" alt="Bolsa para Hielo"><h4>Bolsa para Hielo</h4><p>Resistentes al congelamiento y al peso.</p></div>
       <div class="producto"><img src="img/Bolsa propileno.png" alt="Bolsa de Propileno"><h4>Bolsa de Propileno</h4><p>Transparente y durable para múltiples usos.</p></div>
       <div class="producto"><img src="img/Bolsa transparente.png" alt="Bolsa Transparente"><h4>Bolsa Transparente</h4><p>Visibilidad total para productos en venta.</p></div>
-      <div class="producto"><img src="img/Esponja sabra oro plata.png" alt="Esponja Sabra Oro Plata"><h4>Esponja Sabra Oro/Plata</h4><p>Efectiva para limpieza exigente de cocina.</p></div>
-      <div class="producto"><img src="img/Esponja.png" alt="Esponja"><h4>Esponja</h4><p>Multiuso, ideal para la limpieza del hogar.</p></div>
-      <div class="producto"><img src="img/guantes de aseo domestico.png" alt="Guantes de Aseo"><h4>Guantes de Aseo</h4><p>Protección y comodidad para limpieza doméstica.</p></div>
+      <div class="producto"><img src="img/Servilleta arbora.png" alt="Servilleta Arbora"><h4>Servilleta Arbora</h4><p>Calidad y suavidad garantizadas.</p></div>
+      <div class="producto"><img src="img/Servilleta familia.png" alt="Servilleta Familia"><h4>Servilleta Familia</h4><p>Absorbentes para uso diario.</p></div>
+      <div class="producto"><img src="img/Servilleta favorita.png" alt="Servilleta Favorita"><h4>Servilleta Favorita</h4><p>Diseño económico y versátil.</p></div>
       <div class="producto"><img src="img/Servilleta mia.png" alt="Servilleta Mía"><h4>Servilleta Mía</h4><p>Suaves, perfectas para el día a día.</p></div>
       <div class="producto"><img src="img/Servilleta nube.png" alt="Servilleta Nube"><h4>Servilleta Nube</h4><p>Textura delicada, excelente absorción.</p></div>
       <div class="producto"><img src="img/Servilleta popular.png" alt="Servilleta Popular"><h4>Servilleta Popular</h4><p>Económicas para uso general.</p></div>
+      <!-- Limpieza y hogar -->
+      <div class="producto"><img src="img/Nevera termica.png" alt="Nevera Térmica"><h4>Nevera Térmica</h4><p>Mantiene tus alimentos frescos por más tiempo.</p></div>
+      <div class="producto"><img src="img/Escoba w color.png" alt="Escoba W Color"><h4>Escoba W Color</h4><p>Resistente y colorida para barrido general.</p></div>
+      <div class="producto"><img src="img/Escoba w suprema.png" alt="Escoba W Suprema"><h4>Escoba W Suprema</h4><p>Cerdas duraderas, ideal para exteriores.</p></div>
+      <div class="producto"><img src="img/Escoba Danna.png" alt="Escoba Danna"><h4>Escoba Danna</h4><p>Cerdas fuertes y diseño ergonómico.</p></div>
+      <div class="producto"><img src="img/Cepillo planchita.png" alt="Cepillo Planchita"><h4>Cepillo Planchita</h4><p>Compacto para detalles difíciles.</p></div>
+      <div class="producto"><img src="img/Cepillo anatomico.png" alt="Cepillo Anatómico"><h4>Cepillo Anatómico</h4><p>Diseño ergonómico para mejor agarre.</p></div>
+      <div class="producto"><img src="img/Cepillo multi hogar.png" alt="Cepillo Multi Hogar"><h4>Cepillo Multi Hogar</h4><p>Versátil para limpieza en toda la casa.</p></div>
+      <div class="producto"><img src="img/Esponja sabra oro plata.png" alt="Esponja Sabra Oro Plata"><h4>Esponja Sabra Oro/Plata</h4><p>Efectiva para limpieza exigente de cocina.</p></div>
+      <div class="producto"><img src="img/Esponja.png" alt="Esponja"><h4>Esponja</h4><p>Multiuso, ideal para la limpieza del hogar.</p></div>
+      <div class="producto"><img src="img/guantes de aseo domestico.png" alt="Guantes de Aseo"><h4>Guantes de Aseo</h4><p>Protección y comodidad para limpieza doméstica.</p></div>
+      <div class="producto"><img src="img/Trapeador algodon.png" alt="Trapeador de Algodón"><h4>Trapeador de Algodón</h4><p>Alta absorción para limpieza profunda.</p></div>
       <div class="producto"><img src="img/Trapeador microfibra.png" alt="Trapeador Microfibra"><h4>Trapeador Microfibra</h4><p>Limpieza profunda y sin rayones.</p></div>
-      <div class="producto"><img src="img/Vasos Tami.png" alt="Vasos Tami"><h4>Vasos Tami</h4><p>Prácticos y resistentes para uso diario.</p></div>
-      <div class="producto"><img src="img/Vasos resq.png" alt="Vasos Resq"><h4>Vasos Resq</h4><p>Alta transparencia y resistencia.</p></div>
-      <div class="producto"><img src="img/Vasos espumados.png" alt="Vasos Espumados"><h4>Vasos Espumados</h4><p>Aislantes térmicos y livianos.</p></div>
-      <div class="producto"><img src="img/Portacomidas espumado1.png" alt="Portacomidas Espumado 1"><h4>Portacomidas Espumado 1</h4><p>Práctico para porciones individuales con aislamiento térmico.</p></div>
-      <div class="producto"><img src="img/Ata facil cabuya.png" alt="Ata Fácil Cabuya"><h4>Ata Fácil Cabuya</h4><p>Ideal para empaque seguro de productos.</p></div>
-      <div class="producto"><img src="img/Cepillo planchita.png" alt="Cepillo Planchita"><h4>Cepillo Planchita</h4><p>Diseño compacto para limpieza precisa.</p></div>
-      <div class="producto"><img src="img/Escoba Danna.png" alt="Escoba Danna"><h4>Escoba Danna</h4><p>Resistente, eficiente para barrido diario.</p></div>
-      <div class="producto"><img src="img/Vaso 9 onz.png" alt="Vaso 9 onz"><h4>Vaso 9 onz</h4><p>Versátil para bebidas frías o calientes.</p></div>
+      <div class="producto"><img src="img/Recogedor con banda.png" alt="Recogedor con Banda"><h4>Recogedor con Banda</h4><p>Reforzado para mejor recolección.</p></div>
+      <div class="producto"><img src="img/Recogedor con plus.png" alt="Recogedor Plus"><h4>Recogedor Plus</h4><p>Diseño optimizado y liviano.</p></div>
+      <div class="producto"><img src="img/Recogedor sin banda.png" alt="Recogedor sin Banda"><h4>Recogedor sin Banda</h4><p>Básico y funcional para limpieza rápida.</p></div>
+      <div class="producto"><img src="img/Cinta transparente.png" alt="Cinta Transparente"><h4>Cinta Transparente</h4><p>Adhesión fuerte y presentación limpia.</p></div>
+      <div class="producto"><img src="img/Pegante instantaneo.png" alt="Pegante Instantáneo"><h4>Pegante Instantáneo</h4><p>Fijación rápida y efectiva en segundos.</p></div>
+      <div class="producto"><img src="img/Ata facil cabuya.png" alt="Ata Fácil Cabuya"><h4>Ata Fácil Cabuya</h4><p>Amarre rápido y resistente para paquetes.</p></div>
+      <div class="producto"><img src="img/Mecheras.png" alt="Mecheras"><h4>Mecheras</h4><p>Prácticas para prender estufas y fogones.</p></div>
 
-    </div>
+      </section>
   </main>
 
   <footer>
