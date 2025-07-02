@@ -492,18 +492,26 @@ p {
   z-index: 4;
 }
 
-/* Puntos inactivos */
 .dot {
-  width: 10px;
-  height: 10px;
+  width: 7px;
+  height: 7px;
   background: #ccc;
-  border-radius: 50%;
+  border-radius: 800%;
+  transition: all 0.3s ease;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
   cursor: pointer;
+  border: 0.5px solid transparent;
 }
 
-/* Punto activo */
+.dot:hover {
+  transform: scale(1.2);
+  border-color: #0056b3;
+}
+
 .active-dot {
   background: #0056b3;
+  border: 2px solid rgb(20, 49, 92);
+  box-shadow: 0 0 6px rgba(0,86,179,0.4);
 }
 
 /* ============================ */
@@ -570,29 +578,34 @@ p {
 .productos-grid {
   display: grid;
   grid-template-columns: repeat(5, 1fr); /* 5 columnas fijas */
-  gap: 15px;
-  padding: 30px 0;
+  gap: 35px;
+  padding: 5px 270px 50px;
   width: 100%;
   max-width: 1400px; /* Ancho máximo para contener 5 columnas */
   margin: 0 auto; /* Centrado */
+  justify-content: center;
 }
 
 /* Tarjeta de producto destacado */
 .producto {
-  background: #fff;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.08);
-  text-align: left;
+  background: #ffffff;
+  border-radius: 15px;
+  padding: 10px;
+  width: 100%;
+  max-width: 280px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
   display: flex;
   flex-direction: column;
-  min-width: 0; /* Evita problemas de desbordamiento */
+  align-items: center;
+  justify-content: space-between;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #e0e0e0;
 }
 
 /* Efecto hover para productos destacados */
 .producto:hover {
   transform: translateY(-8px);
-  box-shadow: 0 8px 16px rgba(0,0,0,0.12);
+  box-shadow: 5px 8px 16px rgba(0,0,0,0.12);
 }
 
 /* Imagen de producto destacado */
@@ -617,7 +630,7 @@ p {
 
 /* Texto de cada característica */
 .producto p {
-  margin: 0 12px 12px;
+  margin: 0 12px 16px;
   font-size: 0.85rem;
   color: #555;
   line-height: 1.4em;
@@ -625,7 +638,24 @@ p {
   overflow: hidden;
   position: relative;
 }
+.btn-ver-mas {
+  display: inline-block;
+  margin: 7px auto 0;
+  padding: 10px 20px;
+  border-radius: 25px;
+  background-color: #01254d;
+  color: white;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+}
 
+.btn-ver-mas:hover {
+  background-color: #00172e;
+  transform: scale(1.05);
+}
 /* ============================== */
 /* === ENLACES RÁPIDOS DEL SITIO === */
 /* ============================== */
@@ -676,9 +706,37 @@ p {
 footer {
   background-color: #003366;
   color: white;
-  text-align: center;
-  padding: 20px;
+  padding: 20px 0;
+  font-size: 14px;
 }
+
+.footer-contenido {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footer-info {
+  text-align: center;
+  margin-left: 400px;
+}
+
+.footer-social a {
+  color: white;
+  font-size: 1.2rem;
+  margin-left: 15px;
+  transition: color 0.3s ease;
+}
+
+.footer-social a:hover {
+  color: #aad4ff;
+}
+
 
 /* Estilos para páginas de categoría */
 .titulo-categoria {
@@ -708,7 +766,16 @@ footer {
 /* ============================== */
 /* === MEDIA QUERIES (RESPONSIVE) === */
 /* ============================== */
-
+@media (max-width: 600px) {
+  .footer-contenido {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+  .footer-social a {
+    margin: 0 8px;
+  }
+}
 @media (max-width: 1200px) {
   /* Ajustes para slider en móviles */
   .slider-overlay {
