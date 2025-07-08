@@ -488,30 +488,57 @@ p {
   left: 50%;
   transform: translateX(-50%);
   display: flex;
-  gap: 10px;
+  gap: 1px; /* Reducido de 10px para mejor espaciado con puntos pequeños */
   z-index: 4;
 }
 
 .dot {
-  width: 7px;
-  height: 7px;
+  width: 6px; /* Tamaño más pequeño y uniforme */
+  height: 6px; /* Mismo valor que width para perfecta redondez */
   background: #ccc;
-  border-radius: 800%;
+  border-radius: 50%; /* 50% garantiza un círculo perfecto */
   transition: all 0.3s ease;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+  box-shadow: 0 1px 2px rgba(0,0,0,0.1); /* Sombra más sutil */
   cursor: pointer;
   border: 0.5px solid transparent;
 }
 
 .dot:hover {
-  transform: scale(1.2);
-  border-color: #0056b3;
+  transform: scale(1.3); /* Un poco más de énfasis al hover */
+  background: #0056b3; /* Cambio de color al hover para mejor feedback */
+  box-shadow: 0 0 4px rgba(0,86,179,0.3); /* Sombra azul sutil */
 }
 
 .active-dot {
   background: #0056b3;
-  border: 2px solid rgb(20, 49, 92);
-  box-shadow: 0 0 6px rgba(0,86,179,0.4);
+  border: 1px solid rgba(20, 49, 92, 0.3); /* Borde más sutil */
+  box-shadow: 0 0 6px rgba(0,86,179,0.3);
+  transform: scale(1.1); /* Ligero aumento de tamaño para el activo */
+}
+/* ============================*/
+.slider-dots .dot {
+  all: unset; /* Resetea todos los estilos heredados */
+  width: 8px;
+  height: 8px;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 50%;
+  display: inline-block;
+  margin: 0 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.slider-dots .dot:hover {
+  background: #fff;
+  transform: scale(1.2);
+}
+
+.slider-dots .active-dot {
+  background: #003366;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  transform: scale(1.3);
 }
 
 /* ============================ */
