@@ -70,7 +70,7 @@
   </header>
 
   <main class="main-productos">
-    <section class="productos-grid">
+    <section class="productos-grid" id="productos-container">
       <!-- Todos los productos agrupados -->
       <!-- Contenedores y empaques -->
       <div class="producto"><img src="img/Contenedor SelloPlus.png" alt="Contenedor SelloPlus"><h4>Contenedor SelloPlus</h4><p>Sellado seguro para alimentos preparados.</p></div>
@@ -161,7 +161,31 @@
 
       </section>
   </main>
-
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      fetch('productos.json')
+        .then(response => response.json())
+        .then(data => {
+          const container = document.getElementById('productos-container');
+          
+          // Recorrer todas las categorías y productos
+          for (const categoria in data.productos) {
+            data.productos[categoria].forEach(producto => {
+              const productHTML = `
+                <div class="producto">
+                  <img src="img/${producto.id}.png" alt="${producto.nombre}" loading="lazy">
+                  <h4>${producto.nombre}</h4>
+                  <p>${producto.descripcion.substring(0, 50)}...</p>
+                  <a href="producto.html?id=${producto.id}" class="btn-ver-mas">Ver más</a>
+                </div>
+              `;
+              container.innerHTML += productHTML;
+            });
+          }
+        })
+        .catch(error => console.error('Error al cargar productos:', error));
+    });
+  </script>
   <!-- ========== PIE DE PÁGINA ========== -->
   <footer>
   <div class="footer-contenido">
