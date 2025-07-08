@@ -604,12 +604,11 @@ p {
 /* Grid de productos destacados */
 .productos-grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr); /* 5 columnas fijas */
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 35px;
-  padding: 5px 270px 50px;
-  width: 100%;
-  max-width: 1400px; /* Ancho máximo para contener 5 columnas */
-  margin: 0 auto; /* Centrado */
+  padding: 30px 5%;
+  max-width: 1400px;
+  margin: 0 auto;
   justify-content: center;
 }
 
