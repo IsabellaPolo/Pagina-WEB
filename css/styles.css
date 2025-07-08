@@ -612,6 +612,7 @@ p {
   justify-content: center;
 }
 
+
 /* Tarjeta de producto destacado */
 .producto {
   background: #ffffff;
@@ -653,6 +654,7 @@ p {
   overflow: hidden;
   text-overflow: ellipsis;
 }
+
 
 /* Texto de cada característica */
 .producto p {
@@ -732,36 +734,44 @@ p {
 footer {
   background-color: #003366;
   color: white;
-  padding: 20px 0;
+  padding: 30px 15px;
   font-size: 14px;
+  text-align: center;
 }
 
 .footer-contenido {
-  max-width: 1200px;
+  max-width: 800px;
   margin: 0 auto;
-  padding: 0 30px;
+  padding: 0 30px 0 360px;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  flex-direction: row;  /* Línea horizontal */
+  justify-content: space-between; /* Separación entre elementos */
   align-items: center;
   flex-wrap: wrap;
+  gap: 10px;
 }
 
 .footer-info {
-  text-align: center;
-  margin-left: 400px;
+  flex: 1;
+  text-align: left;
+}
+
+.footer-social {
+  display: flex;
+  gap: 20px;
+  justify-content: flex-end;
 }
 
 .footer-social a {
   color: white;
-  font-size: 1.2rem;
-  margin-left: 15px;
+  font-size: 1.3rem;
   transition: color 0.3s ease;
 }
 
 .footer-social a:hover {
   color: #aad4ff;
 }
+
 
 
 /* Estilos para páginas de categoría */
@@ -789,9 +799,25 @@ footer {
   width: fit-content;
 }
 
+
 /* ============================== */
 /* === MEDIA QUERIES (RESPONSIVE) === */
 /* ============================== */
+@media (min-width: 768px) {
+  .footer-contenido {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .footer-info {
+    text-align: left;
+  }
+
+  .footer-social {
+    text-align: right;
+  }
+}
 @media (max-width: 600px) {
   .footer-contenido {
     flex-direction: column;
