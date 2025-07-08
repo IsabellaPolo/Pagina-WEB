@@ -306,6 +306,39 @@ header {
   background-color: #003366;
 }
 
+/* ========== SECCIÓN NOSOTROS ========== */
+.nosotros-section {
+  position: relative;
+  width: 100%;
+  height: 83vh; /* Pantalla completa */
+  background-image: url('../img/Nosotros.png'); /* Asegúrate de la ruta */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.nosotros-overlay {
+  background: rgba(255, 255, 255, 0.7); /* Fondo blanco semitransparente */
+  max-width: 600px;
+  padding: 50px;
+  margin-left: 10%;
+  border-radius: 10px;
+}
+
+.nosotros-overlay h1 {
+  font-size: 38px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.nosotros-overlay p {
+  font-size: 20px;
+  color: #333;
+  line-height: 1.5;
+}
+
 /* ========================= */
 /* === SECCIÓN DE PRODUCTOS === */
 /* ========================= */
