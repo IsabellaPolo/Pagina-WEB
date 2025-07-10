@@ -5,73 +5,73 @@
         "id": "contenedor-selloPlus",
         "nombre": "SelloPlus resq",
         "descripcion": "Sellado seguro para alimentos preparados",
-        "material": "Cristal",
+        "color": "Cristal",
         "tamanos": ["Tapa Plana 8 oz", "Tapa Media 8 oz", "Tapa Alta 8 oz"],
-        "imagen": ""
+        "imagen": "Contenedor SelloPlus.png"
       },
       {
         "id": "contenedor-triangular",
         "nombre": "Contenedor Triangular",
         "descripcion": "Diseño práctico para porciones individuales",
-        "material": "Cristal",
+        "color": "Cristal",
         "tamanos": ["Altura 5, (11 X 5 CM)"],
-        "imagen": ""
+        "imagen": "Contenedor Triangular.png"
       },
       {
         "id": "contenedores-deli",
         "nombre": "Contenedores Deli",
         "descripcion": "Transparencia ideal para deli y frutas",
-        "material": "Cristal",
+        "color": "Cristal",
         "tamanos": ["S - 2 oz con tapa", "S - 1.5 oz con tapa", "S - 1 oz con tapa"],
-        "imagen": ""
+        "imagen": "contenedores deli.png"
       },
       {
         "id": "contenedores-espumados",
         "nombre": "Contenedores Espumados",
         "descripcion": "Livianos y aislantes para comidas rápidas",
-        "material": "Blanco",
+        "color": "Blanco",
         "tamanos": ["24 oz con Tapa Espumada"],
-        "imagen": ""
+        "imagen": "Contenedores espumados.png"
       },
       {
         "id": "minipack",
         "nombre": "MiniPack",
         "descripcion": "Empaque compacto para alimentos",
-        "material": "Cristal",
+        "color": "Cristal",
         "tamanos": ["S (10.4 x 4.8 cm)", "M (9.2 x 5.4 cm)"],
-        "imagen": ""
+        "imagen": "MiniPack.png"
       },
       {
         "id": "porta-hamburguesas",
         "nombre": "portahamburguesas",
         "descripcion": "Empaque práctico para domicilios.",
-        "material": "Blanco",
+        "color": "Blanco",
         "tamanos": [],
-        "imagen": ""
+        "imagen": "Porta hamburguesas.png"
       },
       {
         "id": "porta-perros",
         "nombre": "portaperros",
         "descripcion": "Diseño seguro para hot dogs.",
-        "material": "Blanco",
+        "color": "Blanco",
         "tamanos": [],
-        "imagen": ""
+        "imagen": "Porta perros.png"
       },
       {
         "id": "portacomidas-espumado",
         "nombre": "Portacomidas Espumado",
         "descripcion": "Contenedor térmico para comidas completas.",
-        "material": "Blanco",
+        "color": "Blanco",
         "tamanos": ["K-1 (21.5 x 11.0 cm)", "P-3, 3 Divisiones (21.5 x 21.0 cm)"],
-        "imagen": ""
+        "imagen": "Portacomidas espumado.png"
       },
       {
         "id": "portacomidas-espumado-L2",
         "nombre": "Portacomidas Espumado",
         "descripcion": "Versión alternativa para porciones individuales.",
-        "material": "Blanco",
+        "color": "Blanco",
         "tamanos": ["E-1 (16.0 x 15.7 cm)", "J-1 (23.5 x 16.0 cm)", "C-1 (15.0 x 15.0 cm)"],
-        "imagen": ""
+        "imagen": "Portacomidas espumado1.png"
       }
     ],
     "bandejas": [
@@ -79,17 +79,17 @@
         "id": "bandejas-espumadas",
         "nombre": "Bandejas Espumadas Estándar",
         "descripcion": "Ideales para exhibición de carnes y frutas.",
-        "material": "Blanco",
+        "color": "Blanco",
         "tamanos": ["#01 (13.0 x 13.0 cm)", "#03 (19.0 x 14.5 cm)", "#17 (21.1 x 12.2 cm)"],
-        "imagen": ""
+        "imagen": "Bandejas espumadas.png"
       },
       {
         "id": "moldes-de-aluminio",
         "nombre": "Moldes de Aluminio",
         "descripcion": "Perfectos para hornear y almacenar.",
-        "material": "",
+        "color": "",
         "tamanos": ["28 oz", "24 oz", "8 oz", "16 oz"],
-        "imagen": ""
+        "imagen": "Moldes de aluminio.png"
       }
     ],
     "copas": [
@@ -97,25 +97,25 @@
         "id": "copa-tipo-flauta",
         "nombre": "Copa tipo flauta",
         "descripcion": "Elegancia para brindis y celebraciones.",
-        "material": "Cristal",
+        "color": "Cristal",
         "tamanos": [],
-        "imagen": ""
+        "imagen": "Copa tipo flauta.png"
       },
       {
         "id": "copa-de-vino",
         "nombre": "Copa vino",
         "descripcion": "Perfecta para eventos formales.",
-        "material": "Cristal",
+        "color": "Cristal",
         "tamanos": [],
-        "imagen": ""
+        "imagen": "Copa vino.png"
       },
       {
         "id": "copas-venecianas",
         "nombre": "Copas Venecianas Flex",
         "descripcion": "Diseño clásico para bebidas frías.",
-        "material": "Cristal",
+        "color": "Cristal",
         "tamanos": ["5 oz"],
-        "imagen": ""
+        "imagen": "Copas venecianas.png"
       }
     ],
     "vasos": [
@@ -123,76 +123,76 @@
         "id": "vasos-tami",
         "nombre": "Vaso TAMI",
         "descripcion": "Prácticos y resistentes para uso diario.",
-        "material": "Cristal",
+        "color": "Cristal",
         "tamanos": ["12 oz", "09 oz", "07 oz"],
-        "imagen": ""
+        "imagen": "Vasos Tami.png "
       },
       {
         "id": "vasos-resq",
         "nombre": "Vasos resq®",
         "descripcion": "Alta transparencia y resistencia.",
-        "material": "Cristal",
+        "color": "Cristal",
         "tamanos": ["10 oz", "12 oz"],
-        "imagen": ""
+        "imagen": "Vasos resq.png"
       },
       {
         "id": "vasos-espumados",
         "nombre": "Vasos Espumados",
         "descripcion": "Aislantes térmicos y livianos.",
-        "material": "Blanco",
+        "color": "Blanco",
         "tamanos": ["12 oz con Tapa Rígida"],
-        "imagen": ""
+        "imagen": "Vasos espumados.png"
       },
       {
         "id": "vaso-3-onz",
         "nombre": "Vaso 3 Onz",
         "descripcion": "Tamaño pequeño ideal para degustaciones.",
-        "material": "Plateado Transparente",
+        "color": "Plateado Transparente",
         "tamanos": ["3 oz"],
-        "imagen": ""
+        "imagen": "Vaso 3 Onz.png"
       },
       {
         "id": "vaso-7-onz",
         "nombre": "Vaso 7 Onz",
         "descripcion": "Uso general en bebidas rápidas.",
-        "material": "Cristal",
+        "color": "Cristal",
         "tamanos": ["7 oz"],
         "variaciones": ["Brom +/-50%", "Brom +/-55%", "Brom +/-100%", "Brom +/-150%"],
-        "imagen": ""
+        "imagen": "Vaso 7 Onz.png"
       },
       {
         "id": "vaso-9-onz",
         "nombre": "Vaso 9 Onz",
         "descripcion": "Capacidad media para múltiples bebidas.",
-        "material": "",
+        "color": "",
         "tamanos": ["9 oz"],
         "variaciones": ["Brom +/-50%", "Brom +/-55%", "Brom +/-100%"],
-        "imagen": ""
+        "imagen": "Vaso 9 Onz.png"
       },
       {
         "id": "vaso-tinto",
         "nombre": "Vaso tinto",
         "descripcion": "Diseño estilizado para bebidas calientes.",
-        "material": "Plateado",
+        "color": "Plateado",
         "tamanos": [],
         "variaciones": ["Brom +/-50%", "Brom +/-55%", "Brom +/-100%"],
-        "imagen": ""
+        "imagen": "Vaso tinto.png"
       },
       {
         "id": "vasos-plasticos-color",
         "nombre": "Vasos plásticos en color",
         "descripcion": "Presentación llamativa y resistente.",
-        "material": "",
+        "color": "",
         "tamanos": ["3 onz.", "3.3 onz.", "5 onz", "7 onz"],
-        "imagen": ""
+        "imagen": "Vasos plasticos en color.png"
       },
       {
         "id": "vasos-plasticos-opal",
         "nombre": "Vasos plásticos en opal",
         "descripcion": "Elegancia con resistencia reforzada.",
-        "material": "Opal",
+        "color": "Opal",
         "tamanos": ["1 onz."],
-        "imagen": ""
+        "imagen": "Vasos plasticos en opal.png"
       }
     ],
     "pitillos-palillos": [
@@ -200,57 +200,57 @@
         "id": "palillo-de-madera",
         "nombre": "Palillo de madera",
         "descripcion": "Natural y funcional para múltiples usos.",
-        "material": "",
+        "color": "",
         "tamanos": ["Palillo de hamburguesa", "Palillo de mesa"],
-        "imagen": ""
+        "imagen": "Palillo de madera.png"
       },
       {
         "id": "palo-de-paleta",
         "nombre": "Palo de paleta",
         "descripcion": "Perfecto para paletas y helados artesanales.",
-        "material": "",
+        "color": "",
         "tamanos": [],
-        "imagen": ""
+        "imagen": "Palo de paleta.png"
       },
       {
         "id": "pincho",
         "nombre": "Pincho",
         "descripcion": "Ideal para asados y comidas rápidas.",
-        "material": "",
+        "color": "",
         "tamanos": ["Pincho 30cm", "Pincho 25cm"],
-        "imagen": ""
+        "imagen": "Pincho.png"
       },
       {
         "id": "pitillo-eco-plastico",
         "nombre": "Pitillo Eco Plástico",
         "descripcion": "Alternativa ecológica y práctica.",
-        "material": "Amarillo",
+        "color": "Amarillo",
         "tamanos": ["Pitillo eco plástico grueso mediano"],
-        "imagen": ""
+        "imagen": "Pitillo eco plastico.png"
       },
       {
         "id": "pitillos-biodegradables",
         "nombre": "Pitillos Biodegradables",
         "descripcion": "Cuida el ambiente sin perder comodidad.",
-        "material": "",
+        "color": "",
         "tamanos": ["26.0 cm Jumbo con Envoltura", "19.7 cm Jumbo con Envoltura"],
-        "imagen": ""
+        "imagen": "Pitillos biodegradables.png"
       },
       {
         "id": "mezclador-madera",
         "nombre": "Mezclador madera",
         "descripcion": "Ideal para bebidas calientes.",
-        "material": "",
+        "color": "",
         "tamanos": [],
-        "imagen": ""
+        "imagen": "Mezclador madera.png"
       },
       {
         "id": "mezclador-plastico",
         "nombre": "Mezclador plástico",
         "descripcion": "Ligero, funcional y desechable.",
-        "material": "Negro",
+        "color": "Negro",
         "tamanos": [],
-        "imagen": ""
+        "imagen": "Mezclador plastico.png"
       }
     ],
     "platos": [
@@ -258,17 +258,17 @@
         "id": "plato-espumado-hondo",
         "nombre": "Plato Espumado Hondo",
         "descripcion": "Ideal para sopas y platos calientes.",
-        "material": "Blanco",
+        "color": "Blanco",
         "tamanos": ["25 oz Hondo Blanco", "12 oz Hondo Blanco"],
-        "imagen": ""
+        "imagen": "Plato espumado hondo.png"
       },
       {
         "id": "plato-espumado",
         "nombre": "Plato Espumado",
         "descripcion": "Ligero y económico para eventos.",
-        "material": "Blanco",
+        "color": "Blanco",
         "tamanos": ["26.0 cm", "23.0 cm", "20.0 cm"],
-        "imagen": ""
+        "imagen": "Plato espumado.png"
       }
     ],
     "frascos": [
@@ -276,49 +276,49 @@
         "id": "domo-perforado",
         "nombre": "Domo perforado para Vaso",
         "descripcion": "Ventilación ideal para postres.",
-        "material": "Cristal",
+        "color": "Cristal",
         "tamanos": ["9 oz - 10 oz", "12 oz - 16 oz", "20 oz"],
-        "imagen": ""
+        "imagen": "Domo perforado.png"
       },
       {
         "id": "domo-sin-perforacion",
         "nombre": "Domo sin perforación para Vaso",
         "descripcion": "Protección hermética para bebidas.",
-        "material": "Cristal",
+        "color": "Cristal",
         "tamanos": ["9 oz - 10 oz", "12 oz - 16 oz", "20 oz"],
-        "imagen": ""
+        "imagen": "Domo sin perforacion.png"
       },
       {
         "id": "tapa-sin-perforacion",
         "nombre": "Tapa sin Perforación para Vaso",
         "descripcion": "Perfecta para vasos o frascos herméticos.",
-        "material": "Cristal",
+        "color": "Cristal",
         "tamanos": ["Tapa 12 oz", "Tapa 09 oz"],
-        "imagen": ""
+        "imagen": "Tapa sin perforacion.png"
       },
       {
         "id": "tapa-perforada",
         "nombre": "Tapa sin perforación para Vaso",
         "descripcion": "Previene derrames y mantiene el contenido fresco.",
-        "material": "Cristal",
+        "color": "Cristal",
         "tamanos": ["9 oz - 10 oz", "12 oz - 16 oz", "20 oz"],
-        "imagen": ""
+        "imagen": "Tapa perforada.png"
       },
       {
         "id": "frasco-plastico-redondo",
         "nombre": "Frasco Plástico Transparente Redondo",
         "descripcion": "Versátil para líquidos o sólidos.",
-        "material": "Cristal",
+        "color": "Cristal",
         "tamanos": ["1000 ml Cristal", "1500 ml Cristal"],
-        "imagen": ""
+        "imagen": "Frasco plastico redondo.png"
       },
       {
         "id": "tapa-frasco-cuadrado",
         "nombre": "Tapa para Frasco Cuadrado",
         "descripcion": "Cierre seguro y duradero.",
-        "material": "Azul, Amarillo, Rojo, Blanco, Verde, Negro",
+        "color": "Azul, Amarillo, Rojo, Blanco, Verde, Negro",
         "tamanos": ["Cuadrado 1000 ml", "Frasco Redondo 1000", "Frasco Redondo 1500"],
-        "imagen": ""
+        "imagen": "Tapa para frasco cuadrado.png"
       }
     ],
     "bolsas": [
@@ -326,65 +326,65 @@
         "id": "bolsa-de-aluminio",
         "nombre": "Bolsa de Aluminio",
         "descripcion": "Durabilidad y resistencia para alimentos calientes o fríos.",
-        "material": "",
+        "color": "",
         "tamanos": ["L 17", "L 23", "L 25", "L 35"],
-        "imagen": ""
+        "imagen": "Bolsa aluminio.png"
       },
       {
         "id": "bolsa-de-basura",
         "nombre": "Bolsa de Basura",
         "descripcion": "Gran capacidad y resistencia para desechos domésticos.",
-        "material": "negro,blanco",
+        "color": "negro,blanco",
         "tamanos": ["Apartamentera 10 K", "Mediana 15 K", "Industrial 20 K", "Yumbo 25 K"],
-        "imagen": ""
+        "imagen": "Bolsa basura.png"
       },
       {
         "id": "bolsa-biodegradable",
         "nombre": "Bolsa Biodegradable",
         "descripcion": "Ecológica y fuerte, ideal para comercios conscientes.",
-        "material": "naranja, verde, blanco, negro, rayado blanco y azul",
+        "color": "naranja, verde, blanco, negro, rayado blanco y azul",
         "tamanos": ["1.5 K", "3 K", "15 K", "30 K"],
-        "imagen": ""
+        "imagen": "Bolsa biodegradable.png"
       },
       {
         "id": "bolsa-de-papel",
         "nombre": "Bolsa de Papel",
         "descripcion": "Prácticas y reutilizables para panaderías o tiendas.",
-        "material": "",
+        "color": "",
         "tamanos": ["1 L", "2 L", "3 L", "4 L"],
-        "imagen": ""
+        "imagen": "Bolsa papel.png"
       },
       {
         "id": "bolsa-hermetica",
         "nombre": "Bolsa Hermética",
         "descripcion": "Con cierre seguro para conservar alimentos.",
-        "material": "Cristal",
+        "color": "Cristal",
         "tamanos": ["3 x 4", "10 x 20", "14 x 14", "14 x 18"],
-        "imagen": ""
+        "imagen": "Bolsa hermetica.png"
       },
       {
         "id": "bolsa-para-hielo",
         "nombre": "Bolsa para Hielo",
         "descripcion": "Resistentes al congelamiento y al peso.",
-        "material": "Cristal",
+        "color": "Cristal",
         "tamanos": [],
-        "imagen": ""
+        "imagen": "Bolsa para hielo.png"
       },
       {
         "id": "bolsa-de-propileno",
         "nombre": "Bolsa de Propileno",
         "descripcion": "Transparente y durable para múltiples usos.",
-        "material": "Cristal",
+        "color": "Cristal",
         "tamanos": ["3 x 4", "10 x 20", "14 x 14", "14 x 18"],
-        "imagen": ""
+        "imagen": "Bolsa propileno.png"
       },
       {
         "id": "bolsa-transparente",
         "nombre": "Bolsa Transparente",
         "descripcion": "Visibilidad total para productos en venta.",
-        "material": "Cristal",
+        "color": "Cristal",
         "tamanos": ["1 L", "2 L", "1 K", "2 K", "3 K"],
-        "imagen": ""
+        "imagen": "Bolsa transparente.png"
       }
     ],
     "servilletas": [
@@ -392,49 +392,49 @@
         "id": "servilleta-arbora",
         "nombre": "Servilleta Arbora",
         "descripcion": "Calidad y suavidad garantizadas.",
-        "material": "",
+        "color": "",
         "tamanos": [],
-        "imagen": ""
+        "imagen": "Servilleta arbora.png"
       },
       {
         "id": "servilleta-familia",
         "nombre": "Servilleta Familia",
         "descripcion": "Absorbentes para uso diario.",
-        "material": "",
+        "color": "",
         "tamanos": [],
-        "imagen": ""
+        "imagen": "Servilleta familia.png"
       },
       {
         "id": "servilleta-favorita",
         "nombre": "Servilleta Favorita",
         "descripcion": "Diseño económico y versátil.",
-        "material": "",
+        "color": "",
         "tamanos": [],
-        "imagen": ""
+        "imagen": "Servilleta favorita.png"
       },
       {
         "id": "servilleta-mia",
         "nombre": "Servilleta Mia",
         "descripcion": "Suaves, perfectas para el día a día.",
-        "material": "",
+        "color": "",
         "tamanos": [],
-        "imagen": ""
+        "imagen": "Servilleta mia.png"
       },
       {
         "id": "servilleta-nube",
         "nombre": "Servilleta Nube",
         "descripcion": "Textura delicada, excelente absorción.",
-        "material": "",
+        "color": "",
         "tamanos": [],
-        "imagen": ""
+        "imagen": "Servilleta nube.png"
       },
       {
         "id": "servilleta-popular",
         "nombre": "Servilleta Popular",
         "descripcion": "Económicas para uso general.",
-        "material": "",
+        "color": "",
         "tamanos": [],
-        "imagen": ""
+        "imagen": "Servilleta popular.png"
       }
     ],
     "aseo": [
@@ -442,113 +442,113 @@
         "id": "escoba-w-color",
         "nombre": "Escoba W Color",
         "descripcion": "Resistente y colorida para barrido general.",
-        "material": "",
+        "color": "",
         "tamanos": [],
-        "imagen": ""
+        "imagen": "Escoba w color.png"
       },
       {
         "id": "escoba-w-suprema",
         "nombre": "Escoba W Suprema",
         "descripcion": "Cerdas duraderas, ideal para exteriores.",
-        "material": "",
+        "color": "",
         "tamanos": [],
-        "imagen": ""
+        "imagen": "Escoba w suprema.png"
       },
       {
         "id": "escoba-danna",
         "nombre": "Escoba Danna",
         "descripcion": "Cerdas fuertes y diseño ergonómico",
-        "material": "",
+        "color": "",
         "tamanos": [],
-        "imagen": ""
+        "imagen": "Escoba Danna.png"
       },
       {
         "id": "cepillo-planchita",
         "nombre": "Cepillo Planchita",
         "descripcion": "Compacto para detalles difíciles.",
-        "material": "",
+        "color": "",
         "tamanos": [],
-        "imagen": ""
+        "imagen": "Cepillo planchita.png"
       },
       {
         "id": "cepillo-anatomico",
         "nombre": "Cepillo Anatómico",
         "descripcion": "Diseño ergonómico para mejor agarre.",
-        "material": "",
+        "color": "",
         "tamanos": [],
-        "imagen": ""
+        "imagen": "Cepillo anatomico.png"
       },
       {
         "id": "cepillo-multi-hogar",
         "nombre": "Cepillo Multi Hogar",
         "descripcion": "Versátil para limpieza en toda la casa.",
-        "material": "",
+        "color": "",
         "tamanos": [],
-        "imagen": ""
+        "imagen": "Cepillo multi hogar.png"
       },
       {
         "id": "esponja-sabra-oro-plata",
         "nombre": "Esponja Sabra Oro/Plata",
         "descripcion": "Efectiva para limpieza exigente de cocina.",
-        "material": "oro-plata",
+        "color": "oro-plata",
         "tamanos": [],
-        "imagen": ""
+        "imagen": "Esponja sabra oro plata.png"
       },
       {
         "id": "esponja",
         "nombre": "Esponja",
         "descripcion": "Multiuso, ideal para la limpieza del hogar.",
-        "material": "",
+        "color": "",
         "tamanos": [],
-        "imagen": ""
+        "imagen": "Esponja.png"
       },
       {
         "id": "guantes-de-aseo",
         "nombre": "Guantes de Aseo",
         "descripcion": "Protección y comodidad para limpieza doméstica.",
-        "material": "",
+        "color": "",
         "tamanos": [],
-        "imagen": ""
+        "imagen": "guantes de aseo domestico.png"
       },
       {
         "id": "trapeador-de-algodon",
         "nombre": "Trapeador de Algodón",
         "descripcion": "Alta absorción para limpieza profunda.",
-        "material": "",
+        "color": "",
         "tamanos": [],
-        "imagen": ""
+        "imagen": "Trapeador algodon.png"
       },
       {
         "id": "trapeador-microfibra",
         "nombre": "Trapeador Microfibra",
         "descripcion": "Limpieza profunda y sin rayones",
-        "material": "",
+        "color": "",
         "tamanos": [],
-        "imagen": ""
+        "imagen": "Trapeador microfibra.png"
       },
       {
         "id": "recogedor-con-banda",
         "nombre": "Recogedor con Banda",
         "descripcion": "Reforzado para mejor recolección.",
-        "material": "",
+        "color": "",
         "tamanos": [],
-        "imagen": ""
+        "imagen": "Recogedor con banda.png"
       },
       {
         "id": "recogedor-plus",
         "nombre": "Recogedor Plus",
         "descripcion": "Diseño optimizado y liviano",
-        "material": "",
+        "color": "",
         "tamanos": [],
-        "imagen": ""
+        "imagen": "Recogedor con plus.png"
       },
       {
         "id": "recogedor-sin-banda",
         "nombre": "Recogedor sin Banda",
         "descripcion": "Básico y funcional para limpieza rápida.",
-        "material": "",
+        "color": "",
         "tamanos": [],
-        "imagen": ""
+        "imagen": "Recogedor sin banda.png"
       }
     ],
     "papel": [
@@ -556,67 +556,59 @@
         "id": "papel-aluminio",
         "nombre": "Papel Aluminio",
         "descripcion": "Ideal para envolver o cocinar.",
-        "material": "",
+        "color": "",
         "tamanos": ["7mts", "16mts"],
-        "imagen": ""
+        "imagen": "papel aluminio.png"
       },
       {
         "id": "vinipel-para-alimentos",
         "nombre": "Vinipel para Alimentos 12”",
         "descripcion": "Conservación de frescura garantizada.",
-        "material": "",
+        "color": "",
         "tamanos": ["7 mts", "50 mts", "100 mts", "200 mts", "300 mts", "16 mts"],
-        "imagen": ""
+        "imagen": "Vinipel para alimentos.png"
       },
       {
         "id": "vinipel-stretch",
         "nombre": "Vinipel Stretch 12”",
         "descripcion": "Adherente y versátil para envolver.",
-        "material": "blanco, negro",
+        "color": "blanco, negro",
         "tamanos": ["7 mts", "50 mts", "100 mts", "200 mts", "300 mts", "16 mts"],
-        "imagen": ""
+        "imagen": "Vinipel stretch.png"
       },
       {
         "id": "lamina-parafinada",
         "nombre": "Lámina Parafinada",
         "descripcion": "Protección para alimentos o empaques.",
-        "material": "",
+        "color": "",
         "tamanos": ["21X21", "25X25", "30X30"],
-        "imagen": ""
+        "imagen": "Lamina parafinada.png"
       }
     ],
     "cubiertos": [
       {
-        "id": "cubiertos-descchables",
-        "nombre": "Cubiertos Desechables",
-        "descripcion": "Prácticos para eventos o domicilios.",
-        "material": "blanco",
-        "tamanos": [],
-        "imagen": ""
-      },
-      {
-        "id": "cucharas-descchables",
+        "id": "cucharas-desechables",
         "nombre": "Cucharas Desechables",
         "descripcion": "Ideales para sopas o postres.",
-        "material": "blanco",
+        "color": "blanco",
         "tamanos": ["Cuchara pequeña x100u", "Cuchara Grande x100u", "Cuchara Grande x20u"],
-        "imagen": ""
+        "imagen": "Cucharas desechables.png"
       },
       {
-        "id": "cuchillos-descchables",
+        "id": "cuchillos-desechables",
         "nombre": "Cuchillos Desechables",
         "descripcion": "Resistentes y ligeros para corte",
-        "material": "blanco",
+        "color": "blanco",
         "tamanos": ["Cuchilllo Grande x100u"],
-        "imagen": ""
+        "imagen": "Cuchillos desechables.png"
       },
       {
         "id": "tenedores-desechables",
         "nombre": "Tenedores Desechables",
         "descripcion": "Útiles en picnics y celebraciones.",
-        "material": "blanco",
+        "color": "blanco",
         "tamanos": ["Tenedor pequeño x100u", "Tenedor Grande x100u", "Tenedor Grande x20u"],
-        "imagen": ""
+        "imagen": "Tenedores desechables.png"
       }
     ],
     "otros": [
@@ -624,41 +616,41 @@
         "id": "cinta-transparente",
         "nombre": "Cinta Transparente",
         "descripcion": "Adhesión fuerte y presentación limpia.",
-        "material": "",
+        "color": "",
         "tamanos": [],
-        "imagen": ""
+        "imagen": "Cinta transparente.png"
       },
       {
         "id": "pegante-instanteneo",
         "nombre": "Pegante Instantáneo",
         "descripcion": "Fijación rápida y efectiva en segundos.",
-        "material": "",
+        "color": "",
         "tamanos": [],
-        "imagen": ""
+        "imagen": "Pegante instantaneo.png"
       },
       {
         "id": "ata-facil-cabuya",
         "nombre": "Ata Fácil Cabuya",
         "descripcion": "Amarre rápido y resistente para paquetes.",
-        "material": "",
+        "color": "",
         "tamanos": [],
-        "imagen": ""
+        "imagen": "Ata facil cabuya.png"
       },
       {
         "id": "mecheras",
         "nombre": "Mecheras",
         "descripcion": "Prácticas para prender estufas y fogones.",
-        "material": "",
+        "color": "",
         "tamanos": [],
-        "imagen": ""
+        "imagen": "Mecheras.png"
       },
       {
         "id": "nevera-termica",
         "nombre": "Nevera Térmica",
         "descripcion": "Mantiene tus alimentos frescos por más tiempo.",
-        "material": "blanco",
+        "color": "blanco",
         "tamanos": ["1 litro", "5 litro", "10 litro", "15 litro", "20 litro"],
-        "imagen": ""
+        "imagen": "Nevera termica.png"
       }
     ]
   }

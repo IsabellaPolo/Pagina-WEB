@@ -161,31 +161,94 @@
 
       </section>
   </main>
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      fetch('productos.json')
-        .then(response => response.json())
-        .then(data => {
-          const container = document.getElementById('productos-container');
-          
-          // Recorrer todas las categorías y productos
-          for (const categoria in data.productos) {
-            data.productos[categoria].forEach(producto => {
-              const productHTML = `
-                <div class="producto">
-                  <img src="img/${producto.id}.png" alt="${producto.nombre}" loading="lazy">
-                  <h4>${producto.nombre}</h4>
-                  <p>${producto.descripcion.substring(0, 50)}...</p>
-                  <a href="producto.html?id=${producto.id}" class="btn-ver-mas">Ver más</a>
-                </div>
-              `;
-              container.innerHTML += productHTML;
-            });
-          }
-        })
-        .catch(error => console.error('Error al cargar productos:', error));
+  <!-- Modificar la parte del script para usar nombres normalizados -->
+<script>
+  // Función para normalizar nombres de imágenes (por si se necesita)
+  function normalizeImageName(name) {
+    if (!name) return 'default-product';
+    return name.toLowerCase()
+      .replace(/[áàäâã]/g, 'a')
+      .replace(/[éèëê]/g, 'e')
+      .replace(/[íìïî]/g, 'i')
+      .replace(/[óòöôõ]/g, 'o')
+      .replace(/[úùüû]/g, 'u')
+      .replace(/ñ/g, 'n')
+      .replace(/\s+/g, '-')
+      .replace(/[^a-z0-9-]/g, '')
+      .replace(/-+/g, '-')
+      .replace(/^-|-$/g, '');
+  }
+
+  function checkImageExists(url) {
+    return new Promise(resolve => {
+      const img = new Image();
+      img.onload = () => resolve(true);
+      img.onerror = () => resolve(false);
+      img.src = url;
     });
-  </script>
+  }
+
+  async function getBestImagePath(product) {
+    // Si en el JSON ya hay un nombre de imagen definido, intenta usarlo primero
+    if (product.imagen && product.imagen.trim() !== '') {
+      const manualPath = `img/${product.imagen.trim()}`;
+      const exists = await checkImageExists(manualPath);
+      if (exists) return manualPath;
+    }
+
+    // Si no hay imagen o no existe, intenta rutas alternativas
+    const basePaths = [
+      `img/${normalizeImageName(product.nombre)}.png`,
+      `img/${normalizeImageName(product.nombre)}.jpg`,
+      `img/${product.id}.png`,
+      `img/${product.id}.jpg`,
+      'img/default-product.png'
+    ];
+
+    for (const path of basePaths) {
+      const exists = await checkImageExists(path);
+      if (exists) return path;
+    }
+
+    return 'img/default-product.png';
+  }
+
+  document.addEventListener('DOMContentLoaded', async function() {
+    try {
+      const response = await fetch('productos.json');
+      if (!response.ok) throw new Error('Error al cargar productos');
+
+      const data = await response.json();
+      const container = document.getElementById('productos-container');
+      const productsHTML = [];
+
+      for (const categoria in data.productos) {
+        for (const producto of data.productos[categoria]) {
+          const imagePath = await getBestImagePath(producto);
+
+          productsHTML.push(`
+            <div class="producto">
+              <img src="${imagePath}" alt="${producto.nombre}" loading="lazy">
+              <h4>${producto.nombre}</h4>
+              <p>${producto.descripcion.substring(0, 50)}...</p>
+              <a href="producto.html?id=${producto.id}" class="btn-ver-mas">Ver más</a>
+            </div>
+          `);
+        }
+      }
+
+      container.innerHTML = productsHTML.join('');
+    } catch (error) {
+      console.error('Error:', error);
+      document.getElementById('productos-container').innerHTML = `
+        <div class="error">
+          <p>No se pudieron cargar los productos. Por favor intenta más tarde.</p>
+        </div>
+      `;
+    }
+  });
+</script>
+
   <!-- ========== PIE DE PÁGINA ========== -->
   <footer>
   <div class="footer-contenido">
