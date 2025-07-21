@@ -43,7 +43,7 @@
       },
       {
         "id": "porta-hamburguesas",
-        "nombre": "portahamburguesas",
+        "nombre": "Porta Hamburguesas",
         "descripcion": "Empaque práctico para domicilios.",
         "color": "Blanco",
         "tamanos": [],
@@ -51,7 +51,7 @@
       },
       {
         "id": "porta-perros",
-        "nombre": "portaperros",
+        "nombre": "Porta Perros",
         "descripcion": "Diseño seguro para hot dogs.",
         "color": "Blanco",
         "tamanos": [],
@@ -59,7 +59,7 @@
       },
       {
         "id": "porta-pizza",
-        "nombre": "Porta pizza",
+        "nombre": "Porta Pizza",
         "descripcion": "Diseñado para transportar pizzas de forma segura",
         "imagen": "Porta pizza.png"
       },
@@ -232,7 +232,7 @@
         "descripcion": "Alternativa ecológica y práctica.",
         "color": "Amarillo",
         "tamanos": ["Pitillo eco plástico grueso mediano"],
-        "imagen": "Pitillo eco plastico.png"
+        "imagen": "Pitillo eco plastico.jpg"
       },
       {
         "id": "pitillos-biodegradables",
