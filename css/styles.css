@@ -306,12 +306,15 @@ header {
   background-color: #003366;
 }
 
-/* ========== SECCIÓN NOSOTROS ========== */
+/* ============================= */
+/* === NOSOTROS - MEJORADO ==== */
+/* ============================= */
+
 .nosotros-section {
   position: relative;
   width: 100%;
-  height: 83vh; /* Pantalla completa */
-  background-image: url('../img/Nosotros.png'); /* Asegúrate de la ruta */
+  height: 80vh;
+  background-image: url('../img/Nosotros.png');
   background-size: cover;
   background-position: center;
   display: flex;
@@ -320,24 +323,180 @@ header {
 }
 
 .nosotros-overlay {
-  background: rgba(255, 255, 255, 0.7); /* Fondo blanco semitransparente */
-  max-width: 600px;
-  padding: 50px;
-  margin-left: 10%;
-  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.85);
+  max-width: 680px;
+  padding: 40px 50px;
+  margin-left: 8%;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
 .nosotros-overlay h1 {
-  font-size: 38px;
-  color: #333;
+  font-size: 2.5rem;
+  color: #003366;
   margin-bottom: 20px;
 }
 
 .nosotros-overlay p {
-  font-size: 20px;
-  color: #333;
-  line-height: 1.5;
+  font-size: 1.1rem;
+  color: #444;
+  line-height: 1.6;
+  margin-bottom: 15px;
 }
+
+/* ===== SECCIÓN UBICACIÓN MEJORADA ===== */
+.ubicacion {
+  background-color: #ffffff;
+  padding: 100px 5% 80px;
+  text-align: center;
+}
+
+.ubicacion h2 {
+  font-size: 2.8rem;
+  margin-bottom: 25px;
+  color: #002244;
+  font-weight: 800;
+}
+
+.ubicacion p {
+  font-size: 1.2rem;
+  color: #444;
+  max-width: 900px;
+  margin: 0 auto 25px;
+  line-height: 1.8;
+}
+
+.mapas-ubicacion {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  flex-wrap: wrap;
+  margin: 60px 0;
+}
+
+.mapa-colombia,
+.mapa-huila {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  padding: 30px;
+  max-width: 360px;
+  width: 100%;
+  transition: transform 0.3s ease;
+}
+
+.mapa-colombia:hover,
+.mapa-huila:hover {
+  transform: translateY(-6px);
+}
+
+.mapa-colombia img,
+.mapa-huila img {
+  width: 100%;
+  height: auto;
+  max-height: 240px;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+
+.mapa-colombia p,
+.mapa-huila p {
+  font-size: 1.1rem;
+  color: #333;
+  margin-top: 10px;
+}
+
+.mapa-colombia p strong,
+.mapa-huila p strong {
+  font-weight: bold;
+  color: #002244;
+}
+
+.direccion {
+  margin-top: 30px;
+}
+
+.direccion h3 {
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+  color: #003366;
+}
+
+.direccion p {
+  font-size: 1.15rem;
+  color: #444;
+  line-height: 1.6;
+}
+
+
+/* === Valores y fortalezas === */
+.valores {
+  background-color: #f8fafd;
+  padding: 60px 5%;
+  text-align: center;
+}
+
+.valores h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #003366;
+}
+
+.grid-valores {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 40px;
+  justify-content: center;
+  align-items: start;
+}
+
+.valor {
+  background: #fff;
+  border-radius: 12px;
+  padding: 30px 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+
+.valor:hover {
+  transform: translateY(-5px);
+}
+
+.valor img {
+  width: 60px;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+.valor p {
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nosotros-overlay {
+    padding: 30px;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+  .mapas-ubicacion {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .direccion {
+    padding: 0 10px;
+  }
+
+  .grid-valores {
+    grid-template-columns: 1fr;
+  }
+}
+
 
 /* ========================= */
 /* === SECCIÓN DE PRODUCTOS === */
