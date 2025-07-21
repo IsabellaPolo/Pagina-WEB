@@ -31,10 +31,10 @@
             <div class="lista-categorias">
               <h4>Categorías</h4>
               <ul>
-                <li><a href="contenedores.html" class="active"><i class="fas fa-box-open"></i> Contenedores</a></li>
+                <li><a href="contenedores.html"><i class="fas fa-box-open"></i> Contenedores</a></li>
                 <li><a href="bandejas.html"><i class="fas fa-layer-group"></i> Bandejas</a></li>
                 <li><a href="copas.html"><i class="fas fa-wine-glass-alt"></i> Copas</a></li>
-                <li><a href="vasos.html"><i class="fas fa-glass-water"></i> Vasos</a></li>
+                <li><a href="vasos.html" class="active"><i class="fas fa-glass-water"></i> Vasos</a></li>
                 <li><a href="pitillos-palillos.html"><i class="fas fa-grip-lines-vertical"></i> Pitillos y Palillos</a></li>
                 <li><a href="platos.html"><i class="fas fa-utensil-spoon"></i> Platos</a></li>
                 <li><a href="frascos.html"><i class="fas fa-flask"></i> Frascos</a></li>
@@ -103,81 +103,30 @@
       <span>Vasos</span>
     </div>
 
-    <div class="productos-grid">
-      <div class="producto">
-        <img src="../img/Vasos Tami.png" alt="Vasos Tami">
-        <h4>Vasos Tami</h4>
-        <p>Prácticos y resistentes para uso diario.</p>
-      </div>
-      
-      <div class="producto">
-        <img src="../img/Vasos resq.png" alt="Vasos Resq">
-        <h4>Vasos Resq</h4>
-        <p>Alta transparencia y resistencia.</p>
-      </div>
-      
-      <div class="producto">
-        <img src="../img/Vasos espumados.png" alt="Vasos Espumados">
-        <h4>Vasos Espumados</h4>
-        <p>Aislantes térmicos y livianos.</p>
-      </div>
-      
-      <div class="producto">
-        <img src="../img/Vaso 3 onz.png" alt="Vaso 3 onz">
-        <h4>Vaso 3 onz</h4>
-        <p>Tamaño pequeño ideal para degustaciones.</p>
-      </div>
-      
-      <div class="producto">
-        <img src="../img/Vaso 5 onz.png" alt="Vaso 5 onz">
-        <h4>Vaso 5 onz</h4>
-        <p>Compacto y práctico para líquidos fríos.</p>
-      </div>
-      
-      <div class="producto">
-        <img src="../img/Vaso 7 onz.png" alt="Vaso 7 onz">
-        <h4>Vaso 7 onz</h4>
-        <p>Uso general en bebidas rápidas.</p>
-      </div>
-      
-      <div class="producto">
-        <img src="../img/Vaso 9 onz.png" alt="Vaso 9 onz">
-        <h4>Vaso 9 onz</h4>
-        <p>Capacidad media para múltiples bebidas.</p>
-      </div>
-      
-      <div class="producto">
-        <img src="../img/Vaso tinto.png" alt="Vaso Tinto">
-        <h4>Vaso Tinto</h4>
-        <p>Diseño estilizado para bebidas calientes.</p>
-      </div>
-      
-      <div class="producto">
-        <img src="../img/Vasos plasticos en color.png" alt="Vasos Plásticos Color">
-        <h4>Vasos Plásticos Color</h4>
-        <p>Presentación llamativa y resistente.</p>
-      </div>
-      
-      <div class="producto">
-        <img src="../img/Vasos plasticos en opal.png" alt="Vasos Plásticos Opal">
-        <h4>Vasos Plásticos Opal</h4>
-        <p>Elegancia con resistencia reforzada.</p>
+    <!-- Contenedor para los productos de vasos -->
+    <div class="productos-grid" id="vasos-container">
+      <!-- Los productos se cargarán aquí dinámicamente con JavaScript -->
+      <div class="loading-products">
+        <i class="fas fa-spinner fa-spin"></i> Cargando productos...
       </div>
     </div>
   </main>
 
   <!-- ========== PIE DE PÁGINA ========== -->
   <footer>
-  <div class="footer-contenido">
-    <div class="footer-info">
-      <p>© 2025 Todo Plásticos · Garzón, Huila · Tel: 310 3377752</p>
+    <div class="footer-contenido">
+      <div class="footer-info">
+        <p>© 2025 Todo Plásticos · Garzón, Huila · Tel: 310 3377752</p>
+      </div>
+      <div class="footer-social">
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      </div>
     </div>
-    <div class="footer-social">
-      <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-      <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-      <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-    </div>
-  </div>
-</footer>
+  </footer>
+
+  <!-- Script para cargar los productos de la categoría -->
+  <script src="../js/categoria.js"></script>
 </body>
 </html>

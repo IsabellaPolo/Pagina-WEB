@@ -103,21 +103,14 @@
       <span>Bandejas</span>
     </div>
 
-    <div class="productos-grid">
-      <div class="producto">
-        <img src="../img/Bandejas espumadas.png" alt="Bandejas Espumadas">
-        <h4>Bandejas Espumadas</h4>
-        <p>Ideales para exhibición de carnes y frutas.</p>
+    <!-- Contenedor para los productos de bandejas -->
+    <div class="productos-grid" id="bandejas-container">
+      <!-- Los productos se cargarán aquí dinámicamente con JavaScript -->
+      <div class="loading-products">
+        <i class="fas fa-spinner fa-spin"></i> Cargando productos...
       </div>
-
-      <div class="producto">
-        <img src="../img/Moldes de aluminio.png" alt="Moldes de Aluminio">
-        <h4>Moldes de Aluminio</h4>
-        <p>Perfectos para hornear y almacenar.</p>
-      </div> 
     </div>
   </main>
-
 
   <!-- ========== PIE DE PÁGINA ========== -->
   <footer>
@@ -132,5 +125,7 @@
     </div>
   </div>
 </footer>
+<!-- Script para cargar los productos de la categoría -->
+  <script src="../js/categoria.js"></script>
 </body>
 </html>

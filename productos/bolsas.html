@@ -103,53 +103,11 @@
       <span>Bolsas</span>
     </div>
 
-    <div class="productos-grid">
-      <div class="producto">
-        <img src="../img/Bolsa aluminio.png" alt="Bolsa de Aluminio">
-        <h4>Bolsa de Aluminio</h4>
-        <p>Durabilidad y resistencia para alimentos calientes o fríos.</p>
-      </div>
-      
-      <div class="producto">
-        <img src="../img/Bolsa basura.png" alt="Bolsa de Basura">
-        <h4>Bolsa de Basura</h4>
-        <p>Gran capacidad y resistencia para desechos domésticos.</p>
-      </div>
-      
-      <div class="producto">
-        <img src="../img/Bolsa biodegradable.png" alt="Bolsa Biodegradable">
-        <h4>Bolsa Biodegradable</h4>
-        <p>Ecológica y fuerte, ideal para comercios conscientes.</p>
-      </div>
-      
-      <div class="producto">
-        <img src="../img/Bolsa papel.png" alt="Bolsa de Papel">
-        <h4>Bolsa de Papel</h4>
-        <p>Prácticas y reutilizables para panaderías o tiendas.</p>
-      </div>
-      
-      <div class="producto">
-        <img src="../img/Bolsa hermetica.png" alt="Bolsa Hermética">
-        <h4>Bolsa Hermética</h4>
-        <p>Con cierre seguro para conservar alimentos.</p>
-      </div>
-      
-      <div class="producto">
-        <img src="../img/Bolsa para hielo.png" alt="Bolsa para Hielo">
-        <h4>Bolsa para Hielo</h4>
-        <p>Resistentes al congelamiento y al peso.</p>
-      </div>
-      
-      <div class="producto">
-        <img src="../img/Bolsa propileno.png" alt="Bolsa de Propileno">
-        <h4>Bolsa de Propileno</h4>
-        <p>Transparente y durable para múltiples usos.</p>
-      </div>
-      
-      <div class="producto">
-        <img src="../img/Bolsa transparente.png" alt="Bolsa Transparente">
-        <h4>Bolsa Transparente</h4>
-        <p>Visibilidad total para productos en venta.</p>
+    <!-- Contenedor para los productos de bolsas -->
+    <div class="productos-grid" id="bolsas-container">
+      <!-- Los productos se cargarán aquí dinámicamente con JavaScript -->
+      <div class="loading-products">
+        <i class="fas fa-spinner fa-spin"></i> Cargando productos...
       </div>
     </div>
   </main>
@@ -167,5 +125,7 @@
     </div>
   </div>
 </footer>
+<!-- Script para cargar los productos de la categoría -->
+  <script src="../js/categoria.js"></script>
 </body>
 </html>

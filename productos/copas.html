@@ -103,23 +103,11 @@
       <span>Copas</span>
     </div>
 
-    <div class="productos-grid">
-      <div class="producto">
-        <img src="../img/Copa tipo flauta.png" alt="Copa tipo Flauta">
-        <h4>Copa tipo Flauta</h4>
-        <p>Elegancia para brindis y celebraciones.</p>
-      </div>
-      
-      <div class="producto">
-        <img src="../img/Copa vino.png" alt="Copa de Vino">
-        <h4>Copa de Vino</h4>
-        <p>Perfecta para eventos formales.</p>
-      </div>
-      
-      <div class="producto">
-        <img src="../img/Copas venecianas.png" alt="Copas Venecianas">
-        <h4>Copas Venecianas</h4>
-        <p>Diseño clásico para bebidas frías.</p>
+    <!-- Contenedor para los productos de copas -->
+    <div class="productos-grid" id="copas-container">
+      <!-- Los productos se cargarán aquí dinámicamente con JavaScript -->
+      <div class="loading-products">
+        <i class="fas fa-spinner fa-spin"></i> Cargando productos...
       </div>
     </div>
   </main>
@@ -137,5 +125,7 @@
     </div>
   </div>
 </footer>
+<!-- Script para cargar los productos de la categoría -->
+  <script src="../js/categoria.js"></script>
 </body>
 </html>

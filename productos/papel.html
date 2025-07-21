@@ -103,29 +103,11 @@
       <span>Papel</span>
     </div>
 
-    <div class="productos-grid">
-      <div class="producto">
-        <img src="../img/papel aluminio.png" alt="Papel Aluminio">
-        <h4>Papel Aluminio</h4>
-        <p>Ideal para envolver o cocinar.</p>
-      </div>
-      
-      <div class="producto">
-        <img src="../img/Vinipel para alimentos.png" alt="Vinipel para Alimentos">
-        <h4>Vinipel para Alimentos</h4>
-        <p>Conservación de frescura garantizada.</p>
-      </div>
-      
-      <div class="producto">
-        <img src="../img/Vinipel strech.png" alt="Vinipel Stretch">
-        <h4>Vinipel Stretch</h4>
-        <p>Adherente y versátil para envolver.</p>
-      </div>
-      
-      <div class="producto">
-        <img src="../img/Lamina parafinada.png" alt="Lámina Parafinada">
-        <h4>Lámina Parafinada</h4>
-        <p>Protección para alimentos o empaques.</p>
+    <!-- Contenedor para los productos de papel -->
+    <div class="productos-grid" id="papel-container">
+      <!-- Los productos se cargarán aquí dinámicamente con JavaScript -->
+      <div class="loading-products">
+        <i class="fas fa-spinner fa-spin"></i> Cargando productos...
       </div>
     </div>
   </main>
@@ -143,5 +125,7 @@
     </div>
   </div>
 </footer>
+<!-- Script para cargar los productos de la categoría -->
+  <script src="../js/categoria.js"></script>
 </body>
 </html>

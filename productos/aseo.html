@@ -103,89 +103,11 @@
       <span>Aseo</span>
     </div>
 
-    <div class="productos-grid">
-      <div class="producto">
-        <img src="../img/Escoba w color.png" alt="Escoba W Color">
-        <h4>Escoba W Color</h4>
-        <p>Resistente y colorida para barrido general.</p>
-      </div>
-      
-      <div class="producto">
-        <img src="../img/Escoba w suprema.png" alt="Escoba W Suprema">
-        <h4>Escoba W Suprema</h4>
-        <p>Cerdas duraderas, ideal para exteriores.</p>
-      </div>
-      
-      <div class="producto">
-        <img src="../img/Escoba Danna.png" alt="Escoba Danna">
-        <h4>Escoba Danna</h4>
-        <p>Cerdas fuertes y diseño ergonómico.</p>
-      </div>
-      
-      <div class="producto">
-        <img src="../img/Cepillo planchita.png" alt="Cepillo Planchita">
-        <h4>Cepillo Planchita</h4>
-        <p>Compacto para detalles difíciles.</p>
-      </div>
-      
-      <div class="producto">
-        <img src="../img/Cepillo anatomico.png" alt="Cepillo Anatómico">
-        <h4>Cepillo Anatómico</h4>
-        <p>Diseño ergonómico para mejor agarre.</p>
-      </div>
-      
-      <div class="producto">
-        <img src="../img/Cepillo multi hogar.png" alt="Cepillo Multi Hogar">
-        <h4>Cepillo Multi Hogar</h4>
-        <p>Versátil para limpieza en toda la casa.</p>
-      </div>
-      
-      <div class="producto">
-        <img src="../img/Esponja sabra oro plata.png" alt="Esponja Sabra Oro Plata">
-        <h4>Esponja Sabra Oro/Plata</h4>
-        <p>Efectiva para limpieza exigente de cocina.</p>
-      </div>
-      
-      <div class="producto">
-        <img src="../img/Esponja.png" alt="Esponja">
-        <h4>Esponja</h4>
-        <p>Multiuso, ideal para la limpieza del hogar.</p>
-      </div>
-      
-      <div class="producto">
-        <img src="../img/guantes de aseo domestico.png" alt="Guantes de Aseo">
-        <h4>Guantes de Aseo</h4>
-        <p>Protección y comodidad para limpieza doméstica.</p>
-      </div>
-      
-      <div class="producto">
-        <img src="../img/Trapeador algodon.png" alt="Trapeador de Algodón">
-        <h4>Trapeador de Algodón</h4>
-        <p>Alta absorción para limpieza profunda.</p>
-      </div>
-      
-      <div class="producto">
-        <img src="../img/Trapeador microfibra.png" alt="Trapeador Microfibra">
-        <h4>Trapeador Microfibra</h4>
-        <p>Limpieza profunda y sin rayones.</p>
-      </div>
-      
-      <div class="producto">
-        <img src="../img/Recogedor con banda.png" alt="Recogedor con Banda">
-        <h4>Recogedor con Banda</h4>
-        <p>Reforzado para mejor recolección.</p>
-      </div>
-      
-      <div class="producto">
-        <img src="../img/Recogedor con plus.png" alt="Recogedor Plus">
-        <h4>Recogedor Plus</h4>
-        <p>Diseño optimizado y liviano.</p>
-      </div>
-      
-      <div class="producto">
-        <img src="../img/Recogedor sin banda.png" alt="Recogedor sin Banda">
-        <h4>Recogedor sin Banda</h4>
-        <p>Básico y funcional para limpieza rápida.</p>
+    <!-- Contenedor para los productos de aseo -->
+    <div class="productos-grid" id="aseo-container">
+      <!-- Los productos se cargarán aquí dinámicamente con JavaScript -->
+      <div class="loading-products">
+        <i class="fas fa-spinner fa-spin"></i> Cargando productos...
       </div>
     </div>
   </main>
@@ -203,3 +125,8 @@
     </div>
   </div>
 </footer>
+
+<!-- Script para cargar los productos de la categoría -->
+  <script src="../js/categoria.js"></script>
+  </body>
+</html>
