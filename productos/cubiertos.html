@@ -103,23 +103,11 @@
       <span>Cubiertos</span>
     </div>
 
-    <div class="productos-grid">
-      <div class="producto">
-        <img src="../img/Cucharas desechables.png" alt="Cucharas Desechables">
-        <h4>Cucharas Desechables</h4>
-        <p>Ideales para sopas o postres.</p>
-      </div>
-      
-      <div class="producto">
-        <img src="../img/Cuchillos desechables.png" alt="Cuchillos Desechables">
-        <h4>Cuchillos Desechables</h4>
-        <p>Resistentes y ligeros para corte.</p>
-      </div>
-      
-      <div class="producto">
-        <img src="../img/Tenedores desechables.png" alt="Tenedores Desechables">
-        <h4>Tenedores Desechables</h4>
-        <p>Útiles en picnics y celebraciones.</p>
+    <!-- Contenedor para los productos de cubiertos -->
+    <div class="productos-grid" id="cubiertos-container">
+      <!-- Los productos se cargarán aquí dinámicamente con JavaScript -->
+      <div class="loading-products">
+        <i class="fas fa-spinner fa-spin"></i> Cargando productos...
       </div>
     </div>
   </main>
@@ -137,5 +125,7 @@
     </div>
   </div>
 </footer>
+<!-- Script para cargar los productos de la categoría -->
+  <script src="../js/categoria.js"></script>
 </body>
 </html>

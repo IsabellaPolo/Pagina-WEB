@@ -103,45 +103,14 @@
       <span>Servilletas</span>
     </div>
 
-    <div class="productos-grid">
-      <div class="producto">
-        <img src="../img/Servilleta arbora.png" alt="Servilleta Arbora">
-        <h4>Servilleta Arbora</h4>
-        <p>Calidad y suavidad garantizadas.</p>
-      </div>
-      
-      <div class="producto">
-        <img src="../img/Servilleta familia.png" alt="Servilleta Familia">
-        <h4>Servilleta Familia</h4>
-        <p>Absorbentes para uso diario.</p>
-      </div>
-      
-      <div class="producto">
-        <img src="../img/Servilleta favorita.png" alt="Servilleta Favorita">
-        <h4>Servilleta Favorita</h4>
-        <p>Diseño económico y versátil.</p>
-      </div>
-      
-      <div class="producto">
-        <img src="../img/Servilleta mia.png" alt="Servilleta Mía">
-        <h4>Servilleta Mía</h4>
-        <p>Suaves, perfectas para el día a día.</p>
-      </div>
-      
-      <div class="producto">
-        <img src="../img/Servilleta nube.png" alt="Servilleta Nube">
-        <h4>Servilleta Nube</h4>
-        <p>Textura delicada, excelente absorción.</p>
-      </div>
-      
-      <div class="producto">
-        <img src="../img/Servilleta popular.png" alt="Servilleta Popular">
-        <h4>Servilleta Popular</h4>
-        <p>Económicas para uso general.</p>
+    <!-- Contenedor para los productos de servilletas -->
+    <div class="productos-grid" id="servilletas-container">
+      <!-- Los productos se cargarán aquí dinámicamente con JavaScript -->
+      <div class="loading-products">
+        <i class="fas fa-spinner fa-spin"></i> Cargando productos...
       </div>
     </div>
   </main>
-
   <!-- ========== PIE DE PÁGINA ========== -->
   <footer>
   <div class="footer-contenido">
@@ -155,5 +124,7 @@
     </div>
   </div>
 </footer>
+<!-- Script para cargar los productos de la categoría -->
+  <script src="../js/categoria.js"></script>
 </body>
 </html>

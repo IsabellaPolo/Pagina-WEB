@@ -104,44 +104,14 @@
     <span>Frascos</span>
   </div>
 
-  <div class="productos-grid">
-    <div class="producto">
-      <img src="../img/Domo perforado.png" alt="Domo Perforado">
-      <h4>Domo Perforado</h4>
-      <p>Ventilación ideal para postres.</p>
+  <!-- Contenedor para los productos de frascos -->
+    <div class="productos-grid" id="frascos-container">
+      <!-- Los productos se cargarán aquí dinámicamente con JavaScript -->
+      <div class="loading-products">
+        <i class="fas fa-spinner fa-spin"></i> Cargando productos...
+      </div>
     </div>
-    
-    <div class="producto">
-      <img src="../img/Domo sin perforacion.png" alt="Domo Sin Perforación">
-      <h4>Domo Sin Perforación</h4>
-      <p>Protección hermética para bebidas.</p>
-    </div>
-    
-    <div class="producto">
-      <img src="../img/Tapa sin perforacion.png" alt="Tapa sin Perforación">
-      <h4>Tapa sin Perforación</h4>
-      <p>Perfecta para vasos o frascos herméticos.</p>
-    </div>
-    
-    <div class="producto">
-      <img src="../img/Tapa perforada.png" alt="Tapa Perforada">
-      <h4>Tapa Perforada</h4>
-      <p>Previene derrames y mantiene el contenido fresco.</p>
-    </div>
-
-    <div class="producto">
-      <img src="../img/Frasco plastico redondo.png" alt="Frasco Plástico Redondo">
-      <h4>Frasco Plástico Redondo</h4>
-      <p>Versátil para líquidos o sólidos.</p>
-    </div>
-    
-    <div class="producto">
-      <img src="../img/Tapa para frasco cuadrado.png" alt="Tapa Frasco Cuadrado">
-      <h4>Tapa Frasco Cuadrado</h4>
-      <p>Cierre seguro y duradero.</p>
-    </div>
-  </div>
-</main>
+  </main>
 
 
   <!-- ========== PIE DE PÁGINA ========== -->
@@ -157,5 +127,7 @@
     </div>
   </div>
 </footer>
+<!-- Script para cargar los productos de la categoría -->
+  <script src="../js/categoria.js"></script>
 </body>
 </html>

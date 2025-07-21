@@ -103,36 +103,11 @@
       <span>Otros</span>
     </div>
 
-    <div class="productos-grid">
-      
-      <div class="producto">
-        <img src="../img/Cinta transparente.png" alt="Cinta Transparente">
-        <h4>Cinta Transparente</h4>
-        <p>Adhesión fuerte y presentación limpia.</p>
-      </div>
-      
-      <div class="producto">
-        <img src="../img/Pegante instantaneo.png" alt="Pegante Instantáneo">
-        <h4>Pegante Instantáneo</h4>
-        <p>Fijación rápida y efectiva en segundos.</p>
-      </div>
-      
-      <div class="producto">
-        <img src="../img/Ata facil cabuya.png" alt="Ata Fácil Cabuya">
-        <h4>Ata Fácil Cabuya</h4>
-        <p>Amarre rápido y resistente para paquetes.</p>
-      </div>
-      
-      <div class="producto">
-        <img src="../img/Mecheras.png" alt="Mecheras">
-        <h4>Mecheras</h4>
-        <p>Prácticas para prender estufas y fogones.</p>
-      </div>
-
-      <div class="producto">
-        <img src="../img/Nevera termica.png" alt="Nevera Térmica">
-        <h4>Nevera Térmica</h4>
-        <p>Mantiene tus alimentos frescos por más tiempo.</p>
+    <!-- Contenedor para los productos de otros -->
+    <div class="productos-grid" id="otros-container">
+      <!-- Los productos se cargarán aquí dinámicamente con JavaScript -->
+      <div class="loading-products">
+        <i class="fas fa-spinner fa-spin"></i> Cargando productos...
       </div>
     </div>
   </main>
@@ -150,5 +125,7 @@
     </div>
   </div>
 </footer>
+<!-- Script para cargar los productos de la categoría -->
+  <script src="../js/categoria.js"></script>
 </body>
 </html>
