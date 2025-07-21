@@ -58,6 +58,12 @@
         "imagen": "Porta perros.png"
       },
       {
+        "id": "porta-pizza",
+        "nombre": "Porta pizza",
+        "descripcion": "Diseñado para transportar pizzas de forma segura",
+        "imagen": "Porta pizza.png"
+      },
+      {
         "id": "portacomidas-espumado",
         "nombre": "Portacomidas Espumado",
         "descripcion": "Contenedor térmico para comidas completas.",
@@ -344,7 +350,14 @@
         "descripcion": "Ecológica y fuerte, ideal para comercios conscientes.",
         "color": "naranja, verde, blanco, negro, rayado blanco y azul",
         "tamanos": ["1.5 K", "3 K", "15 K", "30 K"],
-        "imagen": "Bolsa biodegradable.png"
+        "imagenes": [
+          "Bolsas biodegradable.png",
+          "Bolsa blanca.png",
+          "Bolsa negra.png",
+          "Bolsa verde.png",
+          "Bolsa naranja.png",
+          "Bolsa manigueta rayada.png"
+          ]
       },
       {
         "id": "bolsa-de-papel",
@@ -385,6 +398,29 @@
         "color": "Cristal",
         "tamanos": ["1 L", "2 L", "1 K", "2 K", "3 K"],
         "imagen": "Bolsa transparente.png"
+      },
+      {
+        "id": "bolsa-manija",
+        "nombre": "Bolsa de manija",
+        "descripcion": "Práctica y resistente para múltiples usos",
+        "imagen": "Bolsa de manija.png"
+      },
+      {
+        "id": "bolsa-precorte",
+        "nombre": "Bolsa precorte",
+        "descripcion": "Ideal para empaques rápidos y cómodos",
+        "imagen": "Bolsa precorte.png"
+      },
+      {
+        "id": "bolsa1",
+        "nombre": "Bolsas marcadas con su logo",
+        "descripcion": "Bolsas personalizadas y marcadas con su logo para su empresa",
+        "imagenes": [
+          "Bolsas marcadas/Bolsa1.png",
+          "Bolsas marcadas/Bolsa2.png",
+          "Bolsas marcadas/Bolsa3.png",
+          "Bolsas marcadas/Bolsa4.png"
+          ]
       }
     ],
     "servilletas": [
