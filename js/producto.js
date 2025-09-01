@@ -1,19 +1,20 @@
-// producto.js - Versión mejorada para manejo de imágenes
+// producto.js - Versión mejorada con sugerencias de búsqueda
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const urlParams = new URLSearchParams(window.location.search);
     const productId = urlParams.get('id');
-    
+
     // Elementos del DOM
     const productImage = document.getElementById('producto-imagen');
     const productName = document.getElementById('producto-nombre');
     const productDescription = document.getElementById('producto-descripcion');
     const productSpecs = document.getElementById('producto-especificaciones');
-    
-    // Función mejorada para normalizar nombres de imágenes
+    const productSuggestions = document.getElementById('producto-sugerencias'); // 👈 bloque de sugerencias
+
+    // Normalizar nombres de imágenes
     function normalizeImageName(name) {
         if (!name) return 'default-product';
-        
+
         return name.toLowerCase()
             .replace(/[áàäâã]/g, 'a')
             .replace(/[éèëê]/g, 'e')
@@ -21,13 +22,23 @@ document.addEventListener('DOMContentLoaded', function() {
             .replace(/[óòöôõ]/g, 'o')
             .replace(/[úùüû]/g, 'u')
             .replace(/ñ/g, 'n')
-            .replace(/\s+/g, '-')  // Reemplaza espacios con guiones
-            .replace(/[^a-z0-9-]/g, '') // Elimina caracteres especiales
-            .replace(/-+/g, '-')  // Elimina guiones múltiples
-            .replace(/^-|-$/g, ''); // Elimina guiones al inicio/final
+            .replace(/\s+/g, '-')
+            .replace(/[^a-z0-9-]/g, '')
+            .replace(/-+/g, '-')
+            .replace(/^-|-$/g, '');
     }
 
-    // Función para buscar imagen alternativa si la principal no existe
+    // Verificar si la imagen existe
+    function checkImageExists(url) {
+        return new Promise((resolve) => {
+            const img = new Image();
+            img.onload = () => resolve(true);
+            img.onerror = () => resolve(false);
+            img.src = url;
+        });
+    }
+
+    // Cargar imagen de respaldo
     async function loadProductImage(productName, productId) {
         const basePaths = [
             `img/${normalizeImageName(productName)}.png`,
@@ -36,28 +47,12 @@ document.addEventListener('DOMContentLoaded', function() {
             `img/${productId}.jpg`,
             'img/default-product.png'
         ];
-        
-        // Verificar cada posible ruta hasta encontrar una imagen válida
+
         for (const path of basePaths) {
-            try {
-                const exists = await checkImageExists(path);
-                if (exists) return path;
-            } catch (error) {
-                console.warn(`No se pudo cargar imagen: ${path}`);
-            }
+            const exists = await checkImageExists(path);
+            if (exists) return path;
         }
-        
         return 'img/default-product.png';
-    }
-    
-    // Función para verificar si una imagen existe
-    function checkImageExists(url) {
-        return new Promise((resolve) => {
-            const img = new Image();
-            img.onload = () => resolve(true);
-            img.onerror = () => resolve(false);
-            img.src = url;
-        });
     }
 
     // Cargar datos del producto
@@ -69,8 +64,8 @@ document.addEventListener('DOMContentLoaded', function() {
         .then(async data => {
             let productFound = null;
             let productCategory = '';
-            
-            // Buscar producto por ID
+
+            // Buscar producto
             for (const category in data.productos) {
                 const found = data.productos[category].find(p => p.id === productId);
                 if (found) {
@@ -79,15 +74,15 @@ document.addEventListener('DOMContentLoaded', function() {
                     break;
                 }
             }
-            
+
             if (!productFound) throw new Error('Producto no encontrado');
-            
-            // Actualizar información del producto
+
+            // Actualizar datos principales
             document.title = `${productFound.nombre} | Todo Plásticos`;
             productName.textContent = productFound.nombre;
             productDescription.textContent = productFound.descripcion;
-            
-            // Limpiar y llenar especificaciones
+
+            // Especificaciones
             productSpecs.innerHTML = '';
             if (productFound.color) {
                 productSpecs.innerHTML += `<li><strong>Color:</strong> ${productFound.color}</li>`;
@@ -98,8 +93,8 @@ document.addEventListener('DOMContentLoaded', function() {
             if (productFound.variaciones?.length > 0) {
                 productSpecs.innerHTML += `<li><strong>Variaciones:</strong> ${productFound.variaciones.join(', ')}</li>`;
             }
-            
-            // Cargar imagen: primero usa la del JSON si está, si no, usa respaldo
+
+            // Imagen
             let imagePath;
             if (productFound.imagen && productFound.imagen.trim() !== '') {
                 const manualPath = `img/${productFound.imagen.trim()}`;
@@ -110,6 +105,24 @@ document.addEventListener('DOMContentLoaded', function() {
             }
             productImage.src = imagePath;
             productImage.alt = productFound.nombre;
+
+            // 🔎 Sugerencias de productos relacionados
+            const relatedProducts = data.productos[productCategory].filter(p => p.id !== productId);
+
+            if (relatedProducts.length > 0 && productSuggestions) {
+                productSuggestions.innerHTML = `
+                    <h3>También te puede interesar</h3>
+                    <div class="sugerencias-grid">
+                        ${relatedProducts.map(p => `
+                            <a href="producto.html?id=${p.id}" class="sugerencia-item">
+                                <img src="img/${p.imagen}" alt="${p.nombre}" onerror="this.src='img/default-product.png'">
+                                <p>${p.nombre}</p>
+                            </a>
+                        `).join('')}
+                    </div>
+                `;
+            }
+
         })
         .catch(error => {
             console.error('Error:', error);

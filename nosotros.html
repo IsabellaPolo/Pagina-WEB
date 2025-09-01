@@ -8,49 +8,6 @@
   <link rel="stylesheet" href="css/styles.css" />
   <link rel="icon" href="favicon.ico" />
 </head>
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-  const searchInput = document.getElementById('search-input');
-  const resultsList = document.getElementById('search-results');
-  let productos = [];
-
-  fetch('productos.json')
-    .then(res => res.json())
-    .then(data => {
-      for (const categoria in data.productos) {
-        data.productos[categoria].forEach(p => productos.push(p));
-      }
-    });
-
-  searchInput.addEventListener('input', () => {
-    const query = searchInput.value.toLowerCase().trim();
-    resultsList.innerHTML = '';
-
-    if (query.length < 2) return;
-
-    const resultados = productos.filter(p =>
-      p.nombre.toLowerCase().includes(query)
-    ).slice(0, 10);
-
-    resultados.forEach(producto => {
-      const li = document.createElement('li');
-      li.textContent = producto.nombre;
-      li.onclick = () => {
-        window.location.href = `producto.html?id=${producto.id}`;
-      };
-      resultsList.appendChild(li);
-    });
-  });
-
-  // Oculta los resultados si se hace clic fuera
-  document.addEventListener('click', e => {
-    if (!document.querySelector('.search-container').contains(e.target)) {
-      resultsList.innerHTML = '';
-    }
-  });
-});
-</script>
-
 <body>
 
   <!-- ========== ENCABEZADO ========== -->
@@ -178,7 +135,6 @@ document.addEventListener('DOMContentLoaded', () => {
   </div>
 </section>
 
-
   <!-- ========== PIE DE PÁGINA ========== -->
   <footer>
     <div class="footer-contenido">
@@ -194,4 +150,6 @@ document.addEventListener('DOMContentLoaded', () => {
   </footer>
 
 </body>
+<script src="js/producto.js"></script>
+<script src="js/buscador.js"></script>
 </html>

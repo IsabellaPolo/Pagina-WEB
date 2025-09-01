@@ -64,7 +64,12 @@
       </ul>
     </nav>
     <div class="search-container">
-    <input type="text" id="search-input" placeholder="¿Qué producto estás buscando hoy?" autocomplete="off" />
+    <input 
+      type="text" 
+      id="search-input" 
+      placeholder="¿Qué producto estás buscando hoy?" 
+      autocomplete="off" 
+    />
     <ul id="search-results" class="search-results"></ul>
     <img src="img/bandera colombia.png" alt="Col" class="flag" />
     </div>
@@ -105,72 +110,6 @@
       </div>
     </div>
   </footer>
-
-  <script src="js/producto.js">
-    document.addEventListener('DOMContentLoaded', function() {
-      const urlParams = new URLSearchParams(window.location.search);
-      const productId = urlParams.get('id');
-      
-      if (!productId) {
-        window.location.href = 'productos.html';
-        return;
-      }
-      
-      fetch('productos.json')
-        .then(response => response.json())
-        .then(data => {
-          let productoEncontrado = null;
-          let categoriaProducto = '';
-          
-          // Buscar el producto en todas las categorías
-          for (const categoria in data.productos) {
-            const encontrado = data.productos[categoria].find(p => p.id === productId);
-            if (encontrado) {
-              productoEncontrado = encontrado;
-              categoriaProducto = categoria;
-              break;
-            }
-          }
-          
-          if (productoEncontrado) {
-            // Actualizar título de la página
-            document.title = `${productoEncontrado.nombre} | Todo Plásticos`;
-            
-            // Llenar los datos del producto
-            document.getElementById('producto-nombre').textContent = productoEncontrado.nombre;
-            document.getElementById('producto-categoria').textContent = categoriaProducto.charAt(0).toUpperCase() + categoriaProducto.slice(1);
-            document.getElementById('producto-descripcion').textContent = productoEncontrado.descripcion;
-            
-            // Configurar imagen (asumiendo que las imágenes tienen el mismo nombre que el ID)
-            const imgElement = document.getElementById('producto-imagen');
-            imgElement.src = `img/${productId}.png`;
-            imgElement.alt = productoEncontrado.nombre;
-            
-            // Llenar especificaciones
-            const especificaciones = document.getElementById('producto-especificaciones');
-            
-            if (productoEncontrado.material) {
-              especificaciones.innerHTML += `<li><strong>Material:</strong> ${productoEncontrado.material}</li>`;
-            }
-            
-            if (productoEncontrado.tamanos && productoEncontrado.tamanos.length > 0) {
-              especificaciones.innerHTML += `<li><strong>Tamaños:</strong> ${productoEncontrado.tamanos.join(', ')}</li>`;
-            }
-            
-            if (productoEncontrado.variaciones && productoEncontrado.variaciones.length > 0) {
-              especificaciones.innerHTML += `<li><strong>Variaciones:</strong> ${productoEncontrado.variaciones.join(', ')}</li>`;
-            }
-          } else {
-            // Producto no encontrado, redirigir
-            window.location.href = 'productos.html';
-          }
-        })
-        .catch(error => {
-          console.error('Error al cargar el producto:', error);
-          window.location.href = 'productos.html';
-        });
-    });
-  </script>
 </body>
 <script src="js/producto.js"></script>
 <script src="js/buscador.js"></script>

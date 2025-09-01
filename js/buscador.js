@@ -1,36 +1,51 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const input = document.getElementById("search-input");
+document.addEventListener('DOMContentLoaded', () => {
+  const searchInput = document.getElementById('search-input');
+  const resultsList = document.getElementById('search-results');
+  let productos = [];
 
-  input.addEventListener("keypress", async function (e) {
-    if (e.key === "Enter") {
-      const query = input.value.trim().toLowerCase();
-      if (!query) return;
+  // Detecta la ruta correcta para productos.json
+  let productosJsonPath = "productos.json";
+  if (window.location.pathname.includes("/productos/")) {
+    productosJsonPath = "../productos.json";
+  }
 
-      try {
-        const res = await fetch("productos.json");
-        const data = await res.json();
-        let encontrado = null;
-
-        for (const categoria in data.productos) {
-          for (const producto of data.productos[categoria]) {
-            const nombre = producto.nombre.toLowerCase();
-            if (nombre.includes(query)) {
-              encontrado = producto;
-              break;
-            }
-          }
-          if (encontrado) break;
-        }
-
-        if (encontrado) {
-          window.location.href = `producto.html?id=${encontrado.id}`;
-        } else {
-          alert("Producto no encontrado.");
-        }
-      } catch (err) {
-        console.error("Error en la búsqueda:", err);
-        alert("Hubo un error al buscar el producto.");
+  fetch(productosJsonPath)
+    .then(res => res.json())
+    .then(data => {
+      for (const categoria in data.productos) {
+        data.productos[categoria].forEach(p => productos.push(p));
       }
+    });
+
+  searchInput.addEventListener('input', () => {
+    const query = searchInput.value.toLowerCase().trim();
+    resultsList.innerHTML = '';
+
+    if (query.length < 2) return;
+
+    const resultados = productos.filter(p =>
+      p.nombre.toLowerCase().includes(query)
+    ).slice(0, 10);
+
+    resultados.forEach(producto => {
+      const li = document.createElement('li');
+      li.textContent = producto.nombre;
+      li.onclick = () => {
+        // Ajusta la ruta según la ubicación
+        let productoHref = "producto.html?id=" + producto.id;
+        if (window.location.pathname.includes("/productos/")) {
+          productoHref = "../producto.html?id=" + producto.id;
+        }
+        window.location.href = productoHref;
+      };
+      resultsList.appendChild(li);
+    });
+  });
+
+  // Oculta los resultados si se hace clic fuera
+  document.addEventListener('click', e => {
+    if (!document.querySelector('.search-container').contains(e.target)) {
+      resultsList.innerHTML = '';
     }
   });
 });

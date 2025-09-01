@@ -13,9 +13,10 @@
 <body>
   <!-- ========== ENCABEZADO (HEADER) ========== -->
   <header>
-    <!-- Logo -->
     <div class="logo">
-      <a href="../index.html"><img src="../img/logo todo plasticos.png" alt="Todo Plásticos" /></a>
+      <a href="index.html">
+        <img src="img/logo todo plasticos.png" alt="Todo Plásticos" />
+      </a>
     </div>
 
     <!-- Navegación principal -->
@@ -88,13 +89,14 @@
 
     <!-- Barra de búsqueda -->
     <div class="search-container">
-      <input type="text" placeholder="¿Qué producto estás buscando hoy?" />
+      <input type="text" id="search-input" placeholder="¿Qué producto estás buscando hoy?" autocomplete="off" />
+      <ul id="search-results" class="search-results"></ul>
       <img src="../img/bandera colombia.png" alt="Col" class="flag" />
     </div>
   </header>
 
   <!-- ========== CONTENIDO PRINCIPAL ========== -->
-   <main class="main-productos">
+    <main class="main-productos">
     <h1 class="titulo-categoria"><i class="fas fa-layer-group"></i> Bandejas</h1>
     
     <div class="breadcrumb">
@@ -128,4 +130,6 @@
 <!-- Script para cargar los productos de la categoría -->
   <script src="../js/categoria.js"></script>
 </body>
+<script src="../js/producto.js"></script>
+<script src="../js/buscador.js"></script>
 </html>
