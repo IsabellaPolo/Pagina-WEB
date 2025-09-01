@@ -291,10 +291,10 @@ header {
 
 /* Estilo base para botones primarios */
 .btn-primary {
-  background-color: #0056b3;
+  background-color: #003366;
   color: white;
   padding: 12px 24px;
-  border-radius: 5px;
+  border-radius: 20px;
   font-weight: bold;
   display: inline-block;
   margin-top: 10px;
