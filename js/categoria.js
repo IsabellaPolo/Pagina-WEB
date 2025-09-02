@@ -1,46 +1,36 @@
-document.addEventListener("DOMContentLoaded", async () => {
-  const contenedoresContainer = document.querySelector(".productos-grid");
+document.addEventListener('DOMContentLoaded', () => {
+  // Obtén el nombre de la categoría y pásalo a minúsculas
+  const categoria = document.title.split('|')[0].trim().toLowerCase();
+  const container = document.getElementById(`${categoria}-container`);
+  
+  // Ruta dinámica para JSON
+  const jsonPath = window.location.pathname.includes('/productos/')
+    ? '../productos.json'
+    : 'productos.json';
 
-  try {
-    // ✅ Se carga productos.json desde la raíz
-    const response = await fetch("productos.json");
-    if (!response.ok) throw new Error("No se pudo cargar productos.json");
+  fetch(jsonPath)
+    .then(res => res.json())
+    .then(data => {
+      if (!data.productos[categoria]) {
+        container.innerHTML = "<p>No se encontraron productos en esta categoría.</p>";
+        return;
+      }
 
-    const productos = await response.json();
-
-    // Detectar la categoría actual a partir del nombre del archivo
-    const categoriaActual = window.location.pathname
-      .split("/")
-      .pop()
-      .replace(".html", "");
-
-    // Filtrar productos por categoría
-    const productosFiltrados = productos.filter(
-      (p) => p.categoria.toLowerCase() === categoriaActual
-    );
-
-    contenedoresContainer.innerHTML = "";
-
-    if (productosFiltrados.length > 0) {
-      productosFiltrados.forEach((producto) => {
-        const card = document.createElement("div");
-        card.classList.add("producto-card");
-        card.innerHTML = `
-          <a href="../producto.html?id=${producto.id}">
-            <img src="../img/${producto.imagen}" alt="${producto.nombre}">
-            <h3>${producto.nombre}</h3>
-          </a>
+      container.innerHTML = "";
+      data.productos[categoria].forEach(prod => {
+        const div = document.createElement('div');
+        div.classList.add('producto'); // Usa la clase de productos destacados
+        div.innerHTML = `
+          <img src="../img/${prod.imagen}" alt="${prod.nombre}">
+          <h4>${prod.nombre}</h4>
+          <p>${prod.descripcion ? prod.descripcion : ''}</p>
+          <a href="../producto.html?id=${prod.id}" class="btn-ver-mas">Ver más</a>
         `;
-        contenedoresContainer.appendChild(card);
+        container.appendChild(div);
       });
-    } else {
-      contenedoresContainer.innerHTML = `
-        <p>No hay productos disponibles en esta categoría.</p>
-      `;
-    }
-  } catch (error) {
-    console.error("Error cargando productos:", error);
-    contenedoresContainer.innerHTML =
-      "<p>Error al cargar los productos.</p>";
-  }
+    })
+    .catch(err => {
+      console.error("Error al cargar productos:", err);
+      container.innerHTML = "<p>Error al cargar los productos.</p>";
+    });
 });
