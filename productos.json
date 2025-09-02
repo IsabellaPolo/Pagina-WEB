@@ -45,7 +45,7 @@
         "id": "porta-hamburguesas",
         "nombre": "Porta Hamburguesas",
         "descripcion": "Empaque práctico para domicilios.",
-        "color": "Blanco",
+        "color": "Blanco, Con impresión.",
         "tamanos": [],
         "imagen": "Porta hamburguesas.png"
       },
@@ -53,7 +53,7 @@
         "id": "porta-perros",
         "nombre": "Porta Perros",
         "descripcion": "Diseño seguro para hot dogs.",
-        "color": "Blanco",
+        "color": "Blanco, Con impresión.",
         "tamanos": [],
         "imagen": "Porta perros.png"
       },
@@ -61,6 +61,7 @@
         "id": "porta-pizza",
         "nombre": "Porta Pizza",
         "descripcion": "Diseñado para transportar pizzas de forma segura",
+        "color": "Blanco, café, Con impresión.",
         "imagen": "Porta pizza.png"
       },
       {
@@ -150,38 +151,19 @@
         "imagen": "Vasos espumados.png"
       },
       {
-        "id": "vaso-3-onz",
-        "nombre": "Vaso 3 Onz",
-        "descripcion": "Tamaño pequeño ideal para degustaciones.",
-        "color": "Plateado Transparente",
-        "tamanos": ["3 oz"],
-        "imagen": "Vaso 3 Onz.png"
-      },
-      {
-        "id": "vaso-7-onz",
-        "nombre": "Vaso 7 Onz",
-        "descripcion": "Uso general en bebidas rápidas.",
-        "color": "Cristal",
-        "tamanos": ["7 oz"],
-        "variaciones": ["Brom +/-50%", "Brom +/-55%", "Brom +/-100%", "Brom +/-150%"],
-        "imagen": "Vaso 7 Onz.png"
-      },
-      {
-        "id": "vaso-9-onz",
-        "nombre": "Vaso 9 Onz",
-        "descripcion": "Capacidad media para múltiples bebidas.",
-        "color": "",
-        "tamanos": ["9 oz"],
-        "variaciones": ["Brom +/-50%", "Brom +/-55%", "Brom +/-100%"],
-        "imagen": "Vaso 9 Onz.png"
+        "id": "vaso-plastico",
+        "nombre": "Vaso plastico",
+        "descripcion": "Capacidad para múltiples bebidas.",
+        "color": "transparente",
+        "tamanos": ["5 oz", "7 oz", "9 oz", "12 oz"],
+        "imagen": "Vaso plastico.png"
       },
       {
         "id": "vaso-tinto",
         "nombre": "Vaso tinto",
         "descripcion": "Diseño estilizado para bebidas calientes.",
-        "color": "Plateado",
-        "tamanos": [],
-        "variaciones": ["Brom +/-50%", "Brom +/-55%", "Brom +/-100%"],
+        "color": "gris",
+        "tamanos": ["3 oz", "3.3 oz", "5 oz", "5.5 oz"],
         "imagen": "Vaso tinto.png"
       },
       {
@@ -189,7 +171,7 @@
         "nombre": "Vasos plásticos en color",
         "descripcion": "Presentación llamativa y resistente.",
         "color": "",
-        "tamanos": ["3 onz.", "3.3 onz.", "5 onz", "7 onz"],
+        "tamanos": ["3 onz", "3.3 onz", "5 onz", "7 onz"],
         "imagen": "Vasos plasticos en color.png"
       },
       {
@@ -197,7 +179,7 @@
         "nombre": "Vasos plásticos en opal",
         "descripcion": "Elegancia con resistencia reforzada.",
         "color": "Opal",
-        "tamanos": ["1 onz."],
+        "tamanos": ["7 oz", "9 oz", "12 oz"],
         "imagen": "Vasos plasticos en opal.png"
       }
     ],
@@ -231,16 +213,8 @@
         "nombre": "Pitillo Eco Plástico",
         "descripcion": "Alternativa ecológica y práctica.",
         "color": "Amarillo",
-        "tamanos": ["Pitillo eco plástico grueso mediano"],
+        "tamanos": ["Pitillo eco plástico individual, Caja pitillo eco plástico"],
         "imagen": "Pitillo eco plastico.jpg"
-      },
-      {
-        "id": "pitillos-biodegradables",
-        "nombre": "Pitillos Biodegradables",
-        "descripcion": "Cuida el ambiente sin perder comodidad.",
-        "color": "",
-        "tamanos": ["26.0 cm Jumbo con Envoltura", "19.7 cm Jumbo con Envoltura"],
-        "imagen": "Pitillos biodegradables.png"
       },
       {
         "id": "mezclador-madera",
@@ -304,8 +278,8 @@
       },
       {
         "id": "tapa-perforada",
-        "nombre": "Tapa sin perforación para Vaso",
-        "descripcion": "Previene derrames y mantiene el contenido fresco.",
+        "nombre": "Tapa perforada para Vaso",
+        "descripcion": "Tapa con abertura para pitillos que facilita el consumo y evita derrames accidentales.",
         "color": "Cristal",
         "tamanos": ["9 oz - 10 oz", "12 oz - 16 oz", "20 oz"],
         "imagen": "Tapa perforada.png"
@@ -332,16 +306,15 @@
         "id": "bolsa-de-aluminio",
         "nombre": "Bolsa de Aluminio",
         "descripcion": "Durabilidad y resistencia para alimentos calientes o fríos.",
-        "color": "",
-        "tamanos": ["L 17", "L 23", "L 25", "L 35"],
+        "tamanos": ["6 x 6", "7 x 8"],
         "imagen": "Bolsa aluminio.png"
       },
       {
         "id": "bolsa-de-basura",
         "nombre": "Bolsa de Basura",
         "descripcion": "Gran capacidad y resistencia para desechos domésticos.",
-        "color": "negro,blanco",
-        "tamanos": ["Apartamentera 10 K", "Mediana 15 K", "Industrial 20 K", "Yumbo 25 K"],
+        "color": "Negro, Blanco",
+        "tamanos": ["Apartamentera", "Mediana 26x36 pulgadas", "Industrial 28x39 pulgadas", "Yumbo"],
         "imagen": "Bolsa basura.png"
       },
       {
@@ -349,15 +322,8 @@
         "nombre": "Bolsa Biodegradable",
         "descripcion": "Ecológica y fuerte, ideal para comercios conscientes.",
         "color": "naranja, verde, blanco, negro, rayado blanco y azul",
-        "tamanos": ["1.5 K", "3 K", "15 K", "30 K"],
-        "imagenes": [
-          "Bolsas biodegradable.png",
-          "Bolsa blanca.png",
-          "Bolsa negra.png",
-          "Bolsa verde.png",
-          "Bolsa naranja.png",
-          "Bolsa manigueta rayada.png"
-          ]
+        "tamanos": ["1.5 K", "2 k", "3 K", "5 k", "10 k", "15 K"],
+        "imagen": "Bolsa biodegradable.png"
       },
       {
         "id": "bolsa-de-papel",
@@ -384,20 +350,20 @@
         "imagen": "Bolsa para hielo.png"
       },
       {
-        "id": "bolsa-de-propileno",
-        "nombre": "Bolsa de Propileno",
+        "id": "bolsa-de-polipropileno",
+        "nombre": "Bolsa de Polipropileno",
         "descripcion": "Transparente y durable para múltiples usos.",
         "color": "Cristal",
-        "tamanos": ["3 x 4", "10 x 20", "14 x 14", "14 x 18"],
+        "tamanos": ["5 x 9", "6 x 11", "8 x 12", "9 x 14", "10 x 16"],
         "imagen": "Bolsa propileno.png"
       },
       {
-        "id": "bolsa-transparente",
-        "nombre": "Bolsa Transparente",
-        "descripcion": "Visibilidad total para productos en venta.",
+        "id": "bolsa-de-polietileno",
+        "nombre": "Bolsa de Polietileno",
+        "descripcion": "Transparente y durable para múltiples usos.",
         "color": "Cristal",
-        "tamanos": ["1 L", "2 L", "1 K", "2 K", "3 K"],
-        "imagen": "Bolsa transparente.png"
+        "tamanos": ["1.5k", "6 x 11", "8 x 12", "9 x 14", "10 x 16"],
+        "imagen": "Bolsa polietileno.png"
       },
       {
         "id": "bolsa-manija",
@@ -415,12 +381,7 @@
         "id": "bolsa1",
         "nombre": "Bolsas marcadas con su logo",
         "descripcion": "Bolsas personalizadas y marcadas con su logo para su empresa",
-        "imagenes": [
-          "Bolsas marcadas/Bolsa1.png",
-          "Bolsas marcadas/Bolsa2.png",
-          "Bolsas marcadas/Bolsa3.png",
-          "Bolsas marcadas/Bolsa4.png"
-          ]
+        "imagen": "Bolsas marcadas/Bolsa1.png"
       }
     ],
     "servilletas": [
