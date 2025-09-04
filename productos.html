@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="css/styles.css" />
   <link rel="icon" href="favicon.ico" />
 
-  <!-- Scroll suave al navegar por anclas -->
+  <!-- UX de navegación por anclas -->
   <style>
     html { scroll-behavior: smooth; }
     :target { scroll-margin-top: 90px; } /* ajusta si tu header es sticky */
@@ -36,7 +36,7 @@
       <ul>
         <li><a href="index.html">Inicio</a></li>
 
-        <!-- Mega menú Productos con ANCLAS -->
+        <!-- Mega menú Productos con ANCLAS (mismos ids que el contenido) -->
         <li class="dropdown">
           <a href="productos.html" aria-haspopup="true" aria-expanded="false">Productos</a>
           <ul class="dropdown-menu mega-menu">
@@ -53,12 +53,9 @@
                 <li><a href="productos.html#bolsas"><i class="fas fa-shopping-bag"></i> Bolsas</a></li>
                 <li><a href="productos.html#servilletas"><i class="fas fa-scroll"></i> Servilletas</a></li>
                 <li><a href="productos.html#aseo"><i class="fas fa-broom"></i> Aseo</a></li>
-                <li><a href="productos.html#papel-aluminio"><i class="fas fa-receipt"></i> Papel</a></li>
                 <li><a href="productos.html#cubiertos"><i class="fas fa-utensils"></i> Cubiertos</a></li>
                 <li><a href="productos.html#otros"><i class="fas fa-ellipsis-h"></i> Otros</a></li>
-                <li class="ver-todo">
-                  <a href="productos.html" class="btn-primary">Todos los productos</a>
-                </li>
+                <li class="ver-todo"><a href="productos.html" class="btn-primary">Todos los productos</a></li>
               </ul>
             </div>
 
@@ -97,13 +94,13 @@
 
   <!-- ===== MAIN ===== -->
   <main class="main-productos">
-    <!-- Aquí renderizamos dinámicamente TODAS las secciones -->
+    <!-- Aquí se renderizan dinámicamente TODAS las secciones -->
     <div id="categorias-wrapper"></div>
   </main>
 
-  <!-- ===== SCRIPT: construye secciones por categoría y productos desde productos.json ===== -->
+  <!-- ===== SCRIPT: Construye secciones + productos leyendo productos.json ===== -->
   <script>
-    // --- Helpers ---
+    /* ---------- Helpers ---------- */
     function normalizeImageName(name) {
       if (!name) return 'default-product';
       return name.toLowerCase()
@@ -146,22 +143,26 @@
       return 'img/default-product.png';
     }
 
-    // --- Mapa de categorías JSON -> anclas y títulos ---
-    // Asegúrate de que las CLAVES coincidan con tu productos.json
+    /* ---------- Mapa de categorías JSON -> anclas / títulos ---------- */
+    // Asegúrate de que estas CLAVES coincidan con tu productos.json
     const CATEGORY_MAP = {
-      "Contenedores":        { id: "contenedores",     title: "Contenedores y Empaques" },
-      "Bandejas":            { id: "bandejas",         title: "Bandejas" },
-      "Copas":               { id: "copas",            title: "Copas" },
-      "Vasos":               { id: "vasos",            title: "Vasos" },
-      "Pitillos y Palillos": { id: "pitillos-palillos",title: "Pitillos y Palillos" },
-      "Platos":              { id: "platos",           title: "Platos" },
-      "Frascos":             { id: "frascos",          title: "Frascos" },
-      "Bolsas":              { id: "bolsas",           title: "Bolsas" },
-      "Servilletas":         { id: "servilletas",      title: "Servilletas" },
-      "Aseo":                { id: "aseo",             title: "Limpieza y Hogar" },
-      "Papel Aluminio":      { id: "papel-aluminio",   title: "Papel Aluminio" },
-      "Cubiertos":           { id: "cubiertos",        title: "Cubiertos" },
-      "Otros":               { id: "otros",            title: "Otros" }
+      "Contenedores":        { id: "contenedores",      title: "Contenedores y Empaques" },
+      "Bandejas":            { id: "bandejas",          title: "Bandejas" },
+      "Copas":               { id: "copas",             title: "Copas" },
+      "Vasos":               { id: "vasos",             title: "Vasos" },
+      "Pitillos y Palillos": { id: "pitillos-palillos", title: "Pitillos y Palillos" },
+      "Platos":              { id: "platos",            title: "Platos" },
+      "Frascos":             { id: "frascos",           title: "Frascos" },
+      "Bolsas":              { id: "bolsas",            title: "Bolsas" },
+      "Servilletas":         { id: "servilletas",       title: "Servilletas" },
+      "Aseo":                { id: "aseo",              title: "Limpieza y Hogar (Escobas, Trapeadores, Recogedores)" },
+      "Cubiertos":           { id: "cubiertos",         title: "Cubiertos y Accesorios" },
+      "Otros":               { id: "otros",             title: "Otros (Esponjas, Guantes, Mecheras, Cintas…)" }
+    };
+
+    // Alias de hash para no romper enlaces del home (ej: #moldes-aluminio -> sección real)
+    const HASH_ALIAS = {
+      "moldes-aluminio": "otros"   // allí solemos listar moldes de aluminio
     };
 
     function createSectionEl({ id, title }) {
@@ -202,9 +203,10 @@
         const cfg = CATEGORY_MAP[categoria] || { id: normalizeImageName(categoria), title: categoria };
         const section = createSectionEl(cfg);
         wrapper.appendChild(section);
-        const grid = section.querySelector('.productos-grid');
 
+        const grid = section.querySelector('.productos-grid');
         const items = data.productos[categoria];
+
         for (const producto of items) {
           const imagePath = await getBestImagePath(producto);
           grid.insertAdjacentHTML('beforeend', productCardHTML(producto, imagePath));
@@ -213,10 +215,12 @@
     }
 
     function scrollToHashIfAny() {
-      if (location.hash) {
-        const el = document.querySelector(location.hash);
-        if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
+      if (!location.hash) return;
+      const raw = location.hash.replace('#','').trim();
+      const alias = HASH_ALIAS[raw];
+      const targetId = alias || raw;
+      const el = document.getElementById(targetId);
+      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
 
     document.addEventListener('DOMContentLoaded', async () => {

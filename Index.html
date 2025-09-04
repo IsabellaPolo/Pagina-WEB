@@ -51,7 +51,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Oculta los resultados si se hace clic fuera
   document.addEventListener('click', e => {
     if (!document.querySelector('.search-container').contains(e.target)) {
       resultsList.innerHTML = '';
@@ -61,53 +60,38 @@ document.addEventListener('DOMContentLoaded', () => {
 </script>
 
 <body>
-
   <!-- ========== ENCABEZADO (HEADER) ========== -->
   <header>
-    <!-- Logo con enlace a inicio -->
     <div class="logo">
       <a href="index.html">
         <img src="img/logo todo plasticos.png" alt="Todo Plásticos - Logo" width="180" height="80">
       </a>
     </div>
 
-    <!-- Navegación principal -->
     <nav class="navbar" aria-label="Navegación principal">
       <ul>
-        <!-- Enlace a Inicio -->
         <li><a href="index.html" class="active">Inicio</a></li>
-
-        <!-- Menú desplegable de Productos -->
         <li class="dropdown">
           <a href="productos.html" aria-haspopup="true" aria-expanded="false">Productos</a>
           <ul class="dropdown-menu mega-menu">
-            <!-- Sección de Categorías -->
             <div class="lista-categorias">
               <h4>Categorías</h4>
               <ul>
-                <!-- Cada categoría enlaza a su página específica -->
-                <li><a href="productos/contenedores.html"><i class="fas fa-box-open"></i> Contenedores</a></li>
-                <li><a href="productos/bandejas.html"><i class="fas fa-layer-group"></i> Bandejas</a></li>
-                <li><a href="productos/copas.html"><i class="fas fa-wine-glass-alt"></i> Copas</a></li>
-                <li><a href="productos/vasos.html"><i class="fas fa-glass-water"></i> Vasos</a></li>
-                <li><a href="productos/pitillos-palillos.html"><i class="fas fa-grip-lines-vertical"></i> Pitillos y Palillos</a></li>
-                <li><a href="productos/platos.html"><i class="fas fa-utensil-spoon"></i> Platos</a></li>
-                <li><a href="productos/frascos.html"><i class="fas fa-flask"></i> Frascos</a></li>
-                <li><a href="productos/bolsas.html"><i class="fas fa-shopping-bag"></i> Bolsas</a></li>
-                <li><a href="productos/servilletas.html"><i class="fas fa-scroll"></i> Servilletas</a></li>
-                <li><a href="productos/aseo.html"><i class="fas fa-broom"></i> Aseo</a></li>
-                <li><a href="productos/papel.html"><i class="fas fa-receipt"></i> Papel</a></li>
-                <li><a href="productos/cubiertos.html"><i class="fas fa-utensils"></i> Cubiertos</a></li>
-                <li><a href="productos/otros.html"><i class="fas fa-ellipsis-h"></i> Otros</a></li>
-                
-                <!-- Botón para ver todos los productos -->
-                <li class="ver-todo">
-                  <a href="productos.html" class="btn-primary">Todos los productos</a>
-                </li>
+                <li><a href="productos.html#contenedores"><i class="fas fa-box-open"></i> Contenedores</a></li>
+                <li><a href="productos.html#bandejas"><i class="fas fa-layer-group"></i> Bandejas</a></li>
+                <li><a href="productos.html#copas"><i class="fas fa-wine-glass-alt"></i> Copas</a></li>
+                <li><a href="productos.html#vasos"><i class="fas fa-glass-water"></i> Vasos</a></li>
+                <li><a href="productos.html#pitillos-palillos"><i class="fas fa-grip-lines-vertical"></i> Pitillos y Palillos</a></li>
+                <li><a href="productos.html#platos"><i class="fas fa-utensil-spoon"></i> Platos</a></li>
+                <li><a href="productos.html#frascos"><i class="fas fa-flask"></i> Frascos</a></li>
+                <li><a href="productos.html#bolsas"><i class="fas fa-shopping-bag"></i> Bolsas</a></li>
+                <li><a href="productos.html#servilletas"><i class="fas fa-scroll"></i> Servilletas</a></li>
+                <li><a href="productos.html#aseo"><i class="fas fa-broom"></i> Aseo</a></li>
+                <li><a href="productos.html#cubiertos"><i class="fas fa-utensils"></i> Cubiertos</a></li>
+                <li><a href="productos.html#otros"><i class="fas fa-ellipsis-h"></i> Otros</a></li>
+                <li class="ver-todo"><a href="productos.html" class="btn-primary">Todos los productos</a></li>
               </ul>
             </div>
-
-            <!-- Sección de Marcas Destacadas -->
             <div class="marcas-destacadas">
               <h4>Marcas destacadas</h4>
               <div class="marca-item"><img src="img/Logo darnel.png" alt="Darnel" loading="lazy"></div>
@@ -118,31 +102,18 @@ document.addEventListener('DOMContentLoaded', () => {
             </div>
           </ul>
         </li>
-
-        <!-- Menú desplegable de Catálogo -->
         <li class="dropdown">
           <a href="#" aria-haspopup="true" aria-expanded="false">Catálogo</a>
           <ul class="dropdown-menu menu-catalogo">
-            <li>
-              <a href="catalogo-todo-plasticos.pdf" download>
-                <i class="fas fa-file-pdf"></i> Descargar catálogo
-              </a>
-            </li>
-            <li>
-              <a href="catalogo.html">
-                <i class="fas fa-eye"></i> Ver en línea
-              </a>
-            </li>
+            <li><a href="catalogo-todo-plasticos.pdf" download><i class="fas fa-file-pdf"></i> Descargar catálogo</a></li>
+            <li><a href="catalogo.html"><i class="fas fa-eye"></i> Ver en línea</a></li>
           </ul>
         </li>
-
-        <!-- Enlaces directos -->
         <li><a href="nosotros.html">Nosotros</a></li>
         <li><a href="contacto.html">Contacto</a></li>
       </ul>
     </nav>
 
-    <!-- Barra de búsqueda -->
     <div class="search-container">
       <input type="text" id="search-input" placeholder="¿Qué producto estás buscando hoy?" autocomplete="off" />
       <ul id="search-results" class="search-results"></ul>
@@ -150,29 +121,23 @@ document.addEventListener('DOMContentLoaded', () => {
     </div>
   </header>
 
-  <!-- ========== SLIDER PRINCIPAL (HERO) ========== -->
+  <!-- SLIDER PRINCIPAL -->
   <section class="slider-hero" aria-label="Carrusel de imágenes">
     <div class="slider-images">
-      <!-- Imágenes del slider con loading eager para las primeras -->
       <img src="img/fondo productos1.png" class="slide active" alt="Productos plásticos sostenibles" loading="eager">
       <img src="img/fondo productos2.png" class="slide" alt="Variedad de contenedores plásticos" loading="lazy">
       <img src="img/fondo productos3.png" class="slide" alt="Empaques biodegradables" loading="lazy">
       <img src="img/fondo productos4.png" class="slide" alt="Productos de alta calidad" loading="lazy">
     </div>
-
     <div class="slider-overlay">
       <div class="slider-text">
         <h1><strong>Empaques sostenibles</strong> para tu negocio</h1>
         <p class="tagline">Reciclables, biodegradables y responsables con el planeta 🌱</p>
         <a href="productos.html" class="btn-primary">Ver más productos</a>
       </div>
-      
-      <!-- Controles del slider -->
       <button class="slider-btn prev" aria-label="Imagen anterior">&#10094;</button>
       <button class="slider-btn next" aria-label="Siguiente imagen">&#10095;</button>
     </div>
-
-    <!-- Indicadores del slider -->
     <div class="slider-dots" role="tablist">
       <button class="dot active-dot" aria-label="Ir a imagen 1" role="tab" aria-selected="true"></button>
       <button class="dot" aria-label="Ir a imagen 2" role="tab" aria-selected="false"></button>
@@ -181,182 +146,101 @@ document.addEventListener('DOMContentLoaded', () => {
     </div>
   </section>
 
-  <!-- ========== SECCIÓN DE CARACTERÍSTICAS ========== -->
-  <section class="features" aria-labelledby="caracteristicas-titulo">
-    <h2 id="caracteristicas-titulo" class="sr-only">Nuestras ventajas</h2>
-    
-    <div class="feature">
-      <h3>🌿 Biodegradables</h3>
-      <p>Alternativas ecológicas. Amigables con el medio ambiente.</p>
-    </div>
-    <div class="feature">
-      <h3>📦 Envíos a todo el Huila</h3>
-      <p>Entregas rápidas y seguras a cualquier destino.</p>
-    </div>
-    <div class="feature">
-      <h3>🧑‍💼 Asesoría personalizada</h3>
-      <p>Te ayudamos a encontrar la solución ideal para tu negocio.</p>
-    </div>
+  <!-- SECCIÓN DE CARACTERÍSTICAS -->
+  <section class="features">
+    <div class="feature"><h3>🌿 Biodegradables</h3><p>Alternativas ecológicas. Amigables con el medio ambiente.</p></div>
+    <div class="feature"><h3>📦 Envíos a todo el Huila</h3><p>Entregas rápidas y seguras a cualquier destino.</p></div>
+    <div class="feature"><h3>🧑‍💼 Asesoría personalizada</h3><p>Te ayudamos a encontrar la solución ideal para tu negocio.</p></div>
   </section>
 
-  <!-- ========== PRODUCTOS MÁS VENDIDOS ========== -->
-    <section class="mas-vendidos" aria-labelledby="mas-vendidos-titulo">
-    <h2 id="mas-vendidos-titulo">🛒 Productos más vendidos</h2>
-    
+  <!-- PRODUCTOS MÁS VENDIDOS -->
+  <section class="mas-vendidos">
+    <h2>🛒 Productos más vendidos</h2>
     <div class="productos-grid">
-      <div class="producto">
-        <img src="img/Bolsa biodegradable.png" alt="Bolsa biodegradable" loading="lazy">
-        <h4>Bolsa Biodegradable</h4>
-        <p>Material 100% compostable</p>
-        <a href="producto.html?id=bolsa-biodegradable" class="btn-ver-mas">Ver más</a>
-      </div>
-      <div class="producto">
-        <img src="img/Vasos Tami.png" alt="Vasos desechables" loading="lazy">
-        <h4>Vasos desechables</h4>
-        <p>Resistentes y prácticos</p>
-        <a href="producto.html?id=vasos-tami" class="btn-ver-mas">Ver más</a>
-      </div>
-      <div class="producto">
-        <img src="img/Contenedor SelloPlus.png" alt="Contenedores" loading="lazy">
-        <h4>Contenedor SelloPlus</h4>
-        <p>Sellado hermético</p>
-        <a href="producto.html?id=contenedor-selloPlus" class="btn-ver-mas">Ver más</a>
-      </div>
-      <div class="producto">
-        <img src="img/Bolsa papel.png" alt="Bolsa de papel" loading="lazy">
-        <h4>Bolsa de papel</h4>
-        <p>Resistente y ecológica</p>
-        <a href="producto.html?id=bolsa-papel" class="btn-ver-mas">Ver más</a>
-      </div>
+      <div class="producto"><img src="img/Bolsa biodegradable.png" alt="Bolsa biodegradable"><h4>Bolsa Biodegradable</h4><p>Material 100% compostable</p><a href="producto.html?id=bolsa-biodegradable" class="btn-ver-mas">Ver más</a></div>
+      <div class="producto"><img src="img/Vasos Tami.png" alt="Vasos desechables"><h4>Vasos desechables</h4><p>Resistentes y prácticos</p><a href="producto.html?id=vasos-tami" class="btn-ver-mas">Ver más</a></div>
+      <div class="producto"><img src="img/Contenedor SelloPlus.png" alt="Contenedores"><h4>Contenedor SelloPlus</h4><p>Sellado hermético</p><a href="producto.html?id=contenedor-selloPlus" class="btn-ver-mas">Ver más</a></div>
+      <div class="producto"><img src="img/Bolsa papel.png" alt="Bolsa de papel"><h4>Bolsa de papel</h4><p>Resistente y ecológica</p><a href="producto.html?id=bolsa-papel" class="btn-ver-mas">Ver más</a></div>
     </div>
-    
-    <div class="centrado">
-      <a href="productos.html" class="btn-primary">Ver todos los productos</a>
+    <div class="centrado"><a href="productos.html" class="btn-primary">Ver todos los productos</a></div>
+  </section>
+
+  <!-- ENLACES ADICIONALES -->
+  <section class="site-links">
+    <div class="site-links-container">
+      <div class="column">
+        <h3>Productos</h3>
+        <ul>
+          <li><a href="productos.html#bandejas">Bandejas</a></li>
+          <li><a href="productos.html#contenedores">Contenedores</a></li>
+          <li><a href="productos.html#cubiertos">Cubiertos</a></li>
+          <li><a href="productos.html#aseo">Productos de aseo</a></li>
+          <li><a href="productos.html#moldes-aluminio">Otros</a></li>
+        </ul>
+      </div>
+      <div class="column">
+        <h3>Materiales</h3>
+        <ul>
+          <li><a href="productos.html#servilletas">Servilletas</a></li>
+          <li><a href="productos.html#bolsas">Bolsas</a></li>
+          <li><a href="productos.html#frascos">Frascos</a></li>
+          <li><a href="productos.html#aseo">Escobas y Trapeadores</a></li>
+        </ul>
+      </div>
+      <div class="column">
+        <h3>Servicios</h3>
+        <ul>
+          <li><a href="nosotros.html">Sobre nosotros</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+          <li><a href="catalogo.html">Catálogo digital</a></li>
+          <li><a href="contacto.html#envios">Política de envíos</a></li>
+          <li><a href="contacto.html#pagos">Métodos de pago</a></li>
+        </ul>
+      </div>
     </div>
   </section>
 
-<section class="site-links" aria-labelledby="enlaces-rapidos-titulo">
-  <h2 id="enlaces-rapidos-titulo" class="sr-only">Enlaces rápidos</h2>
-
-  <div class="site-links-container">
-    <div class="column">
-      <h3>Productos</h3>
-      <ul>
-        <li><a href="productos.html#bandejas">Bandejas</a></li>
-        <li><a href="productos.html#contenedores">Contenedores</a></li>
-        <li><a href="productos.html#cubiertos">Cubiertos</a></li>
-        <li><a href="productos.html#aseo">Productos de aseo</a></li>
-        <li><a href="productos.html#moldes-aluminio">Moldes de Aluminio</a></li>
-      </ul>
-    </div>
-
-    <div class="column">
-      <h3>Materiales</h3>
-      <ul>
-        <li><a href="productos.html#servilletas">Servilletas</a></li>
-        <li><a href="productos.html#papel-aluminio">Papel Aluminio</a></li>
-        <li><a href="productos.html#vinipel">Vinipel</a></li>
-        <li><a href="productos.html#frascos">Frascos para almacenar</a></li>
-        <li><a href="productos.html#bolsas-biodegradables">Bolsas biodegradables</a></li>
-      </ul>
-    </div>
-
-    <div class="column">
-      <h3>Servicios</h3>
-      <ul>
-        <li><a href="nosotros.html">Sobre nosotros</a></li>
-        <li><a href="contacto.html">Contacto</a></li>
-        <li><a href="catalogo.html">Catálogo digital</a></li>
-        <li><a href="contacto.html#envios">Política de envíos</a></li>
-        <li><a href="contacto.html#pagos">Métodos de pago</a></li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-  <!-- ========== PIE DE PÁGINA ========== -->
+  <!-- FOOTER -->
   <footer>
-  <div class="footer-contenido">
-    <div class="footer-info">
-      <p>© 2025 Todo Plásticos · Garzón, Huila · Tel: 310 3377752</p>
+    <div class="footer-contenido">
+      <div class="footer-info"><p>© 2025 Todo Plásticos · Garzón, Huila · Tel: 310 3377752</p></div>
+      <div class="footer-social">
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      </div>
     </div>
-    <div class="footer-social">
-      <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-      <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-      <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-    </div>
-  </div>
-</footer>
+  </footer>
 
-  <!-- ========== SCRIPT DEL SLIDER HERO ========== -->
+  <!-- SLIDER SCRIPT -->
   <script>
-    // Configuración del slider
     const slides = document.querySelectorAll('.slide');
     const nextBtn = document.querySelector('.next');
     const prevBtn = document.querySelector('.prev');
     const dots = document.querySelectorAll('.dot');
     let current = 0;
     let autoSlide;
-    const slideInterval = 5000; // 5 segundos
-
-    // Función para actualizar las slides visibles
+    const slideInterval = 5000;
     function updateSlides(index) {
-      slides.forEach((slide, i) => {
-        slide.classList.toggle('active', i === index);
-      });
-
+      slides.forEach((slide, i) => slide.classList.toggle('active', i === index));
       dots.forEach((dot, i) => {
         dot.classList.toggle('active-dot', i === index);
         dot.setAttribute('aria-selected', i === index);
       });
     }
-
-    // Eventos para controles de navegación
-    nextBtn.addEventListener('click', () => {
-      current = (current + 1) % slides.length;
-      updateSlides(current);
-      resetAutoSlide();
-    });
-
-    prevBtn.addEventListener('click', () => {
-      current = (current - 1 + slides.length) % slides.length;
-      updateSlides(current);
-      resetAutoSlide();
-    });
-
-    // Eventos para los puntos indicadores
-    dots.forEach((dot, i) => {
-      dot.addEventListener('click', () => {
-        current = i;
-        updateSlides(current);
-        resetAutoSlide();
-      });
-    });
-
-    // Auto-desplazamiento
     function startAutoSlide() {
       autoSlide = setInterval(() => {
         current = (current + 1) % slides.length;
         updateSlides(current);
       }, slideInterval);
     }
-
-    function resetAutoSlide() {
-      clearInterval(autoSlide);
-      startAutoSlide();
-    }
-
-    // Pausar al interactuar
-    document.querySelector('.slider-hero').addEventListener('mouseenter', () => {
-      clearInterval(autoSlide);
-    });
-
+    function resetAutoSlide() { clearInterval(autoSlide); startAutoSlide(); }
+    nextBtn.addEventListener('click', () => { current = (current + 1) % slides.length; updateSlides(current); resetAutoSlide(); });
+    prevBtn.addEventListener('click', () => { current = (current - 1 + slides.length) % slides.length; updateSlides(current); resetAutoSlide(); });
+    dots.forEach((dot, i) => dot.addEventListener('click', () => { current = i; updateSlides(current); resetAutoSlide(); }));
+    document.querySelector('.slider-hero').addEventListener('mouseenter', () => clearInterval(autoSlide));
     document.querySelector('.slider-hero').addEventListener('mouseleave', startAutoSlide);
-
-    // Inicialización
-    updateSlides(current);
-    startAutoSlide();
+    updateSlides(current); startAutoSlide();
   </script>
-
 </body>
 </html>
