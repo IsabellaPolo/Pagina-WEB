@@ -1,6 +1,6 @@
 {
   "productos": {
-    "contenedores": [
+    "Contenedores": [
       {
         "id": "contenedor-selloPlus",
         "nombre": "SelloPlus resq",
@@ -81,7 +81,7 @@
         "imagen": "Portacomidas espumado1.png"
       }
     ],
-    "bandejas": [
+    "Bandejas": [
       {
         "id": "bandejas-espumadas",
         "nombre": "Bandejas Espumadas Estándar",
@@ -99,7 +99,7 @@
         "imagen": "Moldes de aluminio.png"
       }
     ],
-    "copas": [
+    "Copas": [
       {
         "id": "copa-tipo-flauta",
         "nombre": "Copa tipo flauta",
@@ -125,7 +125,7 @@
         "imagen": "Copas venecianas.png"
       }
     ],
-    "vasos": [
+    "Vasos": [
       {
         "id": "vasos-tami",
         "nombre": "Vaso TAMI",
@@ -183,7 +183,7 @@
         "imagen": "Vasos plasticos en opal.png"
       }
     ],
-    "pitillos-palillos": [
+    "Pitillos-Palillos": [
       {
         "id": "palillo-de-madera",
         "nombre": "Palillo de madera",
@@ -233,7 +233,7 @@
         "imagen": "Mezclador plastico.png"
       }
     ],
-    "platos": [
+    "Platos": [
       {
         "id": "plato-espumado-hondo",
         "nombre": "Plato Espumado Hondo",
@@ -251,7 +251,7 @@
         "imagen": "Plato espumado.png"
       }
     ],
-    "frascos": [
+    "Frascos": [
       {
         "id": "domo-perforado",
         "nombre": "Domo perforado para Vaso",
@@ -301,7 +301,7 @@
         "imagen": "Tapa para frasco cuadrado.png"
       }
     ],
-    "bolsas": [
+    "Bolsas": [
       {
         "id": "bolsa-de-aluminio",
         "nombre": "Bolsa de Aluminio",
@@ -384,7 +384,7 @@
         "imagen": "Bolsas marcadas/Bolsa1.png"
       }
     ],
-    "servilletas": [
+    "Servilletas": [
       {
         "id": "servilleta-arbora",
         "nombre": "Servilleta Arbora",
@@ -434,7 +434,7 @@
         "imagen": "Servilleta popular.png"
       }
     ],
-    "aseo": [
+    "Aseo": [
       {
         "id": "escoba-w-color",
         "nombre": "Escoba W Color",
@@ -548,7 +548,7 @@
         "imagen": "Recogedor sin banda.png"
       }
     ],
-    "papel": [
+    "Papel": [
       {
         "id": "papel-aluminio",
         "nombre": "Papel Aluminio",
@@ -582,7 +582,7 @@
         "imagen": "Lamina parafinada.png"
       }
     ],
-    "cubiertos": [
+    "Cubiertos": [
       {
         "id": "cucharas-desechables",
         "nombre": "Cucharas Desechables",
@@ -608,7 +608,7 @@
         "imagen": "Tenedores desechables.png"
       }
     ],
-    "otros": [
+    "Otros": [
       {
         "id": "cinta-transparente",
         "nombre": "Cinta Transparente",
