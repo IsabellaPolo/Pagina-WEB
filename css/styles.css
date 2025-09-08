@@ -659,4 +659,16 @@ h1[id], h2[id], h3[id],
 .categoria-productos{        /* y/o la sección contenedora */
   scroll-margin-top: calc(var(--header-height) + 12px);
 }
+/* Asegura que todas las tarjetas tengan el mismo comportamiento */
+.producto {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* El botón "Ver más" siempre abajo */
+.producto .btn-ver-mas {
+  margin-top: auto;
+  align-self: center;
+}
 
